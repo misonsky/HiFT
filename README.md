@@ -131,6 +131,28 @@ else:
         )
 ```
 
+**Attention**: the **model name** must be included in `model_name_or_path` because `HiFT` uses model_name_or_path to map the layer processing of different models. You can override `GetCallBack` to suit your preferences.
+
+```
+from hift import MODDELS_HiFT_PROCESS
+
+def GetCallBack(model_name_path):
+    if "roberta" in model_name_path.lower():
+        return MODDELS_HiFT_PROCESS["roberta"]
+    if "bert" in model_name_path.lower():
+        return MODDELS_HiFT_PROCESS["bert"]
+    if "gpt2" in model_name_path.lower():
+        return MODDELS_HiFT_PROCESS["gpt2"]
+    if "gptneox" in model_name_path.lower() or "gpt-neox" in model_name_path.lower():
+        return MODDELS_HiFT_PROCESS["gptneox"]
+    if "gptneo" in model_name_path.lower() or "gpt-neo" in model_name_path.lower():
+        return MODDELS_HiFT_PROCESS["gptneo"]
+    if "opt" in model_name_path.lower():
+        return MODDELS_HiFT_PROCESS["opt"]
+    if "llamafamily" in model_name_path.lower() or "llama" in model_name_path.lower():
+        return MODDELS_HiFT_PROCESS["llamafamily"]
+     ...here Add your mapping........
+```
 
 
 ## Register Your Model  
