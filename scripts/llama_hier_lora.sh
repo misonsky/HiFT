@@ -3,7 +3,7 @@ export output_dir="outputs/e2e_opt"
 port=$(shuf -i25000-30000 -n1)
 # CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7" python -m torch.distributed.launch --nproc_per_node=$num_gpus run_glue.py \
 CUDA_VISIBLE_DEVICES=2 torchrun --master_port "$port" examples/gpt2_example.py \
---model_name_or_path /mounts/work/lyk/hierFT/llama2-7b \
+--model_name_or_path llama2-7b \
 --model_type llama \
 --HiTaskType "CAUSAL_LM" \
 --dataset_name e2e_nlg \
