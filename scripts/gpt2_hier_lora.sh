@@ -2,7 +2,7 @@ export num_gpus=8
 export output_dir="outputs/e2e_gptm"
 # CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7" python -m torch.distributed.launch --nproc_per_node=$num_gpus run_glue.py \
 CUDA_VISIBLE_DEVICES=2 python examples/gpt2_example.py \
---model_name_or_path /mounts/work/lyk/hierFT/gpt2-m \
+--model_name_or_path gpt2-m \
 --model_type gpt2 \
 --dataset_name e2e_nlg \
 --do_train \
