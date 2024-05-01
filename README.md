@@ -195,7 +195,7 @@ class ModelCallBack(HiFTCallBack):
 
 ## Introduction  
 
-![Algorithm](figure\alg.png)  
+![Algorithm](figure/alg.png)  
 
 The detailed training process is shown in Algorithm. The first step is to determine the update strategy. Then freeze all layers. The layers to be updated, denoted by $E$, are selected from the queue $Q$ based on the parameter $m$. The selected layer $E$ is removed from head of the queue $Q$ and added to the tail of $Q$ to wait for the next update. Select the parameter $\theta_s$ that needs to be updated from $M$ based on $E$, set the parameter $\theta_s$ to a computable gradient state and set the update parameter group of optimizer $P$ to $\theta_s$. Before parameter updates, the states parameters  of optimizer $P$ related to $\theta_s$ could be moved to GPU devices. After the completion of weight updates, the corresponding gradients are clean up and optimizer states parameters are moved to CPU. When all layers have been updated once, adjust the learning rate once.    
 
@@ -209,13 +209,13 @@ The detailed training process is shown in Algorithm. The first step is to determ
 
 **Experiments** on **OPT-13B** (with 1000 examples). **ICL**: in-context learning; **LP**: linear probing; **FPFT**: full fine-tuning; Prefix: prefix-tuning. All experiments use prompts from MeZO.  
 
-![OPT-13b](figure\opt13.png)
+![OPT-13b](figure/opt13.png)
 
 
 
 GPU memory usage of fine-tuning **LLaMA (7B)** on the **E2E** dataset.  **Total** represents the total memory used during fine-tuning. **Mixed** represents fine-tuning with **standard mixed precision** and **Mixed^Hi^** represents the mixed precision adapted to `HiFT`. **Para** represents the memory occupied by the model **parameters**; **Gra** represents the memory occupied by the gradient;  **Sta** represents the memory occupied by the **optimizer state**. **PGS** represents the sum of memory occupied by **parameters** , **gradients** and **optimizer state** .  
 
-<img src="figure\llama.png" alt="llama-memory" style="zoom:150%;" />  
+<img src="figure/llama.png" alt="llama-memory" style="zoom:150%;" />  
 
 ## Mixed Precision  
 
