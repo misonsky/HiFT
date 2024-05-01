@@ -1,0 +1,18 @@
+{
+    "bf16": {
+        "enabled": "auto"
+    },
+    "fp16": {
+        "enabled": "auto"
+    },
+    "zero_optimization":{
+    "stage":0
+    },
+    "lr_scheduler": {
+    "update_on_step":false
+    },
+    "gradient_accumulation_steps": "auto",
+    "steps_per_print": "auto",
+    "train_micro_batch_size_per_gpu": "auto",
+    "wall_clock_breakdown": false
+}
