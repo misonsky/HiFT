@@ -165,34 +165,32 @@ Theoretically `HiFT` supports any model. For a new model:
 > 4. provide a regular expression in `pattern_name` that identifies all layers.
 > 5. The process of extracting identifiers for each layer is provided in group_model.****
 
+This is an example of OPT model.
 ```
-class ModelCallBack(HiFTCallBack):
+class OPTCallBack(HiFTCallBack):
     TaskTInterface = [TaskType.SEQ_CLS,TaskType.QUESTION_ANS,TaskType.CAUSAL_LM]
     def __init__(self,freeze_layers,strategy,lora_tuning=False):
         super().__init__(freeze_layers,strategy)
         self.number_position = 5 if lora_tuning else 3
     @classmethod
     def SequenceClassificationSpecialLayer(cls):
-       special_layers = [r"xxxx","xxxx","xxxx"]
+       special_layers = [r"w[^ ]e","score"]
        return special_layers
     @classmethod
     def QuestionAnsweringSpecialLayer(cls):
-        special_layers = [r"xxxx","xxxx","xxxx"]
+        special_layers = [r"w[^ ]e","qa_outputs"]
         return special_layers
     @classmethod
     def CausalLMSpecialLayer(cls):
-        special_layers = [r"xxxx","xxxx","xxxx"]
+        special_layers = [r"embed_[^ ]+","final_layer_norm"]
         return special_layers
     @classmethod
     def GetSpecialLayer(cls,taskType):
         logger.warning("For OPT the HiTaskType should be {}".format(" , ".join(cls.TaskTInterface)))
         assert taskType in cls.TaskTInterface
-        if taskType == TaskType.SEQ_CLS:
-             return cls.SequenceClassificationSpecialLayer()
-        if taskType == TaskType.TOKEN_CLS:
-             return cls.TokenClassificationSpecialLayer()
         if taskType == TaskType.CAUSAL_LM:
             return cls.CausalLMSpecialLayer()
+        return super().GetSpecialLayer(taskType)
     def pattern_name(self,special_layers):
         patterns = [rf'\.\d+\.']
         patterns.extend([rf'{layer}' for layer in special_layers])
