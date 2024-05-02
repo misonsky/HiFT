@@ -163,7 +163,7 @@ Theoretically `HiFT` supports any model. For a new model:
 > 2. For different task types, please provide irregular layer regular expressions for identifying them, such as functions `SequenceClassificationSpecialLayer`, `QuestionAnsweringSpecialLayer`, `CausalLMSpecialLayer`  
 > 3. Match different task types with corresponding regular expressions, such as `GetSpecialLayer`  
 > 4. provide a regular expression in `pattern_name` that identifies all layers.
-> 5. The process of extracting identifiers for each layer is provided in group_model.****
+> 5. The process of extracting identifiers for each layer is provided in group_model.
 
 This is an example of OPT model.
 ```
