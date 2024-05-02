@@ -10,7 +10,7 @@ Paper: https://arxiv.org/abs/2401.15207 <br>
 
 *26/1/2024*: Publish the first version of `HiFT` manuscript  
 *25/2/2024*: Publish the second version of `HiFT` manuscript and source code  
-*1/5/2024*:  Updated HiFT support for `LoRA`     
+*1/5/2024*:  Update HiFT support for `LoRA`     
 
 ## Repository Overview  
 
