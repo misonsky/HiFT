@@ -1,6 +1,6 @@
 # HiFT: A Hierarchical Full Parameter Fine-Tuning Strategy
 
-This repo contains the source code of the Python package `HiFT` and several examples of how to integrate it with PyTorch models, such as those in Hugging Face. We only support PyTorch for now. See [our paper](xxxx) for a detailed description of ·`HiFT`. `HiFT` supports FPFT of **7B** models for **24G** GPU memory devices under mixed precision without using any memory saving techniques and various optimizers including `AdamW`, `AdaGrad`, `SGD`, etc. 
+This repo contains the source code of the Python package `HiFT` and several examples of how to integrate it with PyTorch models, such as those in Hugging Face. We only support PyTorch for now. See [our paper](https://arxiv.org/abs/2401.15207) for a detailed description of ·`HiFT`. `HiFT` supports FPFT of **7B** models for **24G** GPU memory devices under mixed precision without using any memory saving techniques and various optimizers including `AdamW`, `AdaGrad`, `SGD`, etc. 
 
 **HiFT: A Hierarchical Full Parameter Fine-Tuning Strategy** <br>
 *Yongkang Liu, Yiqun Zhang, Qian Li, Tong Liu, Shi Feng, Daling Wang, Yifei Zhang, Hinrich Schütze* <br>
