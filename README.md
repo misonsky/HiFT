@@ -37,7 +37,7 @@ Instruction fine-tuning 7B model on A6000 (48G), and the experimental results sh
 
 ## Quickstart  
 
-1. **Installing `hift`   
+1. Installing `hift`  
  ```bash
  pip install hift
  ```
