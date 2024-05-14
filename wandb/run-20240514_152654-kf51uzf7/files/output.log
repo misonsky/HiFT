@@ -1,0 +1,1807 @@
+  0%|          | 0/3218 [00:00<?, ?it/s]/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/deepspeed/runtime/utils.py:274: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/conda/conda-bld/pytorch_1699449229234/work/torch/csrc/tensor/python_tensor.cpp:83.)
+  overflow_gpu = get_accelerator().ByteTensor([overflow])
+[2024-05-14 15:26:59,268] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 0
+[2024-05-14 15:26:59,269] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 65536.0 to 32768.0
+[2024-05-14 15:26:59,270] [INFO] [replace_operation.py:230:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 65536.0, reducing to 32768.0
+{'loss': 1.834, 'learning_rate': 1e-05, 'epoch': 0.0}
+
+
+
+
+
+  0%|          | 8/3218 [00:12<1:31:04,  1.70s/it]
+[2024-05-14 15:27:11,398] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 8
+[2024-05-14 15:27:11,398] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 32768.0 to 16384.0
+
+  0%|          | 10/3218 [00:15<1:26:00,  1.61s/it]
+
+
+
+
+
+
+
+
+
+
+  1%|          | 20/3218 [00:34<1:44:00,  1.95s/it]
+
+
+
+
+
+
+
+
+
+  1%|          | 30/3218 [00:53<1:34:51,  1.79s/it]
+
+
+
+
+
+
+
+
+
+  1%|          | 40/3218 [01:11<1:43:19,  1.95s/it]
+
+
+
+
+
+
+
+
+
+  2%|▏         | 50/3218 [01:34<2:05:19,  2.37s/it]
+
+
+
+
+
+
+
+
+
+
+  2%|▏         | 60/3218 [02:00<2:21:04,  2.68s/it]
+
+
+
+
+
+
+
+
+
+  2%|▏         | 70/3218 [02:23<1:39:55,  1.90s/it]
+
+
+
+
+
+
+
+
+
+
+  2%|▏         | 80/3218 [02:46<1:58:33,  2.27s/it]
+
+
+
+
+
+
+
+
+
+
+  3%|▎         | 90/3218 [03:11<2:15:35,  2.60s/it]
+
+
+
+
+
+
+
+
+
+  3%|▎         | 99/3218 [03:34<2:14:38,  2.59s/it]
+  3%|▎         | 100/3218 [03:36<2:13:05,  2.56s/it][INFO|trainer.py:3166] 2024-05-14 15:30:35,041 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 15:30:35,047 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 15:30:35,047 >>   Batch size = 8
+
+
+
+
+
+ 94%|█████████▍| 31/33 [00:09<00:00,  3.33it/s]
+
+
+
+
+
+
+
+
+
+  3%|▎         | 110/3218 [04:09<2:09:03,  2.49s/it]
+
+
+
+
+
+
+
+
+
+  4%|▎         | 119/3218 [04:32<2:12:41,  2.57s/it]
+
+
+
+
+
+
+
+
+
+
+
+  4%|▍         | 130/3218 [05:00<2:02:39,  2.38s/it]
+
+
+
+
+
+
+
+
+
+  4%|▍         | 140/3218 [05:23<1:50:56,  2.16s/it]
+
+
+
+
+
+
+
+
+
+
+  5%|▍         | 150/3218 [05:48<2:04:01,  2.43s/it]
+
+
+
+
+
+
+
+
+
+
+  5%|▍         | 160/3218 [06:15<2:17:43,  2.70s/it]
+
+
+
+
+
+
+
+
+
+
+  5%|▌         | 170/3218 [06:41<2:06:59,  2.50s/it]
+
+
+
+
+
+
+
+
+
+  6%|▌         | 180/3218 [07:05<1:58:40,  2.34s/it]
+
+
+
+
+
+
+
+
+
+
+  6%|▌         | 190/3218 [07:29<1:59:02,  2.36s/it]
+
+
+
+
+
+
+
+
+
+  6%|▌         | 200/3218 [07:56<2:09:38,  2.58s/it][INFO|trainer.py:3166] 2024-05-14 15:34:54,662 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 15:34:54,663 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 15:34:54,663 >>   Batch size = 8
+{'loss': 1.4708, 'learning_rate': 9.999940432850114e-06, 'epoch': 0.06}
+
+
+
+
+ 97%|█████████▋| 32/33 [00:09<00:00,  3.44it/s]
+
+  6%|▌         | 200/3218 [08:06<2:09:38,  2.58[INFO|trainer.py:2889] 2024-05-14 15:35:11,503 >> Saving model checkpoint to outputs/instruct_tuning/model/tmp-checkpoint-200
+[INFO|configuration_utils.py:483] 2024-05-14 15:35:11,531 >> Configuration saved in outputs/instruct_tuning/model/tmp-checkpoint-200/config.json
+[INFO|configuration_utils.py:594] 2024-05-14 15:35:11,538 >> Configuration saved in outputs/instruct_tuning/model/tmp-checkpoint-200/generation_config.json
+[INFO|modeling_utils.py:2390] 2024-05-14 15:35:35,449 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 3 checkpoint shards. You can find where each parameters has been saved in the index located at outputs/instruct_tuning/model/tmp-checkpoint-200/model.safetensors.index.json.
+[INFO|tokenization_utils_base.py:2432] 2024-05-14 15:35:35,517 >> tokenizer config file saved in outputs/instruct_tuning/model/tmp-checkpoint-200/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2441] 2024-05-14 15:35:35,517 >> Special tokens file saved in outputs/instruct_tuning/model/tmp-checkpoint-200/special_tokens_map.json
+/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py:1879: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+[2024-05-14 15:35:36,280] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step200 is about to be saved!
+[2024-05-14 15:35:36,484] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: outputs/instruct_tuning/model/tmp-checkpoint-200/global_step200/mp_rank_00_model_states.pt
+[2024-05-14 15:35:36,484] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving outputs/instruct_tuning/model/tmp-checkpoint-200/global_step200/mp_rank_00_model_states.pt...
+[2024-05-14 15:37:48,717] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved outputs/instruct_tuning/model/tmp-checkpoint-200/global_step200/mp_rank_00_model_states.pt.
+[2024-05-14 15:37:48,719] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step200 is ready now!
+
+
+
+
+
+
+
+
+  7%|▋         | 210/3218 [11:24<3:52:42,  4.64s/it]
+
+
+
+
+
+
+
+
+
+
+  7%|▋         | 220/3218 [11:50<2:10:05,  2.60s/it]
+
+
+
+
+
+
+
+
+
+
+  7%|▋         | 230/3218 [12:24<3:39:15,  4.40s/it]
+
+
+
+
+
+
+
+
+
+  7%|▋         | 240/3218 [13:02<2:23:53,  2.90s/it]
+
+
+
+
+
+
+
+
+
+  8%|▊         | 249/3218 [13:37<3:20:38,  4.05s/it]
+
+
+
+
+
+
+
+
+
+
+  8%|▊         | 259/3218 [14:00<2:00:13,  2.44s/it]
+
+
+
+
+
+
+
+
+
+
+
+  8%|▊         | 270/3218 [14:56<6:31:47,  7.97s/it]
+
+
+
+
+
+
+
+
+
+
+  9%|▊         | 280/3218 [15:30<2:49:11,  3.46s/it]
+
+
+
+
+
+
+
+
+
+  9%|▉         | 289/3218 [16:00<2:24:17,  2.96s/it]
+
+
+
+
+
+
+
+
+
+
+  9%|▉         | 300/3218 [16:34<2:34:16,  3.17s/it][INFO|trainer.py:3166] 2024-05-14 15:43:32,616 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 15:43:32,617 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 15:43:32,617 >>   Batch size = 8
+  0%|          | 0/33 [00:00<?, ?it/s]
+
+
+
+
+
+ 88%|████████▊ | 29/33 [00:08<00:01,  3.22it/s]
+
+
+
+
+
+
+
+
+
+ 10%|▉         | 309/3218 [17:17<3:01:27,  3.74s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 10%|▉         | 320/3218 [18:10<2:55:05,  3.63s/it]
+
+
+
+
+
+
+
+
+
+
+ 10%|█         | 330/3218 [18:40<2:55:14,  3.64s/it]
+
+
+
+
+
+
+
+
+
+
+ 11%|█         | 340/3218 [19:13<2:41:00,  3.36s/it]
+
+
+
+
+
+
+
+
+
+ 11%|█         | 350/3218 [19:48<2:54:26,  3.65s/it]
+
+
+
+
+
+
+
+
+
+
+ 11%|█         | 360/3218 [20:15<1:57:31,  2.47s/it]
+
+
+
+
+
+
+
+
+
+
+ 11%|█▏        | 370/3218 [20:50<2:54:48,  3.68s/it]
+
+
+
+
+
+
+
+
+
+
+ 12%|█▏        | 380/3218 [21:26<2:45:04,  3.49s/it]
+
+
+
+
+
+
+
+
+
+
+ 12%|█▏        | 390/3218 [21:52<2:04:34,  2.64s/it]
+
+
+
+
+
+
+
+
+
+ 12%|█▏        | 400/3218 [22:18<1:59:38,  2.55s/it][INFO|trainer.py:3166] 2024-05-14 15:49:16,693 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 15:49:16,694 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 15:49:16,694 >>   Batch size = 8
+  6%|▌         | 2/33 [00:00<00:02, 11.91it/s]
+
+
+
+
+
+ 91%|█████████ | 30/33 [00:08<00:00,  3.44it/s]
+ 12%|█▏        | 400/3218 [22:28<1:59:38,  2.55[INFO|trainer.py:2889] 2024-05-14 15:49:31,422 >> Saving model checkpoint to outputs/instruct_tuning/model/tmp-checkpoint-400
+[INFO|configuration_utils.py:483] 2024-05-14 15:49:31,429 >> Configuration saved in outputs/instruct_tuning/model/tmp-checkpoint-400/config.json
+[INFO|configuration_utils.py:594] 2024-05-14 15:49:31,438 >> Configuration saved in outputs/instruct_tuning/model/tmp-checkpoint-400/generation_config.json
+[INFO|modeling_utils.py:2390] 2024-05-14 15:49:52,817 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 3 checkpoint shards. You can find where each parameters has been saved in the index located at outputs/instruct_tuning/model/tmp-checkpoint-400/model.safetensors.index.json.
+[INFO|tokenization_utils_base.py:2432] 2024-05-14 15:49:52,888 >> tokenizer config file saved in outputs/instruct_tuning/model/tmp-checkpoint-400/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2441] 2024-05-14 15:49:52,889 >> Special tokens file saved in outputs/instruct_tuning/model/tmp-checkpoint-400/special_tokens_map.json
+/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py:1879: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+[2024-05-14 15:49:53,497] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step400 is about to be saved!
+[2024-05-14 15:49:53,607] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: outputs/instruct_tuning/model/tmp-checkpoint-400/global_step400/mp_rank_00_model_states.pt
+[2024-05-14 15:49:53,607] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving outputs/instruct_tuning/model/tmp-checkpoint-400/global_step400/mp_rank_00_model_states.pt...
+[2024-05-14 15:52:13,734] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved outputs/instruct_tuning/model/tmp-checkpoint-400/global_step400/mp_rank_00_model_states.pt.
+[2024-05-14 15:52:13,735] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step400 is ready now!
+
+
+
+
+
+
+
+
+
+ 13%|█▎        | 410/3218 [25:43<3:38:22,  4.67s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 13%|█▎        | 420/3218 [26:14<2:28:53,  3.19s/it]
+
+
+
+
+
+
+
+
+
+
+ 13%|█▎        | 430/3218 [26:43<2:13:21,  2.87s/it]
+
+
+
+
+
+
+
+
+
+
+ 14%|█▎        | 440/3218 [27:08<1:51:20,  2.40s/it]
+
+
+
+
+
+
+
+
+
+
+ 14%|█▍        | 450/3218 [27:32<2:00:48,  2.62s/it]
+
+
+
+
+
+
+
+
+
+
+ 14%|█▍        | 460/3218 [28:00<2:09:35,  2.82s/it]
+
+
+
+
+
+
+
+
+
+
+ 15%|█▍        | 470/3218 [28:26<1:49:31,  2.39s/it]
+
+
+
+
+
+
+
+
+
+
+ 15%|█▍        | 480/3218 [28:47<1:43:59,  2.28s/it]
+
+
+
+
+
+
+
+
+
+
+ 15%|█▌        | 490/3218 [29:13<1:51:11,  2.45s/it]
+
+
+
+
+
+
+
+
+
+ 16%|█▌        | 500/3218 [29:37<1:48:25,  2.39s/it][INFO|trainer.py:3166] 2024-05-14 15:56:35,298 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 15:56:35,298 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 15:56:35,298 >>   Batch size = 8
+  6%|▌         | 2/33 [00:00<00:02, 11.85it/s]
+
+
+
+
+
+ 91%|█████████ | 30/33 [00:08<00:00,  3.43it/s]
+
+
+
+
+
+
+
+
+
+
+ 16%|█▌        | 510/3218 [30:08<1:40:38,  2.23s/it]
+
+
+
+
+
+
+
+
+
+ 16%|█▌        | 520/3218 [30:32<1:51:51,  2.49s/it]
+
+
+
+
+
+
+
+
+
+
+ 16%|█▋        | 530/3218 [30:56<1:45:00,  2.34s/it]
+
+
+
+
+
+
+
+
+
+ 17%|█▋        | 539/3218 [31:16<1:33:43,  2.10s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 17%|█▋        | 550/3218 [31:40<1:43:27,  2.33s/it]
+
+
+
+
+
+
+
+
+
+
+ 17%|█▋        | 560/3218 [32:05<1:59:35,  2.70s/it]
+
+
+
+
+
+
+
+
+
+
+ 18%|█▊        | 570/3218 [32:29<1:42:36,  2.32s/it]
+
+
+
+
+
+
+
+
+
+ 18%|█▊        | 580/3218 [32:50<1:35:12,  2.17s/it]
+
+
+
+
+
+
+
+
+
+
+ 18%|█▊        | 590/3218 [33:15<1:49:35,  2.50s/it]
+
+
+
+
+
+
+
+
+
+
+ 19%|█▊        | 600/3218 [33:38<1:41:50,  2.33s/it]
+ 19%|█▊        | 600/3218 [33:38<1:41:50,  2.33s/it][INFO|trainer.py:3166] 2024-05-14 16:00:36,890 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 16:00:36,890 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 16:00:36,890 >>   Batch size = 8
+
+
+
+
+
+ 97%|█████████▋| 32/33 [00:09<00:00,  3.43it/s]
+ 19%|█▊        | 600/3218 [33:49<1:41:50,  2.33[INFO|trainer.py:2889] 2024-05-14 16:00:51,629 >> Saving model checkpoint to outputs/instruct_tuning/model/tmp-checkpoint-600
+[INFO|configuration_utils.py:483] 2024-05-14 16:00:51,632 >> Configuration saved in outputs/instruct_tuning/model/tmp-checkpoint-600/config.json
+[INFO|configuration_utils.py:594] 2024-05-14 16:00:51,633 >> Configuration saved in outputs/instruct_tuning/model/tmp-checkpoint-600/generation_config.json
+[INFO|modeling_utils.py:2390] 2024-05-14 16:01:14,051 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 3 checkpoint shards. You can find where each parameters has been saved in the index located at outputs/instruct_tuning/model/tmp-checkpoint-600/model.safetensors.index.json.
+[INFO|tokenization_utils_base.py:2432] 2024-05-14 16:01:14,053 >> tokenizer config file saved in outputs/instruct_tuning/model/tmp-checkpoint-600/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2441] 2024-05-14 16:01:14,053 >> Special tokens file saved in outputs/instruct_tuning/model/tmp-checkpoint-600/special_tokens_map.json
+/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py:1879: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+[2024-05-14 16:01:14,555] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step600 is about to be saved!
+[2024-05-14 16:01:14,562] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: outputs/instruct_tuning/model/tmp-checkpoint-600/global_step600/mp_rank_00_model_states.pt
+[2024-05-14 16:01:14,562] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving outputs/instruct_tuning/model/tmp-checkpoint-600/global_step600/mp_rank_00_model_states.pt...
+[2024-05-14 16:03:14,339] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved outputs/instruct_tuning/model/tmp-checkpoint-600/global_step600/mp_rank_00_model_states.pt.
+[2024-05-14 16:03:14,340] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step600 is ready now!
+
+
+
+
+
+
+
+
+
+ 19%|█▉        | 610/3218 [36:38<2:54:40,  4.02s/it]
+
+
+
+
+
+
+
+
+
+ 19%|█▉        | 620/3218 [37:00<1:41:24,  2.34s/it]
+
+
+
+
+
+
+
+
+
+
+ 20%|█▉        | 630/3218 [37:24<1:44:53,  2.43s/it]
+
+
+
+
+
+
+
+
+
+
+ 20%|█▉        | 640/3218 [37:47<1:32:57,  2.16s/it]
+
+
+
+
+
+
+
+
+
+
+ 20%|██        | 650/3218 [38:08<1:32:41,  2.17s/it]
+
+
+
+
+
+
+
+
+
+
+ 21%|██        | 660/3218 [38:32<1:41:40,  2.39s/it]
+
+
+
+
+
+
+
+
+
+
+ 21%|██        | 670/3218 [38:58<1:47:48,  2.54s/it]
+
+
+
+
+
+
+
+
+
+
+ 21%|██        | 680/3218 [39:19<1:29:21,  2.11s/it]
+
+
+
+
+
+
+
+
+
+ 21%|██▏       | 690/3218 [39:43<1:41:26,  2.41s/it]
+
+
+
+
+
+
+
+
+
+ 22%|██▏       | 700/3218 [40:07<1:37:37,  2.33s/it][INFO|trainer.py:3166] 2024-05-14 16:07:05,205 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 16:07:05,205 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 16:07:05,205 >>   Batch size = 8
+{'loss': 1.4666, 'learning_rate': 9.9990469539875e-06, 'epoch': 0.22}
+
+
+
+
+ 97%|█████████▋| 32/33 [00:09<00:00,  3.44it/s]
+
+
+
+
+
+
+
+
+
+
+
+ 22%|██▏       | 710/3218 [40:39<1:34:03,  2.25s/it]
+
+
+
+
+
+
+
+
+
+ 22%|██▏       | 720/3218 [41:01<1:38:06,  2.36s/it]
+
+
+
+
+
+
+
+
+
+
+ 23%|██▎       | 730/3218 [41:26<1:45:29,  2.54s/it]
+
+
+
+
+
+
+
+
+
+
+ 23%|██▎       | 740/3218 [41:49<1:33:05,  2.25s/it]
+
+
+
+
+
+
+
+
+
+
+ 23%|██▎       | 750/3218 [42:09<1:17:25,  1.88s/it]
+
+
+
+
+
+
+
+
+
+
+ 24%|██▎       | 760/3218 [42:33<1:38:17,  2.40s/it]
+
+
+
+
+
+
+
+
+
+
+ 24%|██▍       | 770/3218 [42:58<1:30:48,  2.23s/it]
+
+
+
+
+
+
+
+
+
+
+ 24%|██▍       | 780/3218 [43:19<1:24:48,  2.09s/it]
+
+
+
+
+
+
+
+
+
+ 25%|██▍       | 790/3218 [43:42<1:37:10,  2.40s/it]
+
+
+
+
+
+
+
+
+
+ 25%|██▍       | 800/3218 [44:08<1:49:21,  2.71s/it][INFO|trainer.py:3166] 2024-05-14 16:11:06,139 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 16:11:06,139 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 16:11:06,139 >>   Batch size = 8
+ 12%|█▏        | 4/33 [00:01<00:08,  3.36it/s]
+
+
+
+
+
+ 94%|█████████▍| 31/33 [00:09<00:00,  3.32it/s]
+ 25%|██▍       | 800/3218 [44:18<1:49:21,  2.71[INFO|trainer.py:2889] 2024-05-14 16:11:20,953 >> Saving model checkpoint to outputs/instruct_tuning/model/tmp-checkpoint-800
+[INFO|configuration_utils.py:483] 2024-05-14 16:11:20,955 >> Configuration saved in outputs/instruct_tuning/model/tmp-checkpoint-800/config.json
+[INFO|configuration_utils.py:594] 2024-05-14 16:11:20,956 >> Configuration saved in outputs/instruct_tuning/model/tmp-checkpoint-800/generation_config.json
+[INFO|modeling_utils.py:2390] 2024-05-14 16:11:43,684 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 3 checkpoint shards. You can find where each parameters has been saved in the index located at outputs/instruct_tuning/model/tmp-checkpoint-800/model.safetensors.index.json.
+[INFO|tokenization_utils_base.py:2432] 2024-05-14 16:11:43,685 >> tokenizer config file saved in outputs/instruct_tuning/model/tmp-checkpoint-800/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2441] 2024-05-14 16:11:43,686 >> Special tokens file saved in outputs/instruct_tuning/model/tmp-checkpoint-800/special_tokens_map.json
+/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py:1879: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+[2024-05-14 16:11:44,196] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step800 is about to be saved!
+[2024-05-14 16:11:44,203] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: outputs/instruct_tuning/model/tmp-checkpoint-800/global_step800/mp_rank_00_model_states.pt
+[2024-05-14 16:11:44,203] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving outputs/instruct_tuning/model/tmp-checkpoint-800/global_step800/mp_rank_00_model_states.pt...
+[INFO|trainer.py:2979] 2024-05-14 16:14:00,567 >> Deleting older checkpoint [outputs/instruct_tuning/model/checkpoint-200] due to args.save_total_limit
+[2024-05-14 16:14:00,545] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved outputs/instruct_tuning/model/tmp-checkpoint-800/global_step800/mp_rank_00_model_states.pt.
+[2024-05-14 16:14:00,547] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step800 is ready now!
+
+
+
+
+
+
+
+
+
+ 25%|██▌       | 810/3218 [47:27<2:55:12,  4.37s/it]
+
+
+
+
+
+
+
+
+
+ 25%|██▌       | 820/3218 [47:48<1:23:48,  2.10s/it]
+
+
+
+
+
+
+
+
+
+
+ 26%|██▌       | 830/3218 [48:11<1:30:25,  2.27s/it]
+
+
+
+
+
+
+
+
+
+
+ 26%|██▌       | 840/3218 [48:35<1:32:00,  2.32s/it]
+
+
+
+
+
+
+
+
+
+
+ 26%|██▋       | 850/3218 [48:56<1:18:56,  2.00s/it]
+
+
+
+
+
+
+
+
+
+ 27%|██▋       | 860/3218 [49:16<1:25:29,  2.18s/it]
+
+
+
+
+
+
+
+
+
+
+ 27%|██▋       | 870/3218 [49:38<1:22:20,  2.10s/it]
+
+
+
+
+
+
+
+
+
+
+ 27%|██▋       | 880/3218 [49:59<1:16:51,  1.97s/it]
+
+
+
+
+
+
+
+
+
+ 28%|██▊       | 890/3218 [50:19<1:24:36,  2.18s/it]
+
+
+
+
+
+
+
+
+
+ 28%|██▊       | 900/3218 [50:44<1:34:51,  2.46s/it][INFO|trainer.py:3166] 2024-05-14 16:17:42,481 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 16:17:42,481 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 16:17:42,481 >>   Batch size = 8
+ 15%|█▌        | 5/33 [00:01<00:07,  3.56it/s]
+
+
+
+
+
+ 94%|█████████▍| 31/33 [00:09<00:00,  3.32it/s]
+
+
+
+
+
+
+
+
+
+
+ 28%|██▊       | 910/3218 [51:17<1:38:42,  2.57s/it]
+
+
+
+
+
+
+
+
+
+ 29%|██▊       | 920/3218 [51:38<1:10:37,  1.84s/it]
+
+
+
+
+
+
+
+
+
+
+ 29%|██▉       | 930/3218 [52:01<1:26:52,  2.28s/it]
+
+
+
+
+
+
+
+
+
+
+ 29%|██▉       | 940/3218 [52:25<1:31:39,  2.41s/it]
+
+
+
+
+
+
+
+
+
+
+ 30%|██▉       | 950/3218 [52:46<1:19:04,  2.09s/it]
+
+
+
+
+
+
+
+
+
+ 30%|██▉       | 960/3218 [53:08<1:27:07,  2.31s/it]
+
+
+
+
+
+
+
+
+
+
+ 30%|███       | 970/3218 [53:31<1:25:06,  2.27s/it]
+
+
+
+
+
+
+
+
+
+
+ 30%|███       | 980/3218 [53:53<1:17:37,  2.08s/it]
+
+
+
+
+
+
+ 31%|███       | 986/3218 [54:06<1:18:29,  2.11s/it]
+[2024-05-14 16:21:05,554] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 986
+[2024-05-14 16:21:05,554] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 16384.0 to 8192.0
+
+
+
+ 31%|███       | 990/3218 [54:15<1:23:34,  2.25s/it]
+
+
+
+
+
+
+
+
+
+ 31%|███       | 1000/3218 [54:39<1:23:53,  2.27s/it][INFO|trainer.py:3166] 2024-05-14 16:21:37,985 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 16:21:37,985 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 16:21:37,986 >>   Batch size = 8
+  0%|          | 0/33 [00:00<?, ?it/s]
+
+
+
+
+
+ 82%|████████▏ | 27/33 [00:07<00:01,  3.39it/s]
+ 31%|███       | 1000/3218 [54:50<1:23:53,  2.2[INFO|trainer.py:2889] 2024-05-14 16:21:52,832 >> Saving model checkpoint to outputs/instruct_tuning/model/tmp-checkpoint-1000
+[INFO|configuration_utils.py:483] 2024-05-14 16:21:52,834 >> Configuration saved in outputs/instruct_tuning/model/tmp-checkpoint-1000/config.json
+[INFO|configuration_utils.py:594] 2024-05-14 16:21:52,835 >> Configuration saved in outputs/instruct_tuning/model/tmp-checkpoint-1000/generation_config.json
+[INFO|modeling_utils.py:2390] 2024-05-14 16:22:16,601 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 3 checkpoint shards. You can find where each parameters has been saved in the index located at outputs/instruct_tuning/model/tmp-checkpoint-1000/model.safetensors.index.json.
+[INFO|tokenization_utils_base.py:2432] 2024-05-14 16:22:16,602 >> tokenizer config file saved in outputs/instruct_tuning/model/tmp-checkpoint-1000/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2441] 2024-05-14 16:22:16,603 >> Special tokens file saved in outputs/instruct_tuning/model/tmp-checkpoint-1000/special_tokens_map.json
+/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py:1879: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+[2024-05-14 16:22:17,087] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step1000 is about to be saved!
+[2024-05-14 16:22:17,093] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: outputs/instruct_tuning/model/tmp-checkpoint-1000/global_step1000/mp_rank_00_model_states.pt
+[2024-05-14 16:22:17,093] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving outputs/instruct_tuning/model/tmp-checkpoint-1000/global_step1000/mp_rank_00_model_states.pt...
+[INFO|trainer.py:2979] 2024-05-14 16:24:32,265 >> Deleting older checkpoint [outputs/instruct_tuning/model/checkpoint-400] due to args.save_total_limit
+[2024-05-14 16:24:32,253] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved outputs/instruct_tuning/model/tmp-checkpoint-1000/global_step1000/mp_rank_00_model_states.pt.
+[2024-05-14 16:24:32,254] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step1000 is ready now!
+
+
+
+
+
+
+
+
+
+ 31%|███▏      | 1010/3218 [58:01<2:45:20,  4.49s/it]
+
+
+
+
+
+
+
+
+
+
+ 32%|███▏      | 1020/3218 [58:23<1:21:21,  2.22s/it]
+
+
+
+
+
+
+
+
+
+
+ 32%|███▏      | 1030/3218 [58:46<1:32:19,  2.53s/it]
+
+
+
+
+
+
+
+
+
+ 32%|███▏      | 1039/3218 [59:08<1:28:19,  2.43s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 33%|███▎      | 1050/3218 [59:33<1:18:24,  2.17s/it]
+
+
+
+
+
+
+ 33%|███▎      | 1056/3218 [59:45<1:08:22,  1.90s/it]
+[2024-05-14 16:26:44,729] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 1056
+[2024-05-14 16:26:44,730] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 8192.0 to 4096.0
+
+
+
+ 33%|███▎      | 1059/3218 [59:52<1:19:14,  2.20s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 33%|███▎      | 1070/3218 [1:00:19<1:27:18,  2.44s/it]
+
+
+
+
+
+
+
+
+
+
+ 34%|███▎      | 1080/3218 [1:00:44<1:23:11,  2.33s/it]
+
+
+
+
+
+
+
+
+
+ 34%|███▍      | 1090/3218 [1:01:04<1:05:53,  1.86s/it]
+
+
+
+
+
+
+
+
+
+
+ 34%|███▍      | 1100/3218 [1:01:28<1:28:19,  2.50s/it]
+ 34%|███▍      | 1100/3218 [1:01:28<1:28:19,  2.50s/it][INFO|trainer.py:3166] 2024-05-14 16:28:26,957 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 16:28:26,958 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 16:28:26,958 >>   Batch size = 8
+
+
+
+
+ 97%|█████████▋| 32/33 [00:09<00:00,  3.43it/s]
+
+
+
+
+
+
+
+
+
+
+
+ 34%|███▍      | 1110/3218 [1:02:02<1:23:53,  2.39s/it]
+
+
+
+
+
+
+
+
+
+
+ 35%|███▍      | 1120/3218 [1:02:24<1:16:26,  2.19s/it]
+
+
+
+
+
+
+
+
+
+ 35%|███▌      | 1129/3218 [1:02:42<1:16:29,  2.20s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 35%|███▌      | 1140/3218 [1:03:10<1:31:56,  2.65s/it]
+
+
+
+
+
+
+
+
+
+
+ 36%|███▌      | 1150/3218 [1:03:32<1:15:43,  2.20s/it]
+
+
+
+
+
+
+
+
+
+ 36%|███▌      | 1159/3218 [1:03:52<1:13:16,  2.14s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 36%|███▋      | 1170/3218 [1:04:20<1:26:56,  2.55s/it]
+
+
+
+
+
+
+
+
+
+
+ 37%|███▋      | 1180/3218 [1:04:44<1:19:29,  2.34s/it]
+
+
+
+
+
+
+
+
+
+
+ 37%|███▋      | 1190/3218 [1:05:06<1:11:29,  2.12s/it]
+
+
+
+
+
+
+
+
+
+ 37%|███▋      | 1200/3218 [1:05:30<1:28:28,  2.63s/it][INFO|trainer.py:3166] 2024-05-14 16:32:28,497 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 16:32:28,498 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 16:32:28,498 >>   Batch size = 8
+  6%|▌         | 2/33 [00:00<00:02, 11.91it/s]
+
+
+
+
+
+ 85%|████████▍ | 28/33 [00:08<00:01,  3.20it/s]
+ 37%|███▋      | 1200/3218 [1:05:40<1:28:28,  2[INFO|trainer.py:2889] 2024-05-14 16:32:43,403 >> Saving model checkpoint to outputs/instruct_tuning/model/tmp-checkpoint-1200
+[INFO|configuration_utils.py:483] 2024-05-14 16:32:43,405 >> Configuration saved in outputs/instruct_tuning/model/tmp-checkpoint-1200/config.json
+[INFO|configuration_utils.py:594] 2024-05-14 16:32:43,406 >> Configuration saved in outputs/instruct_tuning/model/tmp-checkpoint-1200/generation_config.json
+[INFO|modeling_utils.py:2390] 2024-05-14 16:33:09,101 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 3 checkpoint shards. You can find where each parameters has been saved in the index located at outputs/instruct_tuning/model/tmp-checkpoint-1200/model.safetensors.index.json.
+[INFO|tokenization_utils_base.py:2432] 2024-05-14 16:33:09,103 >> tokenizer config file saved in outputs/instruct_tuning/model/tmp-checkpoint-1200/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2441] 2024-05-14 16:33:09,104 >> Special tokens file saved in outputs/instruct_tuning/model/tmp-checkpoint-1200/special_tokens_map.json
+[2024-05-14 16:33:09,597] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step1200 is about to be saved!
+[2024-05-14 16:33:09,603] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: outputs/instruct_tuning/model/tmp-checkpoint-1200/global_step1200/mp_rank_00_model_states.pt
+[2024-05-14 16:33:09,604] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving outputs/instruct_tuning/model/tmp-checkpoint-1200/global_step1200/mp_rank_00_model_states.pt...
+/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py:1879: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+[2024-05-14 16:35:19,725] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved outputs/instruct_tuning/model/tmp-checkpoint-1200/global_step1200/mp_rank_00_model_states.pt.
+[INFO|trainer.py:2979] 2024-05-14 16:35:19,738 >> Deleting older checkpoint [outputs/instruct_tuning/model/checkpoint-600] due to args.save_total_limit
+[2024-05-14 16:35:19,727] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step1200 is ready now!
+
+
+
+
+
+
+
+
+
+ 38%|███▊      | 1210/3218 [1:08:48<2:29:05,  4.45s/it]
+
+
+
+
+
+
+
+
+
+
+ 38%|███▊      | 1220/3218 [1:09:10<1:12:41,  2.18s/it]
+
+
+
+
+
+
+
+
+
+
+ 38%|███▊      | 1230/3218 [1:09:30<1:10:20,  2.12s/it]
+
+
+
+
+
+
+
+
+
+
+ 39%|███▊      | 1240/3218 [1:09:55<1:16:55,  2.33s/it]
+
+
+
+
+
+
+
+
+
+
+ 39%|███▉      | 1250/3218 [1:10:16<1:09:17,  2.11s/it]
+
+
+
+
+
+
+
+
+
+ 39%|███▉      | 1260/3218 [1:10:34<53:41,  1.65s/it]
+
+
+
+
+
+
+
+
+
+
+ 39%|███▉      | 1270/3218 [1:10:58<1:16:13,  2.35s/it]
+
+
+
+
+
+
+
+
+
+
+ 40%|███▉      | 1280/3218 [1:11:20<1:11:32,  2.21s/it]
+
+
+
+
+
+
+
+
+
+
+ 40%|████      | 1290/3218 [1:11:41<1:06:46,  2.08s/it]
+
+
+
+
+
+
+
+
+ 40%|████      | 1300/3218 [1:12:05<1:25:05,  2.66s/it][INFO|trainer.py:3166] 2024-05-14 16:39:03,585 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 16:39:03,585 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 16:39:03,585 >>   Batch size = 8
+{'loss': 1.503, 'learning_rate': 9.996559789165037e-06, 'epoch': 0.4}
+
+
+
+
+ 97%|█████████▋| 32/33 [00:09<00:00,  3.43it/s]
+
+
+
+
+
+
+
+
+
+
+
+ 41%|████      | 1310/3218 [1:12:39<1:22:08,  2.58s/it]
+
+
+
+
+
+
+
+
+
+
+ 41%|████      | 1320/3218 [1:13:03<1:13:02,  2.31s/it]
+
+
+
+
+
+
+
+
+
+
+ 41%|████▏     | 1330/3218 [1:13:25<1:09:13,  2.20s/it]
+
+
+
+
+
+
+
+
+
+
+ 42%|████▏     | 1340/3218 [1:13:51<1:20:11,  2.56s/it]
+
+
+
+
+
+
+
+
+
+
+ 42%|████▏     | 1350/3218 [1:14:15<1:13:55,  2.37s/it]
+
+
+
+
+
+
+
+
+
+
+ 42%|████▏     | 1360/3218 [1:14:36<1:04:19,  2.08s/it]
+
+
+
+
+
+
+
+
+
+
+ 43%|████▎     | 1370/3218 [1:14:59<1:17:15,  2.51s/it]
+
+
+
+
+
+
+
+
+
+
+ 43%|████▎     | 1379/3218 [1:15:21<1:15:35,  2.47s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 43%|████▎     | 1390/3218 [1:15:46<1:08:20,  2.24s/it]
+
+
+
+
+
+
+
+
+
+
+ 44%|████▎     | 1400/3218 [1:16:07<1:08:00,  2.24s/it]
+ 44%|████▎     | 1400/3218 [1:16:07<1:08:00,  2.24s/it][INFO|trainer.py:3166] 2024-05-14 16:43:06,034 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 16:43:06,035 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 16:43:06,035 >>   Batch size = 8
+
+
+
+
+ 97%|█████████▋| 32/33 [00:09<00:00,  3.43it/s]
+
+ 44%|████▎     | 1400/3218 [1:16:18<1:08:00,  2[INFO|trainer.py:2889] 2024-05-14 16:43:20,651 >> Saving model checkpoint to outputs/instruct_tuning/model/tmp-checkpoint-1400
+[INFO|configuration_utils.py:483] 2024-05-14 16:43:20,653 >> Configuration saved in outputs/instruct_tuning/model/tmp-checkpoint-1400/config.json
+[INFO|configuration_utils.py:594] 2024-05-14 16:43:20,654 >> Configuration saved in outputs/instruct_tuning/model/tmp-checkpoint-1400/generation_config.json
+[INFO|modeling_utils.py:2390] 2024-05-14 16:43:44,840 >> The model is bigger than the maximum size per checkpoint (5GB) and is going to be split in 3 checkpoint shards. You can find where each parameters has been saved in the index located at outputs/instruct_tuning/model/tmp-checkpoint-1400/model.safetensors.index.json.
+[INFO|tokenization_utils_base.py:2432] 2024-05-14 16:43:44,842 >> tokenizer config file saved in outputs/instruct_tuning/model/tmp-checkpoint-1400/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2441] 2024-05-14 16:43:44,842 >> Special tokens file saved in outputs/instruct_tuning/model/tmp-checkpoint-1400/special_tokens_map.json
+/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py:1879: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+[2024-05-14 16:43:45,339] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step1400 is about to be saved!
+[2024-05-14 16:43:45,345] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: outputs/instruct_tuning/model/tmp-checkpoint-1400/global_step1400/mp_rank_00_model_states.pt
+[2024-05-14 16:43:45,345] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving outputs/instruct_tuning/model/tmp-checkpoint-1400/global_step1400/mp_rank_00_model_states.pt...
+[2024-05-14 16:45:52,320] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved outputs/instruct_tuning/model/tmp-checkpoint-1400/global_step1400/mp_rank_00_model_states.pt.
+[2024-05-14 16:45:52,323] [INFO] [torch_checkpoint_engine.py:33:commit] [Torch] Checkpoint global_step1400 is ready now!
+[INFO|trainer.py:2979] 2024-05-14 16:45:52,334 >> Deleting older checkpoint [outputs/instruct_tuning/model/checkpoint-800] due to args.save_total_limit
+
+
+
+
+
+
+
+
+
+ 44%|████▍     | 1410/3218 [1:19:22<2:16:37,  4.53s/it]
+
+
+
+
+
+
+
+
+
+
+ 44%|████▍     | 1420/3218 [1:19:47<1:18:34,  2.62s/it]
+
+
+
+
+
+
+
+
+
+ 44%|████▍     | 1430/3218 [1:20:09<1:01:39,  2.07s/it]
+
+
+
+
+
+
+
+
+
+
+ 45%|████▍     | 1440/3218 [1:20:35<1:11:46,  2.42s/it]
+
+
+
+
+
+
+
+
+
+
+ 45%|████▌     | 1450/3218 [1:20:57<1:06:10,  2.25s/it]
+
+
+
+
+
+
+
+
+
+ 45%|████▌     | 1459/3218 [1:21:16<1:01:20,  2.09s/it]
+
+
+
+
+
+
+
+
+
+
+ 46%|████▌     | 1470/3218 [1:21:42<1:16:06,  2.61s/it]
+

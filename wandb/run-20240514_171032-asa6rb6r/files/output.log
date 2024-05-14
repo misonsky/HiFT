@@ -1,0 +1,207 @@
+  0%|          | 0/2146 [00:00<?, ?it/s]/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/deepspeed/runtime/utils.py:274: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/conda/conda-bld/pytorch_1699449229234/work/torch/csrc/tensor/python_tensor.cpp:83.)
+  overflow_gpu = get_accelerator().ByteTensor([overflow])
+[2024-05-14 17:10:40,396] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 0
+[2024-05-14 17:10:40,396] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 65536.0 to 32768.0
+[2024-05-14 17:10:40,398] [INFO] [replace_operation.py:230:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 65536.0, reducing to 32768.0
+{'loss': 1.8584, 'learning_rate': 1e-05, 'epoch': 0.0}
+
+
+
+
+
+
+  0%|          | 8/2146 [00:15<1:14:45,  2.10s/it]
+[2024-05-14 17:10:55,896] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 8
+[2024-05-14 17:10:55,897] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 32768.0 to 16384.0
+
+
+  0%|          | 10/2146 [00:19<1:13:04,  2.05s/it]
+
+
+
+
+
+
+
+
+  1%|          | 20/2146 [00:37<1:03:04,  1.78s/it]
+
+
+
+
+
+
+
+
+
+  1%|▏         | 30/2146 [00:59<1:18:09,  2.22s/it]
+
+
+
+
+
+
+
+
+  2%|▏         | 39/2146 [01:19<1:20:24,  2.29s/it]
+
+
+
+
+
+
+
+
+
+
+  2%|▏         | 49/2146 [01:46<1:28:57,  2.55s/it]
+
+
+
+
+
+
+
+
+
+
+  3%|▎         | 59/2146 [02:12<1:35:29,  2.75s/it]
+
+
+
+
+
+
+
+
+
+
+
+  3%|▎         | 70/2146 [02:41<1:22:51,  2.39s/it]
+
+
+
+
+
+
+
+
+
+
+  4%|▎         | 80/2146 [03:09<1:33:24,  2.71s/it]
+
+
+
+
+
+
+
+
+
+
+  4%|▍         | 90/2146 [03:34<1:34:41,  2.76s/it]
+
+
+
+
+
+
+
+
+
+  5%|▍         | 99/2146 [03:59<1:34:23,  2.77s/it]
+  5%|▍         | 100/2146 [04:02<1:32:44,  2.72s/it][INFO|trainer.py:3166] 2024-05-14 17:14:41,702 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 17:14:41,703 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 17:14:41,703 >>   Batch size = 8
+
+
+
+
+ 97%|█████████▋| 32/33 [00:09<00:00,  3.43it/s]
+
+
+
+
+
+
+
+
+
+
+
+  5%|▌         | 110/2146 [04:40<1:41:29,  2.99s/it]
+
+
+
+
+
+
+
+
+
+
+  6%|▌         | 120/2146 [05:08<1:27:16,  2.58s/it]
+
+
+
+
+
+
+
+
+
+
+  6%|▌         | 130/2146 [05:38<1:42:12,  3.04s/it]
+
+
+
+
+
+  6%|▋         | 136/2146 [05:54<1:31:03,  2.72s/it]Traceback (most recent call last):
+  File "examples/instruct_tuning.py", line 576, in <module>
+    main()
+  File "examples/instruct_tuning.py", line 549, in main
+    train_result = trainer.train(resume_from_checkpoint=checkpoint)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/transformers/trainer.py", line 1537, in train
+    return inner_training_loop(
+  File "/nfs/datx/lyk/HiFT/hift/trainer.py", line 1231, in _inner_training_loop
+    self._load_rng_state(resume_from_checkpoint)
+  File "/nfs/datx/lyk/HiFT/hift/trainer.py", line 920, in training_step
+    elements = self.select_element()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/transformers/trainer.py", line 2735, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/transformers/trainer.py", line 2758, in compute_loss
+    outputs = model(**inputs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/deepspeed/utils/nvtx.py", line 15, in wrapped_fn
+    ret_val = func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/deepspeed/runtime/engine.py", line 1833, in forward
+    loss = self.module(*inputs, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/transformers/models/opt/modeling_opt.py", line 1143, in forward
+    outputs = self.model.decoder(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/transformers/models/opt/modeling_opt.py", line 909, in forward
+    layer_outputs = decoder_layer(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/transformers/models/opt/modeling_opt.py", line 550, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/transformers/models/opt/modeling_opt.py", line 232, in forward
+    attn_weights = attn_weights.view(bsz, self.num_heads, tgt_len, src_len) + attention_mask
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 0 has a total capacty of 47.54 GiB of which 183.12 MiB is free. Including non-PyTorch memory, this process has 47.35 GiB memory in use. Of the allocated memory 46.60 GiB is allocated by PyTorch, and 224.83 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

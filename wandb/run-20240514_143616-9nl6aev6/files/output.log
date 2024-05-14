@@ -1,0 +1,139 @@
+  0%|          | 0/3218 [00:00<?, ?it/s]/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/deepspeed/runtime/utils.py:274: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/conda/conda-bld/pytorch_1699449229234/work/torch/csrc/tensor/python_tensor.cpp:83.)
+  overflow_gpu = get_accelerator().ByteTensor([overflow])
+  0%|          | 2/3218 [00:01<44:28,  1.21it/s]
+[2024-05-14 14:36:20,221] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 0
+[2024-05-14 14:36:20,222] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 65536.0 to 32768.0
+[2024-05-14 14:36:20,224] [INFO] [replace_operation.py:230:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 65536.0, reducing to 32768.0
+
+
+  0%|          | 10/3218 [00:05<26:21,  2.03it/s]
+
+
+  1%|          | 18/3218 [00:09<23:35,  2.26it/s]
+
+
+  1%|          | 30/3218 [00:13<16:10,  3.29it/s]
+
+
+  1%|▏         | 41/3218 [00:17<28:11,  1.88it/s]
+
+
+
+  2%|▏         | 53/3218 [00:23<22:16,  2.37it/s]
+
+  2%|▏         | 59/3218 [00:25<19:20,  2.72it/s]
+
+
+  2%|▏         | 74/3218 [00:29<10:57,  4.78it/s]
+
+
+  3%|▎         | 82/3218 [00:33<26:09,  2.00it/s]
+
+
+  3%|▎         | 92/3218 [00:37<21:14,  2.45it/s]
+
+  3%|▎         | 100/3218 [00:40<18:46,  2.77it/s][INFO|trainer.py:3166] 2024-05-14 14:37:00,235 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 14:37:00,235 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 14:37:00,235 >>   Batch size = 8
+ 33%|███▎      | 11/33 [00:00<00:02, 10.13it/s]
+
+{'loss': 2.3512, 'learning_rate': 4.123711340206186e-06, 'epoch': 0.03}
+
+
+  4%|▎         | 114/3218 [00:47<11:01,  4.69it/s]
+
+
+  4%|▎         | 120/3218 [00:51<30:56,  1.67it/s]
+
+
+  4%|▍         | 129/3218 [00:55<23:48,  2.16it/s]
+
+
+  4%|▍         | 140/3218 [00:59<17:29,  2.93it/s]
+
+
+  5%|▍         | 153/3218 [01:03<21:42,  2.35it/s]
+
+
+  5%|▍         | 159/3218 [01:07<29:45,  1.71it/s]
+
+
+
+  5%|▌         | 172/3218 [01:13<21:17,  2.38it/s]
+
+  6%|▌         | 179/3218 [01:15<16:00,  3.16it/s]
+
+
+  6%|▌         | 191/3218 [01:19<21:59,  2.29it/s]
+
+
+  6%|▌         | 200/3218 [01:24<24:01,  2.09it/s][INFO|trainer.py:3166] 2024-05-14 14:37:44,448 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 14:37:44,448 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 14:37:44,448 >>   Batch size = 8
+ 27%|██▋       | 9/33 [00:00<00:01, 13.88it/s]
+[INFO|trainer.py:2889] 2024-05-14 14:37:47,333 >> Saving model checkpoint to outputs/instruct_tuning/model/checkpoint-200
+[INFO|configuration_utils.py:483] 2024-05-14 14:37:47,335 >> Configuration saved in outputs/instruct_tuning/model/checkpoint-200/config.json
+[INFO|configuration_utils.py:594] 2024-05-14 14:37:47,336 >> Configuration saved in outputs/instruct_tuning/model/checkpoint-200/generation_config.json
+{'eval_loss': 2.021484375, 'eval_runtime': 2.5997, 'eval_samples_per_second': 200.405, 'eval_steps_per_second': 12.694, 'epoch': 0.06}
+[INFO|modeling_utils.py:2382] 2024-05-14 14:37:50,256 >> Model weights saved in outputs/instruct_tuning/model/checkpoint-200/pytorch_model.bin
+[INFO|tokenization_utils_base.py:2432] 2024-05-14 14:37:50,260 >> tokenizer config file saved in outputs/instruct_tuning/model/checkpoint-200/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2441] 2024-05-14 14:37:50,260 >> Special tokens file saved in outputs/instruct_tuning/model/checkpoint-200/special_tokens_map.json
+[INFO|tokenization_utils_base.py:2492] 2024-05-14 14:37:50,261 >> added tokens file saved in outputs/instruct_tuning/model/checkpoint-200/added_tokens.json
+/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/nn/modules/module.py:1879: UserWarning: Positional args are being deprecated, use kwargs instead. Refer to https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.state_dict for details.
+  warnings.warn(
+[2024-05-14 14:37:50,366] [INFO] [logging.py:96:log_dist] [Rank 0] [Torch] Checkpoint global_step200 is about to be saved!
+[2024-05-14 14:37:50,385] [INFO] [logging.py:96:log_dist] [Rank 0] Saving model checkpoint: outputs/instruct_tuning/model/checkpoint-200/global_step200/mp_rank_00_model_states.pt
+[2024-05-14 14:37:50,385] [INFO] [torch_checkpoint_engine.py:21:save] [Torch] Saving outputs/instruct_tuning/model/checkpoint-200/global_step200/mp_rank_00_model_states.pt...
+  6%|▋         | 202/3218 [01:53<5:18:15,  6.33s/it]
+[2024-05-14 14:38:12,533] [INFO] [torch_checkpoint_engine.py:23:save] [Torch] Saved outputs/instruct_tuning/model/checkpoint-200/global_step200/mp_rank_00_model_states.pt.
+
+
+  7%|▋         | 211/3218 [01:57<30:55,  1.62it/s]
+
+
+  7%|▋         | 224/3218 [02:01<13:05,  3.81it/s]
+
+  7%|▋         | 229/3218 [02:03<20:18,  2.45it/s]
+
+
+
+  7%|▋         | 239/3218 [02:09<28:17,  1.75it/s]
+
+
+  8%|▊         | 249/3218 [02:13<19:13,  2.57it/s]
+
+
+  8%|▊         | 264/3218 [02:17<12:00,  4.10it/s]
+
+
+  8%|▊         | 272/3218 [02:21<23:50,  2.06it/s]
+
+
+  9%|▉         | 282/3218 [02:25<20:07,  2.43it/s]
+
+
+  9%|▉         | 294/3218 [02:29<14:10,  3.44it/s]
+  9%|▉         | 300/3218 [02:31<12:15,  3.97it/s][INFO|trainer.py:3166] 2024-05-14 14:38:50,874 >> ***** Running Evaluation *****
+[INFO|trainer.py:3168] 2024-05-14 14:38:50,874 >>   Num examples = 521
+[INFO|trainer.py:3171] 2024-05-14 14:38:50,874 >>   Batch size = 8
+ 15%|█▌        | 5/33 [00:00<00:01, 14.87it/s]
+
+100%|██████████| 33/33 [00:02<00:00, 12.10it/s]
+
+
+
+ 10%|▉         | 313/3218 [02:39<24:27,  1.98it/s]
+
+
+ 10%|▉         | 319/3218 [02:43<32:12,  1.50it/s]
+
+
+ 10%|█         | 331/3218 [02:47<15:45,  3.05it/s]
+
+ 11%|█         | 340/3218 [02:50<11:20,  4.23it/s]
+
+
+ 11%|█         | 348/3218 [02:53<22:39,  2.11it/s]
+
+
+ 11%|█         | 354/3218 [02:56<22:19,  2.14it/s]

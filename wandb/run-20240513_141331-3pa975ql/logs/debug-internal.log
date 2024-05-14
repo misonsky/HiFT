@@ -1,0 +1,562 @@
+2024-05-13 14:13:31,192 INFO    StreamThr :521353 [internal.py:wandb_internal():86] W&B internal server running at pid: 521353, started at: 2024-05-13 14:13:31.192014
+2024-05-13 14:13:31,193 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: status
+2024-05-13 14:13:31,198 INFO    WriterThread:521353 [datastore.py:open_for_write():85] open: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/run-3pa975ql.wandb
+2024-05-13 14:13:31,198 DEBUG   SenderThread:521353 [sender.py:send():382] send: header
+2024-05-13 14:13:31,199 DEBUG   SenderThread:521353 [sender.py:send():382] send: run
+2024-05-13 14:13:31,600 INFO    SenderThread:521353 [dir_watcher.py:__init__():211] watching files in: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files
+2024-05-13 14:13:31,600 INFO    SenderThread:521353 [sender.py:_start_run_threads():1136] run started: 3pa975ql with start time 1715602411.193132
+2024-05-13 14:13:31,614 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: check_version
+2024-05-13 14:13:31,615 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: check_version
+2024-05-13 14:13:31,677 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: run_start
+2024-05-13 14:13:31,703 DEBUG   HandlerThread:521353 [system_info.py:__init__():32] System info init
+2024-05-13 14:13:31,703 DEBUG   HandlerThread:521353 [system_info.py:__init__():47] System info init done
+2024-05-13 14:13:31,703 INFO    HandlerThread:521353 [system_monitor.py:start():194] Starting system monitor
+2024-05-13 14:13:31,703 INFO    SystemMonitor:521353 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-13 14:13:31,704 INFO    HandlerThread:521353 [system_monitor.py:probe():214] Collecting system info
+2024-05-13 14:13:31,704 INFO    SystemMonitor:521353 [interfaces.py:start():190] Started cpu monitoring
+2024-05-13 14:13:31,705 INFO    SystemMonitor:521353 [interfaces.py:start():190] Started disk monitoring
+2024-05-13 14:13:31,705 INFO    SystemMonitor:521353 [interfaces.py:start():190] Started gpu monitoring
+2024-05-13 14:13:31,706 INFO    SystemMonitor:521353 [interfaces.py:start():190] Started memory monitoring
+2024-05-13 14:13:31,706 INFO    SystemMonitor:521353 [interfaces.py:start():190] Started network monitoring
+2024-05-13 14:13:31,774 DEBUG   HandlerThread:521353 [system_info.py:probe():196] Probing system
+2024-05-13 14:13:31,779 DEBUG   HandlerThread:521353 [gitlib.py:_init_repo():56] git repository is invalid
+2024-05-13 14:13:31,780 DEBUG   HandlerThread:521353 [system_info.py:probe():244] Probing system done
+2024-05-13 14:13:31,780 DEBUG   HandlerThread:521353 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-91-generic-x86_64-with-glibc2.10', 'python': '3.8.5', 'heartbeatAt': '2024-05-13T12:13:31.774760', 'startedAt': '2024-05-13T12:13:31.172537', 'docker': None, 'cuda': None, 'args': ('--model_type', 'llama', '--HiTaskType', 'CAUSAL_LM', '--optim', 'lion_32bit', '--deepspeed', 'dsconfig/zero0_config.json', '--model_name_or_path', '/mounts/work/lyk/hierFT/llama2-7b', '--data_path', 'data/dummy_conversation.json', '--eval_data_path', 'data/sharegpt_clean.json', '--output_dir', 'outputs/output_vicuna/model', '--num_train_epochs', '3', '--do_train', '--per_device_train_batch_size', '1', '--per_device_eval_batch_size', '8', '--evaluation_strategy', 'steps', '--eval_steps', '1500', '--save_strategy', 'steps', '--save_steps', '1500', '--save_total_limit', '8', '--learning_rate', '2e-5', '--weight_decay', '0.', '--warmup_ratio', '0', '--lr_scheduler_type', 'linear', '--logging_steps', '10', '--model_max_length', '3000', '--lazy_preprocess', 'True', '--torch_dtype', 'float16', '--ddp_find_unused_parameters', 'False', '--load_best_model_at_end', '--hier_tuning', '--group_element', '1', '--optimizer_strategy', 'down2up'), 'state': 'running', 'program': 'examples/vicuna_train.py', 'codePathLocal': 'examples/vicuna_train.py', 'codePath': 'examples/vicuna_train.py', 'host': 'rho1', 'username': 'yongkang', 'executable': '/mounts/work/lyk/anaconda3/envs/torch2/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 1907.0562968749998, 'min': 1500.0, 'max': 3000.0}, 'cpu_freq_per_core': [{'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1471.374, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2200.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2200.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3710.665, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2200.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2528.604, 'min': 1500.0, 'max': 3000.0}, {'current': 2200.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3711.665, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}], 'disk': {'/': {'total': 878.1072120666504, 'used': 583.3174819946289}}, 'gpu': 'NVIDIA RTX A6000', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}], 'memory': {'total': 251.73123168945312}}
+2024-05-13 14:13:31,780 INFO    HandlerThread:521353 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-13 14:13:31,780 INFO    HandlerThread:521353 [system_monitor.py:probe():227] Publishing system info
+2024-05-13 14:13:31,780 DEBUG   HandlerThread:521353 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-05-13 14:13:31,781 DEBUG   HandlerThread:521353 [system_info.py:_save_pip():68] Saving pip packages done
+2024-05-13 14:13:31,782 DEBUG   HandlerThread:521353 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2024-05-13 14:13:32,602 INFO    Thread-12 :521353 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/requirements.txt
+2024-05-13 14:13:32,603 INFO    Thread-12 :521353 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/conda-environment.yaml
+2024-05-13 14:13:34,512 DEBUG   HandlerThread:521353 [system_info.py:_save_conda():87] Saving conda packages done
+2024-05-13 14:13:34,514 INFO    HandlerThread:521353 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-13 14:13:34,525 DEBUG   SenderThread:521353 [sender.py:send():382] send: files
+2024-05-13 14:13:34,525 INFO    SenderThread:521353 [sender.py:_save_file():1392] saving file wandb-metadata.json with policy now
+2024-05-13 14:13:34,537 DEBUG   SenderThread:521353 [sender.py:send():382] send: telemetry
+2024-05-13 14:13:34,537 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 14:13:34,542 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-13 14:13:34,542 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: stop_status
+2024-05-13 14:13:34,604 INFO    Thread-12 :521353 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/conda-environment.yaml
+2024-05-13 14:13:34,604 INFO    Thread-12 :521353 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/wandb-metadata.json
+2024-05-13 14:13:34,768 DEBUG   SenderThread:521353 [sender.py:send():382] send: config
+2024-05-13 14:13:34,769 DEBUG   SenderThread:521353 [sender.py:send():382] send: metric
+2024-05-13 14:13:34,769 DEBUG   SenderThread:521353 [sender.py:send():382] send: telemetry
+2024-05-13 14:13:34,769 DEBUG   SenderThread:521353 [sender.py:send():382] send: metric
+2024-05-13 14:13:34,769 WARNING SenderThread:521353 [sender.py:send_metric():1343] Seen metric with glob (shouldn't happen)
+2024-05-13 14:13:34,769 DEBUG   SenderThread:521353 [sender.py:send():382] send: telemetry
+2024-05-13 14:13:34,972 ERROR   wandb-upload_0:521353 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/wandb-metadata.json?Expires=1715688814&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=o99KYPW9Xyfr8N1Orl%2BMmk8jyh8bj6jQiPg3HGh%2B9H1bMBXzb0aVAX63QlmUQfwtzoIlJdaE3oaa3xUsHxEhc0Gb3bitCrgdQ4I86wDb4E6vo5GffRJXiKc%2FnJ3d3XnFP1IcM2lsx4weJVIDIeKSucxUFBdlk%2BV0mVCHbY3UPiSkAKjhK7LagbX6I4mz9ve3AP8JYfb%2FPE%2Bkmji7Mg%2F8dY35wwV3g%2FtEaqvwTA2BjM1r8V9SqcTbmsbISIoYAWHif04orwtqZe%2F%2F%2FWYv5Cni2fjvmvJnvhNacOlXoJY%2Bkanm6f81GPmYlBr2bZB7jJqyNf4bb5IByn06DBOxSK6sag%3D%3D: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/wandb-metadata.json?Expires=1715688814&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=o99KYPW9Xyfr8N1Orl%2BMmk8jyh8bj6jQiPg3HGh%2B9H1bMBXzb0aVAX63QlmUQfwtzoIlJdaE3oaa3xUsHxEhc0Gb3bitCrgdQ4I86wDb4E6vo5GffRJXiKc%2FnJ3d3XnFP1IcM2lsx4weJVIDIeKSucxUFBdlk%2BV0mVCHbY3UPiSkAKjhK7LagbX6I4mz9ve3AP8JYfb%2FPE%2Bkmji7Mg%2F8dY35wwV3g%2FtEaqvwTA2BjM1r8V9SqcTbmsbISIoYAWHif04orwtqZe%2F%2F%2FWYv5Cni2fjvmvJnvhNacOlXoJY%2Bkanm6f81GPmYlBr2bZB7jJqyNf4bb5IByn06DBOxSK6sag%3D%3D
+2024-05-13 14:13:34,972 ERROR   wandb-upload_0:521353 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '9907'}
+2024-05-13 14:13:34,972 ERROR   wandb-upload_0:521353 [internal_api.py:upload_file():2765] upload_file response body: b"<?xml version='1.0' encoding='UTF-8'?><Error><Code>AccessDenied</Code><Message>Access denied.</Message><Details>We're sorry, but this service is not available in your location</Details></Error>"
+2024-05-13 14:13:35,020 ERROR   wandb-upload_0:521353 [upload_job.py:push():134] Failed to upload file: /tmp/tmp07ez2m4kwandb/5sw8r2ax-wandb-metadata.json
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/wandb-metadata.json?Expires=1715688814&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=o99KYPW9Xyfr8N1Orl%2BMmk8jyh8bj6jQiPg3HGh%2B9H1bMBXzb0aVAX63QlmUQfwtzoIlJdaE3oaa3xUsHxEhc0Gb3bitCrgdQ4I86wDb4E6vo5GffRJXiKc%2FnJ3d3XnFP1IcM2lsx4weJVIDIeKSucxUFBdlk%2BV0mVCHbY3UPiSkAKjhK7LagbX6I4mz9ve3AP8JYfb%2FPE%2Bkmji7Mg%2F8dY35wwV3g%2FtEaqvwTA2BjM1r8V9SqcTbmsbISIoYAWHif04orwtqZe%2F%2F%2FWYv5Cni2fjvmvJnvhNacOlXoJY%2Bkanm6f81GPmYlBr2bZB7jJqyNf4bb5IByn06DBOxSK6sag%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-13 14:13:35,044 ERROR   Thread-11 :521353 [step_upload.py:_handle_event():200] Failed to upload file: /tmp/tmp07ez2m4kwandb/5sw8r2ax-wandb-metadata.json
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/wandb-metadata.json?Expires=1715688814&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=o99KYPW9Xyfr8N1Orl%2BMmk8jyh8bj6jQiPg3HGh%2B9H1bMBXzb0aVAX63QlmUQfwtzoIlJdaE3oaa3xUsHxEhc0Gb3bitCrgdQ4I86wDb4E6vo5GffRJXiKc%2FnJ3d3XnFP1IcM2lsx4weJVIDIeKSucxUFBdlk%2BV0mVCHbY3UPiSkAKjhK7LagbX6I4mz9ve3AP8JYfb%2FPE%2Bkmji7Mg%2F8dY35wwV3g%2FtEaqvwTA2BjM1r8V9SqcTbmsbISIoYAWHif04orwtqZe%2F%2F%2FWYv5Cni2fjvmvJnvhNacOlXoJY%2Bkanm6f81GPmYlBr2bZB7jJqyNf4bb5IByn06DBOxSK6sag%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 57, in run
+    self.push()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-13 14:13:35,605 INFO    Thread-12 :521353 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/output.log
+2024-05-13 14:13:35,801 DEBUG   SenderThread:521353 [sender.py:send():382] send: exit
+2024-05-13 14:13:35,802 INFO    SenderThread:521353 [sender.py:send_exit():589] handling exit code: 1
+2024-05-13 14:13:35,802 INFO    SenderThread:521353 [sender.py:send_exit():591] handling runtime: 4
+2024-05-13 14:13:35,804 INFO    SenderThread:521353 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-13 14:13:35,804 INFO    SenderThread:521353 [sender.py:send_exit():597] send defer
+2024-05-13 14:13:35,804 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:35,804 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 0
+2024-05-13 14:13:35,805 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:35,805 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 0
+2024-05-13 14:13:35,805 INFO    SenderThread:521353 [sender.py:transition_state():617] send defer: 1
+2024-05-13 14:13:35,805 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:35,805 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 1
+2024-05-13 14:13:35,805 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:35,805 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 1
+2024-05-13 14:13:35,805 INFO    SenderThread:521353 [sender.py:transition_state():617] send defer: 2
+2024-05-13 14:13:35,805 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:35,805 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 2
+2024-05-13 14:13:35,805 INFO    HandlerThread:521353 [system_monitor.py:finish():203] Stopping system monitor
+2024-05-13 14:13:35,806 INFO    HandlerThread:521353 [interfaces.py:finish():202] Joined cpu monitor
+2024-05-13 14:13:35,806 DEBUG   SystemMonitor:521353 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-13 14:13:35,806 DEBUG   SystemMonitor:521353 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-13 14:13:35,806 DEBUG   SystemMonitor:521353 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-13 14:13:35,807 INFO    HandlerThread:521353 [interfaces.py:finish():202] Joined disk monitor
+2024-05-13 14:13:36,492 INFO    HandlerThread:521353 [interfaces.py:finish():202] Joined gpu monitor
+2024-05-13 14:13:36,492 INFO    HandlerThread:521353 [interfaces.py:finish():202] Joined memory monitor
+2024-05-13 14:13:36,492 INFO    HandlerThread:521353 [interfaces.py:finish():202] Joined network monitor
+2024-05-13 14:13:36,493 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:36,493 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 2
+2024-05-13 14:13:36,493 INFO    SenderThread:521353 [sender.py:transition_state():617] send defer: 3
+2024-05-13 14:13:36,493 DEBUG   SenderThread:521353 [sender.py:send():382] send: stats
+2024-05-13 14:13:36,494 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:36,494 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 3
+2024-05-13 14:13:36,494 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 14:13:36,495 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:36,495 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 3
+2024-05-13 14:13:36,495 INFO    SenderThread:521353 [sender.py:transition_state():617] send defer: 4
+2024-05-13 14:13:36,495 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:36,495 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 4
+2024-05-13 14:13:36,496 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:36,496 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 4
+2024-05-13 14:13:36,496 INFO    SenderThread:521353 [sender.py:transition_state():617] send defer: 5
+2024-05-13 14:13:36,496 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:36,496 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 5
+2024-05-13 14:13:36,497 DEBUG   SenderThread:521353 [sender.py:send():382] send: summary
+2024-05-13 14:13:36,498 INFO    SenderThread:521353 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-13 14:13:36,498 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:36,498 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 5
+2024-05-13 14:13:36,498 INFO    SenderThread:521353 [sender.py:transition_state():617] send defer: 6
+2024-05-13 14:13:36,499 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:36,499 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 6
+2024-05-13 14:13:36,499 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:36,499 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 6
+2024-05-13 14:13:36,504 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: status_report
+2024-05-13 14:13:36,607 INFO    Thread-12 :521353 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/wandb-summary.json
+2024-05-13 14:13:36,715 INFO    SenderThread:521353 [sender.py:transition_state():617] send defer: 7
+2024-05-13 14:13:36,715 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:36,715 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 7
+2024-05-13 14:13:36,715 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:36,715 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 7
+2024-05-13 14:13:36,788 INFO    SenderThread:521353 [sender.py:transition_state():617] send defer: 8
+2024-05-13 14:13:36,789 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:36,789 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 8
+2024-05-13 14:13:36,789 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:36,789 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 8
+2024-05-13 14:13:36,789 INFO    SenderThread:521353 [job_builder.py:build():298] Attempting to build job artifact
+2024-05-13 14:13:36,792 INFO    SenderThread:521353 [job_builder.py:_get_source_type():439] no source found
+2024-05-13 14:13:36,792 INFO    SenderThread:521353 [sender.py:transition_state():617] send defer: 9
+2024-05-13 14:13:36,792 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:36,793 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 9
+2024-05-13 14:13:36,793 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:36,793 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 9
+2024-05-13 14:13:36,793 INFO    SenderThread:521353 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-13 14:13:36,801 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-13 14:13:37,608 INFO    SenderThread:521353 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/output.log
+2024-05-13 14:13:37,609 INFO    SenderThread:521353 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/config.yaml
+2024-05-13 14:13:37,609 INFO    SenderThread:521353 [dir_watcher.py:finish():388] scan: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files
+2024-05-13 14:13:37,610 INFO    SenderThread:521353 [dir_watcher.py:finish():402] scan save: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/wandb-summary.json wandb-summary.json
+2024-05-13 14:13:37,610 INFO    SenderThread:521353 [dir_watcher.py:finish():402] scan save: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/requirements.txt requirements.txt
+2024-05-13 14:13:37,610 INFO    SenderThread:521353 [dir_watcher.py:finish():402] scan save: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/conda-environment.yaml conda-environment.yaml
+2024-05-13 14:13:37,613 INFO    SenderThread:521353 [dir_watcher.py:finish():402] scan save: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/config.yaml config.yaml
+2024-05-13 14:13:37,617 INFO    SenderThread:521353 [dir_watcher.py:finish():402] scan save: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/wandb-metadata.json wandb-metadata.json
+2024-05-13 14:13:37,619 INFO    SenderThread:521353 [dir_watcher.py:finish():402] scan save: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/output.log output.log
+2024-05-13 14:13:37,621 INFO    SenderThread:521353 [sender.py:transition_state():617] send defer: 10
+2024-05-13 14:13:37,621 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: poll_exit
+2024-05-13 14:13:37,621 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:37,622 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 10
+2024-05-13 14:13:37,623 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:37,623 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 10
+2024-05-13 14:13:37,623 INFO    SenderThread:521353 [file_pusher.py:finish():175] shutting down file pusher
+2024-05-13 14:13:37,802 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-13 14:13:37,802 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: poll_exit
+2024-05-13 14:13:37,863 ERROR   wandb-upload_0:521353 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/requirements.txt?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=GMJD5cYyqIM1RXxQjSR05lKakduCWsUkSP4WJc5FFhy1QGi%2FAGH%2BvguYsa9JRhGE4xkh9wWig3KSFCoemguesYGsWEwNK46hLMTCQ3ptzPwr3q9U%2B%2Fow95HNY6JjNMHwzJXydaXuRwWHVEH2CQGZOqM%2FVLMArIh1JPL04tjkfoxUwuw9d0dJi8%2FPCTNg0JnguF8eybeWmqqFW3UApp5h9fh1cXLvbto08Tl3PCe6SUx1BnxLNukDaLnXdg7K7JepTvqa6YEwUE7INGP%2BTs5kfktQZHJSc7RD5HhbXIT9ZYN%2BcXm64unUdKkEV6q8zUgPr1CH%2FMTC1TV7TVFGijEcZg%3D%3D: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/requirements.txt?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=GMJD5cYyqIM1RXxQjSR05lKakduCWsUkSP4WJc5FFhy1QGi%2FAGH%2BvguYsa9JRhGE4xkh9wWig3KSFCoemguesYGsWEwNK46hLMTCQ3ptzPwr3q9U%2B%2Fow95HNY6JjNMHwzJXydaXuRwWHVEH2CQGZOqM%2FVLMArIh1JPL04tjkfoxUwuw9d0dJi8%2FPCTNg0JnguF8eybeWmqqFW3UApp5h9fh1cXLvbto08Tl3PCe6SUx1BnxLNukDaLnXdg7K7JepTvqa6YEwUE7INGP%2BTs5kfktQZHJSc7RD5HhbXIT9ZYN%2BcXm64unUdKkEV6q8zUgPr1CH%2FMTC1TV7TVFGijEcZg%3D%3D
+2024-05-13 14:13:37,863 ERROR   wandb-upload_0:521353 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2434'}
+2024-05-13 14:13:37,863 ERROR   wandb-upload_0:521353 [internal_api.py:upload_file():2765] upload_file response body: b"<?xml version='1.0' encoding='UTF-8'?><Error><Code>AccessDenied</Code><Message>Access denied.</Message><Details>We're sorry, but this service is not available in your location</Details></Error>"
+2024-05-13 14:13:37,880 ERROR   wandb-upload_0:521353 [upload_job.py:push():134] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/requirements.txt
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/requirements.txt?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=GMJD5cYyqIM1RXxQjSR05lKakduCWsUkSP4WJc5FFhy1QGi%2FAGH%2BvguYsa9JRhGE4xkh9wWig3KSFCoemguesYGsWEwNK46hLMTCQ3ptzPwr3q9U%2B%2Fow95HNY6JjNMHwzJXydaXuRwWHVEH2CQGZOqM%2FVLMArIh1JPL04tjkfoxUwuw9d0dJi8%2FPCTNg0JnguF8eybeWmqqFW3UApp5h9fh1cXLvbto08Tl3PCe6SUx1BnxLNukDaLnXdg7K7JepTvqa6YEwUE7INGP%2BTs5kfktQZHJSc7RD5HhbXIT9ZYN%2BcXm64unUdKkEV6q8zUgPr1CH%2FMTC1TV7TVFGijEcZg%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-13 14:13:37,897 ERROR   wandb-upload_1:521353 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/wandb-summary.json?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=peKN2gAbGYA76H1fsrzECW8T4jbPLxFLtnD3VFBO3GT6pgWBEUqMf3rF0%2F9jJAkjT5K5zEDa8ce9HlB1vLmzUmDERhE7zhRCJrEkpAs2x65J20FWQeJZFzeSAnVlC0g%2FCI1pPjgIHE0NNfnqi6kNzVZu2twz1kC9MmV6lZHetDbM%2BOSEfT0akAtVJ1L8wJimK4y8gziiXRVaXo0obE388BbTs9FohzvkdtYOGq36BWBWfmOcd%2B0YP5YCb%2FmkiHTUaYFiWiZVQCQFxk6QEqzZwrMv%2F7qXu55EazfgqXrdcq7kvwPDfs4PFQlF2j3kYCHn%2FMiKba5if9U10pKCTv4LuQ%3D%3D: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/wandb-summary.json?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=peKN2gAbGYA76H1fsrzECW8T4jbPLxFLtnD3VFBO3GT6pgWBEUqMf3rF0%2F9jJAkjT5K5zEDa8ce9HlB1vLmzUmDERhE7zhRCJrEkpAs2x65J20FWQeJZFzeSAnVlC0g%2FCI1pPjgIHE0NNfnqi6kNzVZu2twz1kC9MmV6lZHetDbM%2BOSEfT0akAtVJ1L8wJimK4y8gziiXRVaXo0obE388BbTs9FohzvkdtYOGq36BWBWfmOcd%2B0YP5YCb%2FmkiHTUaYFiWiZVQCQFxk6QEqzZwrMv%2F7qXu55EazfgqXrdcq7kvwPDfs4PFQlF2j3kYCHn%2FMiKba5if9U10pKCTv4LuQ%3D%3D
+2024-05-13 14:13:37,897 ERROR   wandb-upload_1:521353 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '26'}
+2024-05-13 14:13:37,897 ERROR   wandb-upload_1:521353 [internal_api.py:upload_file():2765] upload_file response body: b"<?xml version='1.0' encoding='UTF-8'?><Error><Code>AccessDenied</Code><Message>Access denied.</Message><Details>We're sorry, but this service is not available in your location</Details></Error>"
+2024-05-13 14:13:37,921 ERROR   Thread-11 :521353 [step_upload.py:_handle_event():200] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/requirements.txt
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/requirements.txt?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=GMJD5cYyqIM1RXxQjSR05lKakduCWsUkSP4WJc5FFhy1QGi%2FAGH%2BvguYsa9JRhGE4xkh9wWig3KSFCoemguesYGsWEwNK46hLMTCQ3ptzPwr3q9U%2B%2Fow95HNY6JjNMHwzJXydaXuRwWHVEH2CQGZOqM%2FVLMArIh1JPL04tjkfoxUwuw9d0dJi8%2FPCTNg0JnguF8eybeWmqqFW3UApp5h9fh1cXLvbto08Tl3PCe6SUx1BnxLNukDaLnXdg7K7JepTvqa6YEwUE7INGP%2BTs5kfktQZHJSc7RD5HhbXIT9ZYN%2BcXm64unUdKkEV6q8zUgPr1CH%2FMTC1TV7TVFGijEcZg%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 57, in run
+    self.push()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-13 14:13:37,922 ERROR   wandb-upload_1:521353 [upload_job.py:push():134] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/wandb-summary.json
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/wandb-summary.json?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=peKN2gAbGYA76H1fsrzECW8T4jbPLxFLtnD3VFBO3GT6pgWBEUqMf3rF0%2F9jJAkjT5K5zEDa8ce9HlB1vLmzUmDERhE7zhRCJrEkpAs2x65J20FWQeJZFzeSAnVlC0g%2FCI1pPjgIHE0NNfnqi6kNzVZu2twz1kC9MmV6lZHetDbM%2BOSEfT0akAtVJ1L8wJimK4y8gziiXRVaXo0obE388BbTs9FohzvkdtYOGq36BWBWfmOcd%2B0YP5YCb%2FmkiHTUaYFiWiZVQCQFxk6QEqzZwrMv%2F7qXu55EazfgqXrdcq7kvwPDfs4PFQlF2j3kYCHn%2FMiKba5if9U10pKCTv4LuQ%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-13 14:13:37,936 ERROR   wandb-upload_4:521353 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/output.log?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Gx8lN5lLNy9a7EHUsUS2ngmfH2HMxDdxfpb9UKBaWrZTkUE3%2BB7D2szPKToADUayVw6FBJyWgQZnd4WsDHIRKvaY9ovbwql73ZfCCorVtyZFxEXiIaoitZvVHF%2F3X1%2Frjzn%2FWtQ2CaUpxQyDRtDl03DB3oPGEvO1KwtfnmnAapVqMHpbG6IARHeCDUsF02vT5baCbOr5jTh0RvdLh2Sdhp0VParX625NiAqtN%2BOPXezftm0Wkv5ALeE7q4AIyy%2BpVsxCLxqTFeGizjRJlPfzVUlj%2BWWJOpTYaw8HqNE0f3oyRZvKqV6dkj45OriH2NpGwh2MXbrSshlkTNTeiWOB3g%3D%3D: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/output.log?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Gx8lN5lLNy9a7EHUsUS2ngmfH2HMxDdxfpb9UKBaWrZTkUE3%2BB7D2szPKToADUayVw6FBJyWgQZnd4WsDHIRKvaY9ovbwql73ZfCCorVtyZFxEXiIaoitZvVHF%2F3X1%2Frjzn%2FWtQ2CaUpxQyDRtDl03DB3oPGEvO1KwtfnmnAapVqMHpbG6IARHeCDUsF02vT5baCbOr5jTh0RvdLh2Sdhp0VParX625NiAqtN%2BOPXezftm0Wkv5ALeE7q4AIyy%2BpVsxCLxqTFeGizjRJlPfzVUlj%2BWWJOpTYaw8HqNE0f3oyRZvKqV6dkj45OriH2NpGwh2MXbrSshlkTNTeiWOB3g%3D%3D
+2024-05-13 14:13:37,936 ERROR   wandb-upload_4:521353 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2437'}
+2024-05-13 14:13:37,936 ERROR   wandb-upload_4:521353 [internal_api.py:upload_file():2765] upload_file response body: b"<?xml version='1.0' encoding='UTF-8'?><Error><Code>AccessDenied</Code><Message>Access denied.</Message><Details>We're sorry, but this service is not available in your location</Details></Error>"
+2024-05-13 14:13:37,953 ERROR   wandb-upload_2:521353 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/conda-environment.yaml?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kcR7GUK%2FlFP5%2FzxMA59myW3GspHBYsZ0SwbpKb7JzymDiBCjF8Vt0%2Bvvk%2F5s0xuiYy1GNfyLIEf%2B6fewhdKDYR1gAtAfS6XeMHt20dEXZTNukk0pQZu1zneP2VUdiMijo2nKmq70HMf%2Fd0swJo7ksJaTWhuV5%2FM022uZ34YnZpx%2BnYpwetcFEF7MPXKGNiGWqPKhu4Ek8ALT2hS4%2BZ%2Fy2VJxfN1En5TXdHTJiG%2FNNksmnRGzOKjWXkxi7J05zOqrgZkwPPn4a2ALLpK1TK5UqKtoZPmpgrqLvy%2F%2FcFvCF6KArLHmdYnf3ucYMRC5LA6lwTtTNnpk2aQJHflsh9xV1w%3D%3D: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/conda-environment.yaml?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kcR7GUK%2FlFP5%2FzxMA59myW3GspHBYsZ0SwbpKb7JzymDiBCjF8Vt0%2Bvvk%2F5s0xuiYy1GNfyLIEf%2B6fewhdKDYR1gAtAfS6XeMHt20dEXZTNukk0pQZu1zneP2VUdiMijo2nKmq70HMf%2Fd0swJo7ksJaTWhuV5%2FM022uZ34YnZpx%2BnYpwetcFEF7MPXKGNiGWqPKhu4Ek8ALT2hS4%2BZ%2Fy2VJxfN1En5TXdHTJiG%2FNNksmnRGzOKjWXkxi7J05zOqrgZkwPPn4a2ALLpK1TK5UqKtoZPmpgrqLvy%2F%2FcFvCF6KArLHmdYnf3ucYMRC5LA6lwTtTNnpk2aQJHflsh9xV1w%3D%3D
+2024-05-13 14:13:37,953 ERROR   wandb-upload_2:521353 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '5433'}
+2024-05-13 14:13:37,953 ERROR   wandb-upload_2:521353 [internal_api.py:upload_file():2765] upload_file response body: b"<?xml version='1.0' encoding='UTF-8'?><Error><Code>AccessDenied</Code><Message>Access denied.</Message><Details>We're sorry, but this service is not available in your location</Details></Error>"
+2024-05-13 14:13:37,958 ERROR   wandb-upload_3:521353 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/config.yaml?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=QXBRjGC5QvNYT%2BxBGzS4Nv2JWGkZMJuX%2BIDoGFfr35HBYA5ahcrNfzOkc0hyyiJr6db9PY1DlttJR9lth%2Fzac8mCRuXu3MKobHTx%2FVpsEwTp6ZAG3dJQ1sBk7EMpaisBE0a7Sjl6YWzUKaohsXyyGc2jb4%2BWU43%2F2b8DRPElugu9cRnwgatlOGJLPXSknlloVWHhq4yk18WfkMlrY1FfOOW9HLpLTWLky9EhnF6Ju2bAuOTvvS9EXvzUgz8kOGd9vTE8rU3QHmrDPhQU0ZB481BLGHYd357JHrW409iAL3BmYn6%2BLEBRLrMpIbhNJg0t9oORxTLft41Z7P0RbWP31A%3D%3D: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/config.yaml?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=QXBRjGC5QvNYT%2BxBGzS4Nv2JWGkZMJuX%2BIDoGFfr35HBYA5ahcrNfzOkc0hyyiJr6db9PY1DlttJR9lth%2Fzac8mCRuXu3MKobHTx%2FVpsEwTp6ZAG3dJQ1sBk7EMpaisBE0a7Sjl6YWzUKaohsXyyGc2jb4%2BWU43%2F2b8DRPElugu9cRnwgatlOGJLPXSknlloVWHhq4yk18WfkMlrY1FfOOW9HLpLTWLky9EhnF6Ju2bAuOTvvS9EXvzUgz8kOGd9vTE8rU3QHmrDPhQU0ZB481BLGHYd357JHrW409iAL3BmYn6%2BLEBRLrMpIbhNJg0t9oORxTLft41Z7P0RbWP31A%3D%3D
+2024-05-13 14:13:37,958 ERROR   wandb-upload_3:521353 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '9673'}
+2024-05-13 14:13:37,958 ERROR   wandb-upload_3:521353 [internal_api.py:upload_file():2765] upload_file response body: b"<?xml version='1.0' encoding='UTF-8'?><Error><Code>AccessDenied</Code><Message>Access denied.</Message><Details>We're sorry, but this service is not available in your location</Details></Error>"
+2024-05-13 14:13:37,987 ERROR   Thread-11 :521353 [step_upload.py:_handle_event():200] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/wandb-summary.json
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/wandb-summary.json?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=peKN2gAbGYA76H1fsrzECW8T4jbPLxFLtnD3VFBO3GT6pgWBEUqMf3rF0%2F9jJAkjT5K5zEDa8ce9HlB1vLmzUmDERhE7zhRCJrEkpAs2x65J20FWQeJZFzeSAnVlC0g%2FCI1pPjgIHE0NNfnqi6kNzVZu2twz1kC9MmV6lZHetDbM%2BOSEfT0akAtVJ1L8wJimK4y8gziiXRVaXo0obE388BbTs9FohzvkdtYOGq36BWBWfmOcd%2B0YP5YCb%2FmkiHTUaYFiWiZVQCQFxk6QEqzZwrMv%2F7qXu55EazfgqXrdcq7kvwPDfs4PFQlF2j3kYCHn%2FMiKba5if9U10pKCTv4LuQ%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 57, in run
+    self.push()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-13 14:13:37,988 ERROR   wandb-upload_4:521353 [upload_job.py:push():134] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/output.log
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/output.log?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Gx8lN5lLNy9a7EHUsUS2ngmfH2HMxDdxfpb9UKBaWrZTkUE3%2BB7D2szPKToADUayVw6FBJyWgQZnd4WsDHIRKvaY9ovbwql73ZfCCorVtyZFxEXiIaoitZvVHF%2F3X1%2Frjzn%2FWtQ2CaUpxQyDRtDl03DB3oPGEvO1KwtfnmnAapVqMHpbG6IARHeCDUsF02vT5baCbOr5jTh0RvdLh2Sdhp0VParX625NiAqtN%2BOPXezftm0Wkv5ALeE7q4AIyy%2BpVsxCLxqTFeGizjRJlPfzVUlj%2BWWJOpTYaw8HqNE0f3oyRZvKqV6dkj45OriH2NpGwh2MXbrSshlkTNTeiWOB3g%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-13 14:13:37,988 ERROR   wandb-upload_2:521353 [upload_job.py:push():134] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/conda-environment.yaml
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/conda-environment.yaml?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kcR7GUK%2FlFP5%2FzxMA59myW3GspHBYsZ0SwbpKb7JzymDiBCjF8Vt0%2Bvvk%2F5s0xuiYy1GNfyLIEf%2B6fewhdKDYR1gAtAfS6XeMHt20dEXZTNukk0pQZu1zneP2VUdiMijo2nKmq70HMf%2Fd0swJo7ksJaTWhuV5%2FM022uZ34YnZpx%2BnYpwetcFEF7MPXKGNiGWqPKhu4Ek8ALT2hS4%2BZ%2Fy2VJxfN1En5TXdHTJiG%2FNNksmnRGzOKjWXkxi7J05zOqrgZkwPPn4a2ALLpK1TK5UqKtoZPmpgrqLvy%2F%2FcFvCF6KArLHmdYnf3ucYMRC5LA6lwTtTNnpk2aQJHflsh9xV1w%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-13 14:13:37,988 ERROR   wandb-upload_3:521353 [upload_job.py:push():134] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/config.yaml
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/config.yaml?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=QXBRjGC5QvNYT%2BxBGzS4Nv2JWGkZMJuX%2BIDoGFfr35HBYA5ahcrNfzOkc0hyyiJr6db9PY1DlttJR9lth%2Fzac8mCRuXu3MKobHTx%2FVpsEwTp6ZAG3dJQ1sBk7EMpaisBE0a7Sjl6YWzUKaohsXyyGc2jb4%2BWU43%2F2b8DRPElugu9cRnwgatlOGJLPXSknlloVWHhq4yk18WfkMlrY1FfOOW9HLpLTWLky9EhnF6Ju2bAuOTvvS9EXvzUgz8kOGd9vTE8rU3QHmrDPhQU0ZB481BLGHYd357JHrW409iAL3BmYn6%2BLEBRLrMpIbhNJg0t9oORxTLft41Z7P0RbWP31A%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-13 14:13:38,046 ERROR   Thread-11 :521353 [step_upload.py:_handle_event():200] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/conda-environment.yaml
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/conda-environment.yaml?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=kcR7GUK%2FlFP5%2FzxMA59myW3GspHBYsZ0SwbpKb7JzymDiBCjF8Vt0%2Bvvk%2F5s0xuiYy1GNfyLIEf%2B6fewhdKDYR1gAtAfS6XeMHt20dEXZTNukk0pQZu1zneP2VUdiMijo2nKmq70HMf%2Fd0swJo7ksJaTWhuV5%2FM022uZ34YnZpx%2BnYpwetcFEF7MPXKGNiGWqPKhu4Ek8ALT2hS4%2BZ%2Fy2VJxfN1En5TXdHTJiG%2FNNksmnRGzOKjWXkxi7J05zOqrgZkwPPn4a2ALLpK1TK5UqKtoZPmpgrqLvy%2F%2FcFvCF6KArLHmdYnf3ucYMRC5LA6lwTtTNnpk2aQJHflsh9xV1w%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 57, in run
+    self.push()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-13 14:13:38,046 ERROR   Thread-11 :521353 [step_upload.py:_handle_event():200] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/config.yaml
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/config.yaml?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=QXBRjGC5QvNYT%2BxBGzS4Nv2JWGkZMJuX%2BIDoGFfr35HBYA5ahcrNfzOkc0hyyiJr6db9PY1DlttJR9lth%2Fzac8mCRuXu3MKobHTx%2FVpsEwTp6ZAG3dJQ1sBk7EMpaisBE0a7Sjl6YWzUKaohsXyyGc2jb4%2BWU43%2F2b8DRPElugu9cRnwgatlOGJLPXSknlloVWHhq4yk18WfkMlrY1FfOOW9HLpLTWLky9EhnF6Ju2bAuOTvvS9EXvzUgz8kOGd9vTE8rU3QHmrDPhQU0ZB481BLGHYd357JHrW409iAL3BmYn6%2BLEBRLrMpIbhNJg0t9oORxTLft41Z7P0RbWP31A%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 57, in run
+    self.push()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-13 14:13:38,046 ERROR   Thread-11 :521353 [step_upload.py:_handle_event():200] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/files/output.log
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/3pa975ql/output.log?Expires=1715688817&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=Gx8lN5lLNy9a7EHUsUS2ngmfH2HMxDdxfpb9UKBaWrZTkUE3%2BB7D2szPKToADUayVw6FBJyWgQZnd4WsDHIRKvaY9ovbwql73ZfCCorVtyZFxEXiIaoitZvVHF%2F3X1%2Frjzn%2FWtQ2CaUpxQyDRtDl03DB3oPGEvO1KwtfnmnAapVqMHpbG6IARHeCDUsF02vT5baCbOr5jTh0RvdLh2Sdhp0VParX625NiAqtN%2BOPXezftm0Wkv5ALeE7q4AIyy%2BpVsxCLxqTFeGizjRJlPfzVUlj%2BWWJOpTYaw8HqNE0f3oyRZvKqV6dkj45OriH2NpGwh2MXbrSshlkTNTeiWOB3g%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 57, in run
+    self.push()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-13 14:13:38,247 INFO    Thread-11 :521353 [sender.py:transition_state():617] send defer: 11
+2024-05-13 14:13:38,247 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:38,247 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 11
+2024-05-13 14:13:38,248 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:38,248 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 11
+2024-05-13 14:13:38,248 INFO    SenderThread:521353 [file_pusher.py:join():181] waiting for file pusher
+2024-05-13 14:13:38,248 INFO    SenderThread:521353 [sender.py:transition_state():617] send defer: 12
+2024-05-13 14:13:38,248 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:38,248 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 12
+2024-05-13 14:13:38,248 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:38,248 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 12
+2024-05-13 14:13:38,248 INFO    SenderThread:521353 [file_stream.py:finish():595] file stream finish called
+2024-05-13 14:13:38,749 INFO    SenderThread:521353 [file_stream.py:finish():599] file stream finish is done
+2024-05-13 14:13:38,749 INFO    SenderThread:521353 [sender.py:transition_state():617] send defer: 13
+2024-05-13 14:13:38,749 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:38,749 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 13
+2024-05-13 14:13:38,750 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:38,750 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 13
+2024-05-13 14:13:38,750 INFO    SenderThread:521353 [sender.py:transition_state():617] send defer: 14
+2024-05-13 14:13:38,750 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: defer
+2024-05-13 14:13:38,750 INFO    HandlerThread:521353 [handler.py:handle_request_defer():172] handle defer: 14
+2024-05-13 14:13:38,751 DEBUG   SenderThread:521353 [sender.py:send():382] send: final
+2024-05-13 14:13:38,751 DEBUG   SenderThread:521353 [sender.py:send():382] send: footer
+2024-05-13 14:13:38,751 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: defer
+2024-05-13 14:13:38,751 INFO    SenderThread:521353 [sender.py:send_request_defer():613] handle sender defer: 14
+2024-05-13 14:13:38,752 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-13 14:13:38,753 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: poll_exit
+2024-05-13 14:13:38,753 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-13 14:13:38,753 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: poll_exit
+2024-05-13 14:13:38,754 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: server_info
+2024-05-13 14:13:38,754 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: server_info
+2024-05-13 14:13:38,757 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: get_summary
+2024-05-13 14:13:38,758 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: sampled_history
+2024-05-13 14:13:38,758 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-13 14:13:38,759 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: job_info
+2024-05-13 14:13:38,890 DEBUG   SenderThread:521353 [sender.py:send_request():409] send_request: job_info
+2024-05-13 14:13:38,890 INFO    MainThread:521353 [wandb_run.py:_footer_history_summary_info():3837] rendering history
+2024-05-13 14:13:38,890 INFO    MainThread:521353 [wandb_run.py:_footer_history_summary_info():3869] rendering summary
+2024-05-13 14:13:38,891 INFO    MainThread:521353 [wandb_run.py:_footer_sync_info():3796] logging synced files
+2024-05-13 14:13:38,891 DEBUG   HandlerThread:521353 [handler.py:handle_request():146] handle_request: shutdown
+2024-05-13 14:13:38,891 INFO    HandlerThread:521353 [handler.py:finish():866] shutting down handler
+2024-05-13 14:13:39,759 INFO    WriterThread:521353 [datastore.py:close():294] close: /nfs/datx/lyk/HiFT/wandb/run-20240513_141331-3pa975ql/run-3pa975ql.wandb
+2024-05-13 14:13:39,890 INFO    SenderThread:521353 [sender.py:finish():1548] shutting down sender
+2024-05-13 14:13:39,890 INFO    SenderThread:521353 [file_pusher.py:finish():175] shutting down file pusher
+2024-05-13 14:13:39,890 INFO    SenderThread:521353 [file_pusher.py:join():181] waiting for file pusher

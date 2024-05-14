@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="HiFT",
-    version="0.0.1",
+    version="0.0.2",
     author="Yongkang Liu",
     author_email="misonsky@163.com",
     description="PyTorch implementation of 'HiFT: A Hierarchical Full Parameter Fine-Tuning Strategy', a memory-efficient approach to adapt a large pre-trained deep learning model.",

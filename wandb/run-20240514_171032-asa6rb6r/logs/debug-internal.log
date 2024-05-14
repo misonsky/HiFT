@@ -1,0 +1,940 @@
+2024-05-14 17:10:32,814 INFO    StreamThr :967918 [internal.py:wandb_internal():86] W&B internal server running at pid: 967918, started at: 2024-05-14 17:10:32.813702
+2024-05-14 17:10:32,815 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status
+2024-05-14 17:10:32,819 INFO    WriterThread:967918 [datastore.py:open_for_write():85] open: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/run-asa6rb6r.wandb
+2024-05-14 17:10:32,820 DEBUG   SenderThread:967918 [sender.py:send():382] send: header
+2024-05-14 17:10:32,820 DEBUG   SenderThread:967918 [sender.py:send():382] send: run
+2024-05-14 17:10:33,166 INFO    SenderThread:967918 [dir_watcher.py:__init__():211] watching files in: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files
+2024-05-14 17:10:33,166 INFO    SenderThread:967918 [sender.py:_start_run_threads():1136] run started: asa6rb6r with start time 1715699432.815041
+2024-05-14 17:10:33,176 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: check_version
+2024-05-14 17:10:33,177 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: check_version
+2024-05-14 17:10:33,236 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: run_start
+2024-05-14 17:10:33,264 DEBUG   HandlerThread:967918 [system_info.py:__init__():32] System info init
+2024-05-14 17:10:33,264 DEBUG   HandlerThread:967918 [system_info.py:__init__():47] System info init done
+2024-05-14 17:10:33,265 INFO    HandlerThread:967918 [system_monitor.py:start():194] Starting system monitor
+2024-05-14 17:10:33,265 INFO    SystemMonitor:967918 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-14 17:10:33,265 INFO    HandlerThread:967918 [system_monitor.py:probe():214] Collecting system info
+2024-05-14 17:10:33,266 INFO    SystemMonitor:967918 [interfaces.py:start():190] Started cpu monitoring
+2024-05-14 17:10:33,267 INFO    SystemMonitor:967918 [interfaces.py:start():190] Started disk monitoring
+2024-05-14 17:10:33,267 INFO    SystemMonitor:967918 [interfaces.py:start():190] Started gpu monitoring
+2024-05-14 17:10:33,267 INFO    SystemMonitor:967918 [interfaces.py:start():190] Started memory monitoring
+2024-05-14 17:10:33,268 INFO    SystemMonitor:967918 [interfaces.py:start():190] Started network monitoring
+2024-05-14 17:10:33,339 DEBUG   HandlerThread:967918 [system_info.py:probe():196] Probing system
+2024-05-14 17:10:33,344 DEBUG   HandlerThread:967918 [gitlib.py:_init_repo():56] git repository is invalid
+2024-05-14 17:10:33,344 DEBUG   HandlerThread:967918 [system_info.py:probe():244] Probing system done
+2024-05-14 17:10:33,344 DEBUG   HandlerThread:967918 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-91-generic-x86_64-with-glibc2.10', 'python': '3.8.5', 'heartbeatAt': '2024-05-14T15:10:33.339238', 'startedAt': '2024-05-14T15:10:32.804797', 'docker': None, 'cuda': None, 'args': ('--model_type', 'opt', '--HiTaskType', 'CAUSAL_LM', '--optim', 'adamw_torch', '--deepspeed', 'dsconfig/zero0_config.json', '--model_name_or_path', '/mounts/work/lyk/hierFT/opt-7b', '--dataset_dir', 'alpaca_data', '--validation_split_percentage', '0.01', '--per_device_train_batch_size', '12', '--per_device_eval_batch_size', '8', '--do_train', '--do_eval', '--seed', '12345', '--fp16', '--tf32', 'true', '--num_train_epochs', '1', '--lr_scheduler_type', 'cosine', '--learning_rate', '1e-5', '--warmup_ratio', '0.0', '--weight_decay', '0.0', '--logging_strategy', 'steps', '--logging_steps', '10', '--save_strategy', 'steps', '--save_total_limit', '3', '--evaluation_strategy', 'steps', '--eval_steps', '100', '--save_steps', '200', '--preprocessing_num_workers', '4', '--max_seq_length', '512', '--output_dir', 'outputs/instruct_tuning/model', '--overwrite_output_dir', '--logging_first_step', 'True', '--torch_dtype', 'float16', '--ddp_find_unused_parameters', 'False', '--load_best_model_at_end', '--hier_tuning', '--group_element', '1', '--optimizer_strategy', 'down2up'), 'state': 'running', 'program': 'examples/instruct_tuning.py', 'codePathLocal': 'examples/instruct_tuning.py', 'codePath': 'examples/instruct_tuning.py', 'host': 'rho1', 'username': 'yongkang', 'executable': '/mounts/work/lyk/anaconda3/envs/torch2/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 1969.409984375, 'min': 1500.0, 'max': 3000.0}, 'cpu_freq_per_core': [{'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3724.367, 'min': 1500.0, 'max': 3000.0}, {'current': 2264.475, 'min': 1500.0, 'max': 3000.0}, {'current': 2200.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3716.981, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3717.594, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3412.687, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3645.374, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2200.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}], 'disk': {'/': {'total': 878.1072120666504, 'used': 583.3610458374023}}, 'gpu': 'NVIDIA RTX A6000', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}], 'memory': {'total': 251.73123168945312}}
+2024-05-14 17:10:33,344 INFO    HandlerThread:967918 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-14 17:10:33,344 INFO    HandlerThread:967918 [system_monitor.py:probe():227] Publishing system info
+2024-05-14 17:10:33,344 DEBUG   HandlerThread:967918 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-05-14 17:10:33,345 DEBUG   HandlerThread:967918 [system_info.py:_save_pip():68] Saving pip packages done
+2024-05-14 17:10:33,345 DEBUG   HandlerThread:967918 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2024-05-14 17:10:34,168 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/conda-environment.yaml
+2024-05-14 17:10:34,169 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/requirements.txt
+2024-05-14 17:10:39,051 DEBUG   HandlerThread:967918 [system_info.py:_save_conda():87] Saving conda packages done
+2024-05-14 17:10:39,052 INFO    HandlerThread:967918 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-14 17:10:39,068 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:10:39,068 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: keepalive
+2024-05-14 17:10:39,068 DEBUG   SenderThread:967918 [sender.py:send():382] send: files
+2024-05-14 17:10:39,068 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-metadata.json with policy now
+2024-05-14 17:10:39,075 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:10:39,075 DEBUG   SenderThread:967918 [sender.py:send():382] send: telemetry
+2024-05-14 17:10:39,075 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:10:39,078 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:10:39,172 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/conda-environment.yaml
+2024-05-14 17:10:39,172 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-metadata.json
+2024-05-14 17:10:39,352 DEBUG   SenderThread:967918 [sender.py:send():382] send: config
+2024-05-14 17:10:39,353 DEBUG   SenderThread:967918 [sender.py:send():382] send: metric
+2024-05-14 17:10:39,353 DEBUG   SenderThread:967918 [sender.py:send():382] send: telemetry
+2024-05-14 17:10:39,353 DEBUG   SenderThread:967918 [sender.py:send():382] send: metric
+2024-05-14 17:10:39,353 WARNING SenderThread:967918 [sender.py:send_metric():1343] Seen metric with glob (shouldn't happen)
+2024-05-14 17:10:39,353 DEBUG   SenderThread:967918 [sender.py:send():382] send: telemetry
+2024-05-14 17:10:39,506 ERROR   wandb-upload_0:967918 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/wandb-metadata.json?Expires=1715785839&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=VvGcblZkRe7%2BBhBu7XX4PdpOMUiZFeHEykfH6HI0iggVcIAA0kyOnEOpBnaH%2BOQ4DZw3qCicypzSIkXdGxuw9voAONJsypUCwBWSoe7CxTSSw3RqcZTt01BX9CBbOYt%2BqjojKvbY%2FH3NfUZPHFX2aD35my2Dsn4aed%2BwIiNhES8eAvQ4k1Z8Df1rtuhtYUDyKYuz0nsnbZpOynOpkbU%2Bq3k4iTZ%2F2GLUHejiuhoRJinN2pp1oHLW0ApULUbkRZQkHeheo38SqsRATt7F3vR0FWU%2BpMXfvMFfabR95RWgq17XHDvRZn69vAJIOsTcny90zISSw%2BebRAQybUigBH02EA%3D%3D: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/wandb-metadata.json?Expires=1715785839&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=VvGcblZkRe7%2BBhBu7XX4PdpOMUiZFeHEykfH6HI0iggVcIAA0kyOnEOpBnaH%2BOQ4DZw3qCicypzSIkXdGxuw9voAONJsypUCwBWSoe7CxTSSw3RqcZTt01BX9CBbOYt%2BqjojKvbY%2FH3NfUZPHFX2aD35my2Dsn4aed%2BwIiNhES8eAvQ4k1Z8Df1rtuhtYUDyKYuz0nsnbZpOynOpkbU%2Bq3k4iTZ%2F2GLUHejiuhoRJinN2pp1oHLW0ApULUbkRZQkHeheo38SqsRATt7F3vR0FWU%2BpMXfvMFfabR95RWgq17XHDvRZn69vAJIOsTcny90zISSw%2BebRAQybUigBH02EA%3D%3D
+2024-05-14 17:10:39,506 ERROR   wandb-upload_0:967918 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10135'}
+2024-05-14 17:10:39,506 ERROR   wandb-upload_0:967918 [internal_api.py:upload_file():2765] upload_file response body: b"<?xml version='1.0' encoding='UTF-8'?><Error><Code>AccessDenied</Code><Message>Access denied.</Message><Details>We're sorry, but this service is not available in your location</Details></Error>"
+2024-05-14 17:10:39,554 ERROR   wandb-upload_0:967918 [upload_job.py:push():134] Failed to upload file: /tmp/tmpruif_sovwandb/xrkhodtx-wandb-metadata.json
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/wandb-metadata.json?Expires=1715785839&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=VvGcblZkRe7%2BBhBu7XX4PdpOMUiZFeHEykfH6HI0iggVcIAA0kyOnEOpBnaH%2BOQ4DZw3qCicypzSIkXdGxuw9voAONJsypUCwBWSoe7CxTSSw3RqcZTt01BX9CBbOYt%2BqjojKvbY%2FH3NfUZPHFX2aD35my2Dsn4aed%2BwIiNhES8eAvQ4k1Z8Df1rtuhtYUDyKYuz0nsnbZpOynOpkbU%2Bq3k4iTZ%2F2GLUHejiuhoRJinN2pp1oHLW0ApULUbkRZQkHeheo38SqsRATt7F3vR0FWU%2BpMXfvMFfabR95RWgq17XHDvRZn69vAJIOsTcny90zISSw%2BebRAQybUigBH02EA%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-14 17:10:39,575 ERROR   Thread-11 :967918 [step_upload.py:_handle_event():200] Failed to upload file: /tmp/tmpruif_sovwandb/xrkhodtx-wandb-metadata.json
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/wandb-metadata.json?Expires=1715785839&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=VvGcblZkRe7%2BBhBu7XX4PdpOMUiZFeHEykfH6HI0iggVcIAA0kyOnEOpBnaH%2BOQ4DZw3qCicypzSIkXdGxuw9voAONJsypUCwBWSoe7CxTSSw3RqcZTt01BX9CBbOYt%2BqjojKvbY%2FH3NfUZPHFX2aD35my2Dsn4aed%2BwIiNhES8eAvQ4k1Z8Df1rtuhtYUDyKYuz0nsnbZpOynOpkbU%2Bq3k4iTZ%2F2GLUHejiuhoRJinN2pp1oHLW0ApULUbkRZQkHeheo38SqsRATt7F3vR0FWU%2BpMXfvMFfabR95RWgq17XHDvRZn69vAJIOsTcny90zISSw%2BebRAQybUigBH02EA%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 57, in run
+    self.push()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-14 17:10:40,174 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:10:41,198 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:10:41,200 DEBUG   SenderThread:967918 [sender.py:send():382] send: metric
+2024-05-14 17:10:41,200 DEBUG   SenderThread:967918 [sender.py:send():382] send: metric
+2024-05-14 17:10:41,200 DEBUG   SenderThread:967918 [sender.py:send():382] send: metric
+2024-05-14 17:10:41,200 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:10:41,200 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:10:41,203 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:10:42,176 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:10:42,176 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:10:43,177 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:10:43,662 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:10:44,178 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:10:46,180 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:10:48,182 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:10:49,641 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:10:50,183 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:10:52,185 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:10:54,074 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:10:54,074 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:10:54,075 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:10:54,186 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:10:55,409 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:10:56,188 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:10:57,189 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:10:58,190 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:10:58,587 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:10:58,588 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:10:58,589 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:10:58,590 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:10:59,190 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:11:00,191 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:01,193 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:01,332 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:11:02,194 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:04,196 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:06,198 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:06,715 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:11:07,198 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/config.yaml
+2024-05-14 17:11:08,346 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:09,074 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:11:09,074 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:11:09,075 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:11:10,348 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:12,497 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:11:14,350 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:16,352 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:16,608 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:11:16,610 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:11:16,610 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:11:16,611 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:11:17,352 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:11:17,612 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:11:18,353 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:19,354 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:20,355 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:22,356 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:22,879 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:11:24,074 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:11:24,074 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:11:24,076 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:11:24,359 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:28,363 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:28,402 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:11:32,366 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:33,268 DEBUG   SystemMonitor:967918 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-14 17:11:33,270 DEBUG   SenderThread:967918 [sender.py:send():382] send: stats
+2024-05-14 17:11:33,743 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:11:34,367 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:36,369 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:38,371 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:38,455 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:11:38,456 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:11:38,456 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:11:38,457 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:11:39,074 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:11:39,074 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:11:39,077 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:11:39,289 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:11:39,371 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:11:40,372 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:41,373 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:42,374 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:44,376 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:44,686 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:11:46,378 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:48,379 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:49,800 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:11:52,382 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:54,074 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:11:54,075 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:11:54,076 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:11:55,226 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:11:56,385 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:11:58,387 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:00,388 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:01,186 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:12:01,798 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:12:01,799 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:12:01,799 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:12:01,801 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:12:02,389 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:12:03,271 DEBUG   SenderThread:967918 [sender.py:send():382] send: stats
+2024-05-14 17:12:03,391 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:04,391 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:06,361 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:12:06,393 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:09,074 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:12:09,075 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:12:09,077 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:12:10,396 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:11,455 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:12:12,398 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:14,400 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:17,027 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:12:18,403 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:20,405 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:22,077 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:12:22,407 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:24,075 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:12:24,075 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:12:24,077 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:12:24,409 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:27,081 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:12:27,781 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:12:27,783 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:12:27,783 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:12:27,784 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:12:28,412 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:28,413 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:12:29,413 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:30,414 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:32,416 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:33,064 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:12:33,273 DEBUG   SenderThread:967918 [sender.py:send():382] send: stats
+2024-05-14 17:12:34,418 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:36,419 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:38,421 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:38,992 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:12:39,074 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:12:39,075 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:12:39,076 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:12:42,423 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:44,424 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:44,591 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:12:48,427 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:50,382 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:12:50,429 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:53,993 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:12:53,994 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:12:53,994 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:12:53,995 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:12:54,075 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:12:54,075 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:12:54,077 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:12:54,430 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:54,431 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:12:55,432 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:56,278 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:12:56,433 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:12:58,434 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:00,435 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:01,467 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:13:03,273 DEBUG   SenderThread:967918 [sender.py:send():382] send: stats
+2024-05-14 17:13:04,438 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:06,439 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:07,062 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:13:09,075 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:13:09,075 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:13:09,078 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:13:10,442 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:12,443 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:12,574 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:13:14,444 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:18,157 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:13:18,447 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:20,448 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:20,489 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:13:20,490 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:13:20,491 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:13:20,492 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:13:21,449 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:13:22,450 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:23,451 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:23,779 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:13:24,075 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:13:24,075 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:13:24,077 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:13:24,452 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:28,455 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:29,726 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:13:30,456 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:33,275 DEBUG   SenderThread:967918 [sender.py:send():382] send: stats
+2024-05-14 17:13:34,459 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:35,528 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:13:36,461 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:38,462 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:39,075 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:13:39,076 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:13:39,077 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:13:41,198 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:13:42,465 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:44,466 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:46,951 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:13:48,370 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:13:48,371 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:13:48,371 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:13:48,372 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:13:48,468 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:48,469 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:13:50,470 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:51,471 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:52,472 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:52,736 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:13:54,075 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:13:54,075 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:13:54,077 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:13:54,474 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:56,475 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:13:58,000 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:14:00,478 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:02,479 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:03,277 DEBUG   SenderThread:967918 [sender.py:send():382] send: stats
+2024-05-14 17:14:03,278 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:14:04,482 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:06,483 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:08,485 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:09,076 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:14:09,076 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:14:09,078 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:14:09,270 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:14:12,489 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:13,439 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:14:13,440 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:14:13,440 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:14:13,441 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:14:13,489 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:14:14,442 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:14:14,490 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:15,491 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:18,493 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:20,099 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:14:20,494 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:24,075 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:14:24,076 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:14:24,077 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:14:24,496 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:25,926 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:14:26,498 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:30,502 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:31,803 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:14:32,504 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:33,279 DEBUG   SenderThread:967918 [sender.py:send():382] send: stats
+2024-05-14 17:14:36,513 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:37,507 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:14:38,515 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:39,076 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:14:39,076 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:14:39,078 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:14:40,517 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:41,702 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:14:41,704 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:14:41,704 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:14:41,705 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:14:42,518 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:14:43,008 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:14:43,519 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:44,520 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:46,521 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:48,202 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:14:48,523 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:50,525 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:52,007 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:14:52,009 DEBUG   SenderThread:967918 [sender.py:send():382] send: metric
+2024-05-14 17:14:52,011 DEBUG   SenderThread:967918 [sender.py:send():382] send: metric
+2024-05-14 17:14:52,011 DEBUG   SenderThread:967918 [sender.py:send():382] send: metric
+2024-05-14 17:14:52,011 DEBUG   SenderThread:967918 [sender.py:send():382] send: metric
+2024-05-14 17:14:52,011 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:14:52,011 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:14:52,012 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:14:52,526 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:52,527 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:14:53,528 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:54,013 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:14:54,076 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:14:54,076 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:14:54,078 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:14:54,529 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:56,531 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:58,533 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:14:59,591 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:15:00,535 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/config.yaml
+2024-05-14 17:15:02,537 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:03,281 DEBUG   SenderThread:967918 [sender.py:send():382] send: stats
+2024-05-14 17:15:04,539 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:04,968 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:15:06,541 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:09,076 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:15:09,076 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:15:09,078 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:15:10,315 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:15:10,545 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:12,546 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:14,547 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:16,284 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:15:18,551 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:19,693 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:15:19,694 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:15:19,694 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:15:19,696 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:15:20,552 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:20,553 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:15:21,554 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:21,697 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:15:24,077 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:15:24,077 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:15:24,078 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:15:24,556 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:26,559 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:27,067 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:15:30,562 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:32,371 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:15:32,564 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:33,282 DEBUG   SenderThread:967918 [sender.py:send():382] send: stats
+2024-05-14 17:15:36,567 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:37,382 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:15:38,569 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:39,077 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:15:39,077 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:15:39,080 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:15:42,443 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:15:42,572 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:44,574 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:46,575 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:47,268 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:15:47,270 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:15:47,270 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:15:47,271 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:15:47,576 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:15:48,272 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:15:48,577 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:49,578 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:50,579 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:53,961 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:15:54,076 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:15:54,077 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:15:54,078 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:15:54,582 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:58,585 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:15:59,883 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:16:00,587 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:03,283 DEBUG   SenderThread:967918 [sender.py:send():382] send: stats
+2024-05-14 17:16:04,591 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:05,244 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:16:06,592 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:09,076 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:16:09,077 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:16:09,079 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:16:10,258 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:16:10,596 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:12,598 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:16,043 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:16:16,601 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:17,684 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 17:16:17,685 DEBUG   SenderThread:967918 [sender.py:send():382] send: history
+2024-05-14 17:16:17,686 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 17:16:17,687 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:16:18,603 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:18,603 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:16:19,604 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:21,432 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:16:22,607 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:24,076 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 17:16:24,077 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 17:16:24,079 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:16:24,609 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:27,058 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:16:28,612 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:30,614 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:32,294 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:16:32,615 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:33,285 DEBUG   SenderThread:967918 [sender.py:send():382] send: stats
+2024-05-14 17:16:35,094 DEBUG   SenderThread:967918 [sender.py:send():382] send: exit
+2024-05-14 17:16:35,094 INFO    SenderThread:967918 [sender.py:send_exit():589] handling exit code: 1
+2024-05-14 17:16:35,095 INFO    SenderThread:967918 [sender.py:send_exit():591] handling runtime: 361
+2024-05-14 17:16:35,096 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:16:35,096 INFO    SenderThread:967918 [sender.py:send_exit():597] send defer
+2024-05-14 17:16:35,096 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:35,096 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 0
+2024-05-14 17:16:35,096 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:35,096 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 0
+2024-05-14 17:16:35,096 INFO    SenderThread:967918 [sender.py:transition_state():617] send defer: 1
+2024-05-14 17:16:35,096 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:35,096 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 1
+2024-05-14 17:16:35,097 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:35,097 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 1
+2024-05-14 17:16:35,097 INFO    SenderThread:967918 [sender.py:transition_state():617] send defer: 2
+2024-05-14 17:16:35,097 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:35,097 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 2
+2024-05-14 17:16:35,097 INFO    HandlerThread:967918 [system_monitor.py:finish():203] Stopping system monitor
+2024-05-14 17:16:35,097 DEBUG   SystemMonitor:967918 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-14 17:16:35,097 DEBUG   SystemMonitor:967918 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-14 17:16:35,098 INFO    HandlerThread:967918 [interfaces.py:finish():202] Joined cpu monitor
+2024-05-14 17:16:35,098 INFO    HandlerThread:967918 [interfaces.py:finish():202] Joined disk monitor
+2024-05-14 17:16:35,617 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:16:35,838 INFO    HandlerThread:967918 [interfaces.py:finish():202] Joined gpu monitor
+2024-05-14 17:16:35,838 INFO    HandlerThread:967918 [interfaces.py:finish():202] Joined memory monitor
+2024-05-14 17:16:35,838 INFO    HandlerThread:967918 [interfaces.py:finish():202] Joined network monitor
+2024-05-14 17:16:35,839 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:35,839 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 2
+2024-05-14 17:16:35,839 INFO    SenderThread:967918 [sender.py:transition_state():617] send defer: 3
+2024-05-14 17:16:35,839 DEBUG   SenderThread:967918 [sender.py:send():382] send: stats
+2024-05-14 17:16:35,839 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:35,840 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 3
+2024-05-14 17:16:35,840 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:35,840 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 3
+2024-05-14 17:16:35,840 INFO    SenderThread:967918 [sender.py:transition_state():617] send defer: 4
+2024-05-14 17:16:35,840 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:35,840 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 4
+2024-05-14 17:16:35,840 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:35,840 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 4
+2024-05-14 17:16:35,840 INFO    SenderThread:967918 [sender.py:transition_state():617] send defer: 5
+2024-05-14 17:16:35,840 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:35,840 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 5
+2024-05-14 17:16:35,841 DEBUG   SenderThread:967918 [sender.py:send():382] send: summary
+2024-05-14 17:16:35,842 INFO    SenderThread:967918 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 17:16:35,842 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:35,842 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 5
+2024-05-14 17:16:35,842 INFO    SenderThread:967918 [sender.py:transition_state():617] send defer: 6
+2024-05-14 17:16:35,843 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:35,843 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 6
+2024-05-14 17:16:35,843 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:35,843 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 6
+2024-05-14 17:16:35,843 INFO    SenderThread:967918 [sender.py:transition_state():617] send defer: 7
+2024-05-14 17:16:35,843 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 17:16:35,843 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:35,843 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 7
+2024-05-14 17:16:35,843 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:35,843 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 7
+2024-05-14 17:16:36,095 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-14 17:16:36,619 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:36,619 INFO    Thread-12 :967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+2024-05-14 17:16:38,818 INFO    SenderThread:967918 [sender.py:transition_state():617] send defer: 8
+2024-05-14 17:16:38,818 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: poll_exit
+2024-05-14 17:16:38,818 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:38,818 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 8
+2024-05-14 17:16:38,818 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:38,818 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 8
+2024-05-14 17:16:38,819 INFO    SenderThread:967918 [job_builder.py:build():298] Attempting to build job artifact
+2024-05-14 17:16:38,821 INFO    SenderThread:967918 [job_builder.py:_get_source_type():439] no source found
+2024-05-14 17:16:38,821 INFO    SenderThread:967918 [sender.py:transition_state():617] send defer: 9
+2024-05-14 17:16:38,821 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:38,821 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 9
+2024-05-14 17:16:38,821 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:38,821 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 9
+2024-05-14 17:16:38,821 INFO    SenderThread:967918 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-14 17:16:39,620 INFO    SenderThread:967918 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+2024-05-14 17:16:39,621 INFO    SenderThread:967918 [dir_watcher.py:finish():388] scan: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files
+2024-05-14 17:16:39,621 INFO    SenderThread:967918 [dir_watcher.py:finish():402] scan save: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json wandb-summary.json
+2024-05-14 17:16:39,621 INFO    SenderThread:967918 [dir_watcher.py:finish():402] scan save: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/requirements.txt requirements.txt
+2024-05-14 17:16:39,622 INFO    SenderThread:967918 [dir_watcher.py:finish():402] scan save: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/conda-environment.yaml conda-environment.yaml
+2024-05-14 17:16:39,625 INFO    SenderThread:967918 [dir_watcher.py:finish():402] scan save: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/config.yaml config.yaml
+2024-05-14 17:16:39,625 INFO    SenderThread:967918 [dir_watcher.py:finish():402] scan save: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-metadata.json wandb-metadata.json
+2024-05-14 17:16:39,625 INFO    SenderThread:967918 [dir_watcher.py:finish():402] scan save: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log output.log
+2024-05-14 17:16:39,625 INFO    SenderThread:967918 [sender.py:transition_state():617] send defer: 10
+2024-05-14 17:16:39,628 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:39,628 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 10
+2024-05-14 17:16:39,634 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:39,634 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 10
+2024-05-14 17:16:39,634 INFO    SenderThread:967918 [file_pusher.py:finish():175] shutting down file pusher
+2024-05-14 17:16:39,935 ERROR   wandb-upload_0:967918 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/requirements.txt?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=q87LRmCPCVNDQjtgvJ0fT5ZNkASgC3IPbtzjzQwr3y3PnlBvtNgoDvCiqVQQqZRzcBHj7KNNlBOF4ln%2Bg5ct2y7RfY3SPoU8W0xAwYhV1oh9uc9ig9%2B7sPUo%2FMPZSiT2p3MRXOuqnt7ktBFmS0lMIOaOLyBs9jx039KbX1NevKwhu6wT%2BbUkX6pE67ZaNma0rW6VuGQuZCTXcULMkv1vBCuamdD6qC7pdYnjSGwvpVJQW%2FkAuDDDTxxWfnmZ7GSp8c5A2VaFdPcVc9%2BXh3Nm7KaH58FjCnBJfmXNv4QZTCR8rbawTwUy70c0LfjQGaenHMwYhkl%2BJIcQ5lZFLxBlbQ%3D%3D: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/requirements.txt?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=q87LRmCPCVNDQjtgvJ0fT5ZNkASgC3IPbtzjzQwr3y3PnlBvtNgoDvCiqVQQqZRzcBHj7KNNlBOF4ln%2Bg5ct2y7RfY3SPoU8W0xAwYhV1oh9uc9ig9%2B7sPUo%2FMPZSiT2p3MRXOuqnt7ktBFmS0lMIOaOLyBs9jx039KbX1NevKwhu6wT%2BbUkX6pE67ZaNma0rW6VuGQuZCTXcULMkv1vBCuamdD6qC7pdYnjSGwvpVJQW%2FkAuDDDTxxWfnmZ7GSp8c5A2VaFdPcVc9%2BXh3Nm7KaH58FjCnBJfmXNv4QZTCR8rbawTwUy70c0LfjQGaenHMwYhkl%2BJIcQ5lZFLxBlbQ%3D%3D
+2024-05-14 17:16:39,935 ERROR   wandb-upload_0:967918 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '2434'}
+2024-05-14 17:16:39,935 ERROR   wandb-upload_0:967918 [internal_api.py:upload_file():2765] upload_file response body: b"<?xml version='1.0' encoding='UTF-8'?><Error><Code>AccessDenied</Code><Message>Access denied.</Message><Details>We're sorry, but this service is not available in your location</Details></Error>"
+2024-05-14 17:16:39,937 ERROR   wandb-upload_1:967918 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/wandb-summary.json?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=fJgmRZZsUSuugxHWRxCN9Fz27dtM35zC2OAtW3MgzJRok8hgsNGGFztGdV6OxuifgUyOaG%2FFHzcEP7SN7TRQcm0gzcP1%2F9AxZnthM5fL9JKa%2B5RYQanHGwQRZ0qB7EMRXyUXgYD7Bm7YyK2jL62EWylQj8vtJaj%2BpBRdQ3m7Iahlqwb72R8O9bjAQ80P9Eb8J2VBPSpUaiTT2E4UgaKMo6rSZ2aeWV3k79dQVP0Jns%2Fue8brDes3y7FX9FZyHcurfhh8xbcalmLYvytT4NLyfLnsSHPCHd4h2ETz8NMOyD53dLIhMYoaW90I1pwlpd3c9fLpjSj4iDgDFKEswC6R%2BA%3D%3D: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/wandb-summary.json?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=fJgmRZZsUSuugxHWRxCN9Fz27dtM35zC2OAtW3MgzJRok8hgsNGGFztGdV6OxuifgUyOaG%2FFHzcEP7SN7TRQcm0gzcP1%2F9AxZnthM5fL9JKa%2B5RYQanHGwQRZ0qB7EMRXyUXgYD7Bm7YyK2jL62EWylQj8vtJaj%2BpBRdQ3m7Iahlqwb72R8O9bjAQ80P9Eb8J2VBPSpUaiTT2E4UgaKMo6rSZ2aeWV3k79dQVP0Jns%2Fue8brDes3y7FX9FZyHcurfhh8xbcalmLYvytT4NLyfLnsSHPCHd4h2ETz8NMOyD53dLIhMYoaW90I1pwlpd3c9fLpjSj4iDgDFKEswC6R%2BA%3D%3D
+2024-05-14 17:16:39,937 ERROR   wandb-upload_1:967918 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '341'}
+2024-05-14 17:16:39,937 ERROR   wandb-upload_1:967918 [internal_api.py:upload_file():2765] upload_file response body: b"<?xml version='1.0' encoding='UTF-8'?><Error><Code>AccessDenied</Code><Message>Access denied.</Message><Details>We're sorry, but this service is not available in your location</Details></Error>"
+2024-05-14 17:16:39,966 ERROR   wandb-upload_4:967918 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/output.log?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=qSbLf3IdIr0k%2ByKQnYp6Y3u%2FlDHlcaavQcvr1BBp1lUlNYV%2FPcL0cH9lso%2FEYeKiniBPouYjetDu5Ha%2FfrV9zQXT2ffYMkSg487FOcP6Ztp%2BaxHGt86VYg5c3bHyAfH5iNgNV5eMZkArkmYOmWGKWxFJeq3xJ18rgCiEkkqNpSi28e6LXI2IxxQUprUJyebNQwx6heZkicpyU%2BAp0ha7VGRjJmeLQnNlbzI5%2Fbt7NqrN8A1QPS5hNdczauC5QUYM7ocn23v61iMWrUq4AiEIPJB%2Bga9FpEkLaKYhWKmO6vuYf2UmgVKWd%2F3DzJq6hE4rzAYDh6zScY9qM9bTtABSAA%3D%3D: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/output.log?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=qSbLf3IdIr0k%2ByKQnYp6Y3u%2FlDHlcaavQcvr1BBp1lUlNYV%2FPcL0cH9lso%2FEYeKiniBPouYjetDu5Ha%2FfrV9zQXT2ffYMkSg487FOcP6Ztp%2BaxHGt86VYg5c3bHyAfH5iNgNV5eMZkArkmYOmWGKWxFJeq3xJ18rgCiEkkqNpSi28e6LXI2IxxQUprUJyebNQwx6heZkicpyU%2BAp0ha7VGRjJmeLQnNlbzI5%2Fbt7NqrN8A1QPS5hNdczauC5QUYM7ocn23v61iMWrUq4AiEIPJB%2Bga9FpEkLaKYhWKmO6vuYf2UmgVKWd%2F3DzJq6hE4rzAYDh6zScY9qM9bTtABSAA%3D%3D
+2024-05-14 17:16:39,966 ERROR   wandb-upload_4:967918 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '6783'}
+2024-05-14 17:16:39,966 ERROR   wandb-upload_4:967918 [internal_api.py:upload_file():2765] upload_file response body: b"<?xml version='1.0' encoding='UTF-8'?><Error><Code>AccessDenied</Code><Message>Access denied.</Message><Details>We're sorry, but this service is not available in your location</Details></Error>"
+2024-05-14 17:16:39,975 ERROR   wandb-upload_2:967918 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/conda-environment.yaml?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=jf42vbNS2wtBlK4rnNQ7ya1YeLZDkkltBRyzDtwRPybSmraAcF7TGctkp%2FGpbkQRu6NulMte9PXULyICkEShlNPk%2F8z3PFYCvj2lEEX2O%2FNlIIY%2FmdCwt%2FbP496Wy1OdkCw1iMgSmllDvyqMaTva%2F3%2BVH%2Fhr%2FdGed%2Br16rhYZzoYdFGB413GPVnOD5n0uUu1uBQbS4DCZ3L29Z9qeom5KCx1W7ugqSpGJyjhfQj8z7322OZf2nJEzcRE7rloeU9eYXqyM8Pd03NO2VDOsQR9t3vHzIUg9ctT7%2BQQpsPHX%2B8hSt1kHhnQPk7B4K1NTlUcdtq%2BypE%2BE5HKaW2ZSP7Ehw%3D%3D: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/conda-environment.yaml?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=jf42vbNS2wtBlK4rnNQ7ya1YeLZDkkltBRyzDtwRPybSmraAcF7TGctkp%2FGpbkQRu6NulMte9PXULyICkEShlNPk%2F8z3PFYCvj2lEEX2O%2FNlIIY%2FmdCwt%2FbP496Wy1OdkCw1iMgSmllDvyqMaTva%2F3%2BVH%2Fhr%2FdGed%2Br16rhYZzoYdFGB413GPVnOD5n0uUu1uBQbS4DCZ3L29Z9qeom5KCx1W7ugqSpGJyjhfQj8z7322OZf2nJEzcRE7rloeU9eYXqyM8Pd03NO2VDOsQR9t3vHzIUg9ctT7%2BQQpsPHX%2B8hSt1kHhnQPk7B4K1NTlUcdtq%2BypE%2BE5HKaW2ZSP7Ehw%3D%3D
+2024-05-14 17:16:39,976 ERROR   wandb-upload_3:967918 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/config.yaml?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=M9nCvCHj2PtfxspAQwhMR1Hic6N%2Bzd1yOekOOdmJmduNu3i7jHjSngfhVdytRIUZwXuXnxK1UKgzxncl6q21pIF09eRwZcK8v1jZxPbHQhI%2FaL27MblXW547y%2FRXT54%2B4fbbJkR3clbyQtP6N%2F%2FOvBAuw5ZgYuXuuajPcTGzHJm56HkEwU9nyBBR8MvX4YQwC0zUadSRcInfhFqmN7ozEOTp5nCzChbfY22pg0vqwX4wcjL9vh2G%2FUF0gNQvXYa42ImwjBMNc3TguZALUUs12TF1xzXH5Miko6CGc9WjTtG6P%2Fj31In%2F9WcUUsYlNO%2BLf7xqZuQ%2BGFCE8vgoa18udA%3D%3D: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/config.yaml?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=M9nCvCHj2PtfxspAQwhMR1Hic6N%2Bzd1yOekOOdmJmduNu3i7jHjSngfhVdytRIUZwXuXnxK1UKgzxncl6q21pIF09eRwZcK8v1jZxPbHQhI%2FaL27MblXW547y%2FRXT54%2B4fbbJkR3clbyQtP6N%2F%2FOvBAuw5ZgYuXuuajPcTGzHJm56HkEwU9nyBBR8MvX4YQwC0zUadSRcInfhFqmN7ozEOTp5nCzChbfY22pg0vqwX4wcjL9vh2G%2FUF0gNQvXYa42ImwjBMNc3TguZALUUs12TF1xzXH5Miko6CGc9WjTtG6P%2Fj31In%2F9WcUUsYlNO%2BLf7xqZuQ%2BGFCE8vgoa18udA%3D%3D
+2024-05-14 17:16:39,976 ERROR   wandb-upload_2:967918 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '5415'}
+2024-05-14 17:16:39,976 ERROR   wandb-upload_3:967918 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10191'}
+2024-05-14 17:16:39,976 ERROR   wandb-upload_2:967918 [internal_api.py:upload_file():2765] upload_file response body: b"<?xml version='1.0' encoding='UTF-8'?><Error><Code>AccessDenied</Code><Message>Access denied.</Message><Details>We're sorry, but this service is not available in your location</Details></Error>"
+2024-05-14 17:16:39,976 ERROR   wandb-upload_3:967918 [internal_api.py:upload_file():2765] upload_file response body: b"<?xml version='1.0' encoding='UTF-8'?><Error><Code>AccessDenied</Code><Message>Access denied.</Message><Details>We're sorry, but this service is not available in your location</Details></Error>"
+2024-05-14 17:16:40,034 ERROR   wandb-upload_0:967918 [upload_job.py:push():134] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/requirements.txt
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/requirements.txt?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=q87LRmCPCVNDQjtgvJ0fT5ZNkASgC3IPbtzjzQwr3y3PnlBvtNgoDvCiqVQQqZRzcBHj7KNNlBOF4ln%2Bg5ct2y7RfY3SPoU8W0xAwYhV1oh9uc9ig9%2B7sPUo%2FMPZSiT2p3MRXOuqnt7ktBFmS0lMIOaOLyBs9jx039KbX1NevKwhu6wT%2BbUkX6pE67ZaNma0rW6VuGQuZCTXcULMkv1vBCuamdD6qC7pdYnjSGwvpVJQW%2FkAuDDDTxxWfnmZ7GSp8c5A2VaFdPcVc9%2BXh3Nm7KaH58FjCnBJfmXNv4QZTCR8rbawTwUy70c0LfjQGaenHMwYhkl%2BJIcQ5lZFLxBlbQ%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-14 17:16:40,034 ERROR   wandb-upload_4:967918 [upload_job.py:push():134] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/output.log?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=qSbLf3IdIr0k%2ByKQnYp6Y3u%2FlDHlcaavQcvr1BBp1lUlNYV%2FPcL0cH9lso%2FEYeKiniBPouYjetDu5Ha%2FfrV9zQXT2ffYMkSg487FOcP6Ztp%2BaxHGt86VYg5c3bHyAfH5iNgNV5eMZkArkmYOmWGKWxFJeq3xJ18rgCiEkkqNpSi28e6LXI2IxxQUprUJyebNQwx6heZkicpyU%2BAp0ha7VGRjJmeLQnNlbzI5%2Fbt7NqrN8A1QPS5hNdczauC5QUYM7ocn23v61iMWrUq4AiEIPJB%2Bga9FpEkLaKYhWKmO6vuYf2UmgVKWd%2F3DzJq6hE4rzAYDh6zScY9qM9bTtABSAA%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-14 17:16:40,034 ERROR   wandb-upload_1:967918 [upload_job.py:push():134] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/wandb-summary.json?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=fJgmRZZsUSuugxHWRxCN9Fz27dtM35zC2OAtW3MgzJRok8hgsNGGFztGdV6OxuifgUyOaG%2FFHzcEP7SN7TRQcm0gzcP1%2F9AxZnthM5fL9JKa%2B5RYQanHGwQRZ0qB7EMRXyUXgYD7Bm7YyK2jL62EWylQj8vtJaj%2BpBRdQ3m7Iahlqwb72R8O9bjAQ80P9Eb8J2VBPSpUaiTT2E4UgaKMo6rSZ2aeWV3k79dQVP0Jns%2Fue8brDes3y7FX9FZyHcurfhh8xbcalmLYvytT4NLyfLnsSHPCHd4h2ETz8NMOyD53dLIhMYoaW90I1pwlpd3c9fLpjSj4iDgDFKEswC6R%2BA%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-14 17:16:40,034 ERROR   wandb-upload_2:967918 [upload_job.py:push():134] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/conda-environment.yaml
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/conda-environment.yaml?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=jf42vbNS2wtBlK4rnNQ7ya1YeLZDkkltBRyzDtwRPybSmraAcF7TGctkp%2FGpbkQRu6NulMte9PXULyICkEShlNPk%2F8z3PFYCvj2lEEX2O%2FNlIIY%2FmdCwt%2FbP496Wy1OdkCw1iMgSmllDvyqMaTva%2F3%2BVH%2Fhr%2FdGed%2Br16rhYZzoYdFGB413GPVnOD5n0uUu1uBQbS4DCZ3L29Z9qeom5KCx1W7ugqSpGJyjhfQj8z7322OZf2nJEzcRE7rloeU9eYXqyM8Pd03NO2VDOsQR9t3vHzIUg9ctT7%2BQQpsPHX%2B8hSt1kHhnQPk7B4K1NTlUcdtq%2BypE%2BE5HKaW2ZSP7Ehw%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-14 17:16:40,034 ERROR   wandb-upload_3:967918 [upload_job.py:push():134] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/config.yaml
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/config.yaml?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=M9nCvCHj2PtfxspAQwhMR1Hic6N%2Bzd1yOekOOdmJmduNu3i7jHjSngfhVdytRIUZwXuXnxK1UKgzxncl6q21pIF09eRwZcK8v1jZxPbHQhI%2FaL27MblXW547y%2FRXT54%2B4fbbJkR3clbyQtP6N%2F%2FOvBAuw5ZgYuXuuajPcTGzHJm56HkEwU9nyBBR8MvX4YQwC0zUadSRcInfhFqmN7ozEOTp5nCzChbfY22pg0vqwX4wcjL9vh2G%2FUF0gNQvXYa42ImwjBMNc3TguZALUUs12TF1xzXH5Miko6CGc9WjTtG6P%2Fj31In%2F9WcUUsYlNO%2BLf7xqZuQ%2BGFCE8vgoa18udA%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-14 17:16:40,121 ERROR   Thread-11 :967918 [step_upload.py:_handle_event():200] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/requirements.txt
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/requirements.txt?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=q87LRmCPCVNDQjtgvJ0fT5ZNkASgC3IPbtzjzQwr3y3PnlBvtNgoDvCiqVQQqZRzcBHj7KNNlBOF4ln%2Bg5ct2y7RfY3SPoU8W0xAwYhV1oh9uc9ig9%2B7sPUo%2FMPZSiT2p3MRXOuqnt7ktBFmS0lMIOaOLyBs9jx039KbX1NevKwhu6wT%2BbUkX6pE67ZaNma0rW6VuGQuZCTXcULMkv1vBCuamdD6qC7pdYnjSGwvpVJQW%2FkAuDDDTxxWfnmZ7GSp8c5A2VaFdPcVc9%2BXh3Nm7KaH58FjCnBJfmXNv4QZTCR8rbawTwUy70c0LfjQGaenHMwYhkl%2BJIcQ5lZFLxBlbQ%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 57, in run
+    self.push()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-14 17:16:40,123 ERROR   Thread-11 :967918 [step_upload.py:_handle_event():200] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/output.log
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/output.log?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=qSbLf3IdIr0k%2ByKQnYp6Y3u%2FlDHlcaavQcvr1BBp1lUlNYV%2FPcL0cH9lso%2FEYeKiniBPouYjetDu5Ha%2FfrV9zQXT2ffYMkSg487FOcP6Ztp%2BaxHGt86VYg5c3bHyAfH5iNgNV5eMZkArkmYOmWGKWxFJeq3xJ18rgCiEkkqNpSi28e6LXI2IxxQUprUJyebNQwx6heZkicpyU%2BAp0ha7VGRjJmeLQnNlbzI5%2Fbt7NqrN8A1QPS5hNdczauC5QUYM7ocn23v61iMWrUq4AiEIPJB%2Bga9FpEkLaKYhWKmO6vuYf2UmgVKWd%2F3DzJq6hE4rzAYDh6zScY9qM9bTtABSAA%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 57, in run
+    self.push()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-14 17:16:40,123 ERROR   Thread-11 :967918 [step_upload.py:_handle_event():200] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/conda-environment.yaml
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/conda-environment.yaml?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=jf42vbNS2wtBlK4rnNQ7ya1YeLZDkkltBRyzDtwRPybSmraAcF7TGctkp%2FGpbkQRu6NulMte9PXULyICkEShlNPk%2F8z3PFYCvj2lEEX2O%2FNlIIY%2FmdCwt%2FbP496Wy1OdkCw1iMgSmllDvyqMaTva%2F3%2BVH%2Fhr%2FdGed%2Br16rhYZzoYdFGB413GPVnOD5n0uUu1uBQbS4DCZ3L29Z9qeom5KCx1W7ugqSpGJyjhfQj8z7322OZf2nJEzcRE7rloeU9eYXqyM8Pd03NO2VDOsQR9t3vHzIUg9ctT7%2BQQpsPHX%2B8hSt1kHhnQPk7B4K1NTlUcdtq%2BypE%2BE5HKaW2ZSP7Ehw%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 57, in run
+    self.push()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-14 17:16:40,123 ERROR   Thread-11 :967918 [step_upload.py:_handle_event():200] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/wandb-summary.json
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/wandb-summary.json?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=fJgmRZZsUSuugxHWRxCN9Fz27dtM35zC2OAtW3MgzJRok8hgsNGGFztGdV6OxuifgUyOaG%2FFHzcEP7SN7TRQcm0gzcP1%2F9AxZnthM5fL9JKa%2B5RYQanHGwQRZ0qB7EMRXyUXgYD7Bm7YyK2jL62EWylQj8vtJaj%2BpBRdQ3m7Iahlqwb72R8O9bjAQ80P9Eb8J2VBPSpUaiTT2E4UgaKMo6rSZ2aeWV3k79dQVP0Jns%2Fue8brDes3y7FX9FZyHcurfhh8xbcalmLYvytT4NLyfLnsSHPCHd4h2ETz8NMOyD53dLIhMYoaW90I1pwlpd3c9fLpjSj4iDgDFKEswC6R%2BA%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 57, in run
+    self.push()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-14 17:16:40,124 ERROR   Thread-11 :967918 [step_upload.py:_handle_event():200] Failed to upload file: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/files/config.yaml
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/asa6rb6r/config.yaml?Expires=1715786199&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=M9nCvCHj2PtfxspAQwhMR1Hic6N%2Bzd1yOekOOdmJmduNu3i7jHjSngfhVdytRIUZwXuXnxK1UKgzxncl6q21pIF09eRwZcK8v1jZxPbHQhI%2FaL27MblXW547y%2FRXT54%2B4fbbJkR3clbyQtP6N%2F%2FOvBAuw5ZgYuXuuajPcTGzHJm56HkEwU9nyBBR8MvX4YQwC0zUadSRcInfhFqmN7ozEOTp5nCzChbfY22pg0vqwX4wcjL9vh2G%2FUF0gNQvXYa42ImwjBMNc3TguZALUUs12TF1xzXH5Miko6CGc9WjTtG6P%2Fj31In%2F9WcUUsYlNO%2BLf7xqZuQ%2BGFCE8vgoa18udA%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 57, in run
+    self.push()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-14 17:16:40,324 INFO    Thread-11 :967918 [sender.py:transition_state():617] send defer: 11
+2024-05-14 17:16:40,324 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:40,324 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 11
+2024-05-14 17:16:40,325 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:40,325 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 11
+2024-05-14 17:16:40,325 INFO    SenderThread:967918 [file_pusher.py:join():181] waiting for file pusher
+2024-05-14 17:16:40,325 INFO    SenderThread:967918 [sender.py:transition_state():617] send defer: 12
+2024-05-14 17:16:40,325 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:40,325 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 12
+2024-05-14 17:16:40,325 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:40,325 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 12
+2024-05-14 17:16:40,325 INFO    SenderThread:967918 [file_stream.py:finish():595] file stream finish called
+2024-05-14 17:16:40,819 INFO    SenderThread:967918 [file_stream.py:finish():599] file stream finish is done
+2024-05-14 17:16:40,819 INFO    SenderThread:967918 [sender.py:transition_state():617] send defer: 13
+2024-05-14 17:16:40,819 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:40,820 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 13
+2024-05-14 17:16:40,820 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:40,820 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 13
+2024-05-14 17:16:40,820 INFO    SenderThread:967918 [sender.py:transition_state():617] send defer: 14
+2024-05-14 17:16:40,820 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: defer
+2024-05-14 17:16:40,820 INFO    HandlerThread:967918 [handler.py:handle_request_defer():172] handle defer: 14
+2024-05-14 17:16:40,820 DEBUG   SenderThread:967918 [sender.py:send():382] send: final
+2024-05-14 17:16:40,820 DEBUG   SenderThread:967918 [sender.py:send():382] send: footer
+2024-05-14 17:16:40,820 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: defer
+2024-05-14 17:16:40,820 INFO    SenderThread:967918 [sender.py:send_request_defer():613] handle sender defer: 14
+2024-05-14 17:16:40,821 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: poll_exit
+2024-05-14 17:16:40,821 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: poll_exit
+2024-05-14 17:16:40,821 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: server_info
+2024-05-14 17:16:40,822 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: server_info
+2024-05-14 17:16:40,823 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: get_summary
+2024-05-14 17:16:40,824 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: sampled_history
+2024-05-14 17:16:40,824 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 17:16:40,824 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: job_info
+2024-05-14 17:16:40,958 DEBUG   SenderThread:967918 [sender.py:send_request():409] send_request: job_info
+2024-05-14 17:16:40,959 INFO    MainThread:967918 [wandb_run.py:_footer_history_summary_info():3837] rendering history
+2024-05-14 17:16:40,959 INFO    MainThread:967918 [wandb_run.py:_footer_history_summary_info():3869] rendering summary
+2024-05-14 17:16:40,959 INFO    MainThread:967918 [wandb_run.py:_footer_sync_info():3796] logging synced files
+2024-05-14 17:16:40,959 DEBUG   HandlerThread:967918 [handler.py:handle_request():146] handle_request: shutdown
+2024-05-14 17:16:40,959 INFO    HandlerThread:967918 [handler.py:finish():866] shutting down handler
+2024-05-14 17:16:41,825 INFO    WriterThread:967918 [datastore.py:close():294] close: /nfs/datx/lyk/HiFT/wandb/run-20240514_171032-asa6rb6r/run-asa6rb6r.wandb
+2024-05-14 17:16:41,958 INFO    SenderThread:967918 [sender.py:finish():1548] shutting down sender
+2024-05-14 17:16:41,959 INFO    SenderThread:967918 [file_pusher.py:finish():175] shutting down file pusher
+2024-05-14 17:16:41,959 INFO    SenderThread:967918 [file_pusher.py:join():181] waiting for file pusher

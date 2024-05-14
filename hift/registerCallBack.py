@@ -1,60 +1,99 @@
 import re
+import random
 from transformers.utils import logging
 from peft import TaskType
 
 logger = logging.get_logger(__name__)
 class HiFTCallBack(object):
-    def __init__(self,freeze_layers,strategy) -> None:
+    def __init__(self,freeze_layers,strategy,taskType,peft_type) -> None:
         self.strategy = strategy
         self.freeze_layers = freeze_layers
-    @classmethod
-    def SequenceClassificationSpecialLayer(cls):
-       special_layers = ["embeddings","classifier"]
-       return special_layers
-    @classmethod
-    def TokenClassificationSpecialLayer(cls):
-        special_layers = ["embeddings","classifier"]
+        self.peft_type = peft_type
+        self.taskType = taskType
+        self.pattern_list= self.GetSpecialLayer()
+    @property
+    def emb_pattern(self):
+        return list()
+    @property
+    def others_pattern(self):
+        return list()
+    @property
+    def seq_cls_head(self):
+        return list()
+    @property
+    def token_cls_head(self):
+        return list()
+    @property
+    def qa_cls_head(self):
+        return list()
+    @property
+    def causal_head(self):
+        return list()
+    @property
+    def others_pattern(self):
+        return list()
+    def SequenceClassificationSpecialLayer(self):
+        special_layers = []
+        special_layers.extend(self.emb_pattern)
+        special_layers.extend(self.others_pattern)
+        special_layers.extend(self.seq_cls_head)
         return special_layers
-    @classmethod
-    def QuestionAnsweringSpecialLayer(cls):
-        special_layers = ["embeddings","qa_outputs"]
+    def TokenClassificationSpecialLayer(self):
+        special_layers = []
+        special_layers.extend(self.emb_pattern)
+        special_layers.extend(self.others_pattern)
+        special_layers.extend(self.token_cls_head)
         return special_layers
-    @classmethod
-    def GetSpecialLayer(cls,taskType):
-        if taskType == TaskType.SEQ_CLS:
-            return cls.SequenceClassificationSpecialLayer()
-        if taskType == TaskType.TOKEN_CLS:
-            return cls.TokenClassificationSpecialLayer()
-        if taskType == TaskType.QUESTION_ANS:
-            return cls.QuestionAnsweringSpecialLayer()
-    
-    def nest_fun(self,layers,subname):
-        signal_value = [1 if len(re.compile(layern).findall(subname))>0 else 0 for layern in layers]
+    def QuestionAnsweringSpecialLayer(self):
+        special_layers = []
+        special_layers.extend(self.emb_pattern)
+        special_layers.extend(self.others_pattern)
+        special_layers.extend(self.qa_cls_head)
+        return special_layers
+    def CausalLMSpecialLayer(self):
+        special_layers = []
+        special_layers.extend(self.emb_pattern)
+        special_layers.extend(self.others_pattern)
+        special_layers.extend(self.causal_head)
+        return special_layers
+    def check_selection(self,elements,name_search):
+        if len(name_search)<=0:
+            return False
+        elements = elements = [element if '\\' in element else re.escape(element) for element in elements]
+        signal_value = [1 if len(re.compile(element).findall(name_search[0]))>0 else 0 for element in elements]
         if sum(signal_value)<=0:
             return False
-        return True
-    def group_model(self,model,special_layers,num_position=2,lora_tuning=False):
+        else:
+            return True
+    def check_task_type(self,taskType,model_name,TaskTInterface):
+        logger.warning("For {} the HiTaskType should be {}".format(model_name," , ".join(TaskTInterface)))
+        assert taskType in TaskTInterface
+    def GetSpecialLayer(self):
+        if self.taskType == TaskType.SEQ_CLS:
+            return self.SequenceClassificationSpecialLayer()
+        if self.taskType == TaskType.TOKEN_CLS:
+            return self.TokenClassificationSpecialLayer()
+        if self.taskType == TaskType.QUESTION_ANS:
+            return self.QuestionAnsweringSpecialLayer()
+        if self.taskType == TaskType.CAUSAL_LM:
+            return self.CausalLMSpecialLayer()
+        else:
+            raise ValueError("......unsupported task type......")
+    
+    def group_model(self,model):
         group_parameters = []
-        non_lora_identifier = []
-        for pname in special_layers:
-            for name,_ in model.named_parameters():
-                matches = re.compile(pname).findall(name)
+        for name,p in model.named_parameters():
+            if not p.requires_grad:continue
+            for pattern in self.pattern_list:
+                matches = re.compile(pattern).findall(name)
                 if len(matches)>0:
-                    if pname not in group_parameters:
-                        if not lora_tuning:
-                            group_parameters.append(pname)
-                else:
-                    items = name.split(".")
-                    flags = [1 if self.nest_fun(special_layers,item) else 0 for item in items]
-                    if sum(flags)<=0:
-                        layerNum = items[num_position]
-                        assert layerNum.isdigit()
-                        if layerNum not in group_parameters:
-                            group_parameters.append(layerNum)
-            
+                    if matches[0] not in group_parameters:
+                        group_parameters.append(matches[0])
+        if hasattr(self,"merge_param"):
+            group_parameters = self.merge_param(group_parameters)
         if len(self.freeze_layers)>0:
             for index in self.freeze_layers:
-                group_parameters[index]=-1
+                group_parameters[int(index)]=-1
                 group_parameters = [element for element in group_parameters if element != -1]
         if self.strategy=="up2down":
            group_parameters.reverse()
@@ -66,224 +105,236 @@ class HiFTCallBack(object):
         return group_parameters
 
 class RobertaCallBack(HiFTCallBack):
-    TaskTInterface = [TaskType.SEQ_CLS,TaskType.TOKEN_CLS,TaskType.QUESTION_ANS]
-    def __init__(self,freeze_layers,strategy,lora_tuning=False):
-        super().__init__(freeze_layers,strategy)
-        self.number_position = 5 if lora_tuning else 3
-    def pattern_name(self,special_layers):
-        patterns = [rf'\.\d+\.']
-        patterns.extend([rf'{layer}' if "embeddings" not in layer else rf'\.{layer}\.' for layer in special_layers])
-        pattern = '|'.join(patterns)
-        return pattern
-    def check_selection(self,elements,name_search):
-        pattern_element = ["\."+element+"\." if element.isdigit() or "embeddings" in element else element for element in elements]
-        assert len(name_search)==1
-        signal_value = [1 if len(re.compile(element).findall(name_search[0]))>0 else 0 for element in pattern_element]
-        if sum(signal_value)<=0:
-            return False
+    def __init__(self,freeze_layers,strategy,taskType,peft_type=None):
+        super().__init__(freeze_layers,strategy,taskType,peft_type)
+        self.TaskTInterface = [TaskType.SEQ_CLS,TaskType.TOKEN_CLS,TaskType.QUESTION_ANS]
+        self.check_task_type(taskType,"RoBERTa",self.TaskTInterface)
+    @property
+    def emb_pattern(self):
+        if self.peft_type:
+            return [rf'\.embedding\.']
         else:
-            return True
-    @classmethod
-    def GetSpecialLayer(cls,taskType):
-        logger.warning("For RoBERTa the HiTaskType should be {}".format(" , ".join(cls.TaskTInterface)))
-        assert taskType in cls.TaskTInterface
-        return super().GetSpecialLayer(taskType)
+            return [rf'\.embeddings\.']
+    @property
+    def seq_cls_head(self):
+        if self.peft_type:
+            return ["classifier"]
+        else:
+            return ["classifier"]
+    @property
+    def token_cls_head(self):
+        if self.peft_type:
+            return ["classifier"]
+        else:
+            return ["classifier"]
+    @property
+    def qa_cls_head(self):
+        if self.peft_type:
+            return ["qa_outputs"]
+        else:
+            return ["qa_outputs"]
+    @property
+    def others_pattern(self):
+        if self.peft_type:
+            return [rf'\.\d+\.']
+        else:
+            return [rf'\.\d+\.']
 class BERTCallBack(HiFTCallBack):
-    TaskTInterface = [TaskType.SEQ_CLS,TaskType.TOKEN_CLS,TaskType.QUESTION_ANS]
-    def __init__(self,freeze_layers,strategy,lora_tuning=False):
-        
-        super().__init__(freeze_layers,strategy)
-        self.number_position = 5 if lora_tuning else 3
-    @classmethod
-    def SequenceClassificationSpecialLayer(cls):
-       special_layers = ["embeddings","pooler","classifier"]
-       return special_layers
-    @classmethod
-    def TokenClassificationSpecialLayer(cls):
-        special_layers = ["embeddings","pooler","classifier"]
-        return special_layers
-    @classmethod
-    def QuestionAnsweringSpecialLayer(cls):
-        special_layers = ["embeddings","pooler","qa_outputs"]
-        return special_layers
-    def pattern_name(self,special_layers):
-        patterns = [rf'\.\d+\.']
-        patterns.extend([rf'{layer}' if "embeddings" not in layer else rf'\.{layer}\.' for layer in special_layers])
-        pattern = '|'.join(patterns)
-        return pattern
-    def check_selection(self,elements,name_search):
-        pattern_element = ["\."+element+"\." if element.isdigit() or "embeddings" in element else element for element in elements]
-        assert len(name_search)==1
-        signal_value = [1 if len(re.compile(element).findall(name_search[0]))>0 else 0 for element in pattern_element]
-        if sum(signal_value)<=0:
-            return False
+    def __init__(self,freeze_layers,strategy,taskType,peft_type=None):
+        super().__init__(freeze_layers,strategy,taskType,peft_type)
+        self.TaskTInterface = [TaskType.SEQ_CLS,TaskType.TOKEN_CLS,TaskType.QUESTION_ANS]
+        self.check_task_type(taskType,"BERTa",self.TaskTInterface)
+    @property
+    def emb_pattern(self):
+        if self.peft_type:
+            return [rf'\.embedding\.']
         else:
-            return True
-    @classmethod
-    def GetSpecialLayer(cls,taskType):
-        logger.warning("For BERT the HiTaskType should be {}".format(" , ".join(cls.TaskTInterface)))
-        assert taskType in cls.TaskTInterface
-        return super().GetSpecialLayer(taskType)
+            return [rf'\.embeddings\.']
+    @property
+    def seq_cls_head(self):
+        if self.peft_type:
+            return ["classifier"]
+        else:
+            return ["pooler","classifier"]
+    @property
+    def token_cls_head(self):
+        if self.peft_type:
+            return ["classifier"]
+        else:
+            return ["pooler","classifier"]
+    @property
+    def qa_cls_head(self):
+        if self.peft_type:
+            return ["qa_outputs"]
+        else:
+            return ["pooler","qa_outputs"]
+    @property
+    def others_pattern(self):
+        if self.peft_type:
+            return [rf'\.\d+\.']
+        else:
+            return [rf'\.\d+\.']
 class GPT2CallBack(HiFTCallBack):
-    TaskTInterface = [TaskType.SEQ_CLS,TaskType.TOKEN_CLS,TaskType.QUESTION_ANS,TaskType.CAUSAL_LM]
-    def __init__(self,freeze_layers,strategy,lora_tuning=False):
-        super().__init__(freeze_layers,strategy)
-        self.number_position = 4 if lora_tuning else 2
-
-    @classmethod
-    def SequenceClassificationSpecialLayer(cls):
-       special_layers = [r"w[^ ]e","score"]
-       return special_layers
-    @classmethod
-    def TokenClassificationSpecialLayer(cls):
-        special_layers = [r"w[^ ]e","classifier"]
-        return special_layers
-    @classmethod
-    def QuestionAnsweringSpecialLayer(cls):
-        special_layers = [r"w[^ ]e","qa_outputs"]
-        return special_layers
-    @classmethod
-    def LMHeadModelSpecialLayer(cls):
-        special_layers = [r"w[^ ]e","ln_f"]
-        return special_layers
-    @classmethod
-    def GetSpecialLayer(cls,taskType):
-        logger.warning("For GPT-2 the HiTaskType should be {}".format(" , ".join(cls.TaskTInterface)))
-        assert taskType in cls.TaskTInterface
-        if taskType == TaskType.CAUSAL_LM:
-            return cls.LMHeadModelSpecialLayer()
-        return super().GetSpecialLayer(taskType)
-    def pattern_name(self,special_layers):
-        patterns = [rf'\.\d+\.']
-        patterns.extend([rf'{layer}' for layer in special_layers])
-        pattern = '|'.join(patterns)
-        return pattern
-    def check_selection(self,elements,name_search):
-        pattern_element = ["\."+element+"\." if element.isdigit() else element for element in elements]
-        assert len(name_search)==1
-        signal_value = [1 if len(re.compile(element).findall(name_search[0]))>0 else 0 for element in pattern_element]
-        if sum(signal_value)<=0:
-            return False
-        else:
-            return True
-
-class GPTNeoXCallBack(HiFTCallBack):
-    TaskTInterface = [TaskType.SEQ_CLS,TaskType.TOKEN_CLS,TaskType.QUESTION_ANS,TaskType.CAUSAL_LM]
-    def __init__(self,freeze_layers,strategy,lora_tuning=False):
-        super().__init__(freeze_layers,strategy)
-        self.number_position = 4 if lora_tuning else 2
+    def __init__(self,freeze_layers,strategy,taskType,peft_type=None):
+        super().__init__(freeze_layers,strategy,taskType,peft_type)
+        self.TaskTInterface = [TaskType.SEQ_CLS,TaskType.TOKEN_CLS,TaskType.QUESTION_ANS,TaskType.CAUSAL_LM]
+        self.check_task_type(taskType,"GPT2",self.TaskTInterface)
+    def merge_param(self,group_parameters):
+        group_parameters = self.emb_pattern + [param for param in group_parameters if len(re.compile(self.emb_pattern[0]).findall(param))<=0]
         
-    @classmethod
-    def SequenceClassificationSpecialLayer(cls):
-       special_layers = [r"w[^ ]e","score"]
-       return special_layers
-    @classmethod
-    def TokenClassificationSpecialLayer(cls):
-        special_layers = [r"w[^ ]e","classifier"]
-        return special_layers
-    @classmethod
-    def QuestionAnsweringSpecialLayer(cls):
-        special_layers = [r"w[^ ]e","qa_outputs"]
-        return special_layers
-    @classmethod
-    def CausalLMSpecialLayer(cls):
-        special_layers = [r"w[^ ]e","ln_f"]
-        return special_layers
-    @classmethod
-    def GetSpecialLayer(cls,taskType):
-        logger.warning("For GPTNeoX the HiTaskType should be {}".format(" , ".join(cls.TaskTInterface)))
-        assert taskType in cls.TaskTInterface
-        if taskType == TaskType.CAUSAL_LM:
-            return cls.CausalLMSpecialLayer()
-        return super().GetSpecialLayer(taskType)
-    def pattern_name(self,special_layers):
-        patterns = [rf'\.\d+\.']
-        patterns.extend([rf'{layer}' for layer in special_layers])
-        pattern = '|'.join(patterns)
-        return pattern
-    def check_selection(self,elements,name_search):
-        pattern_element = ["\."+element+"\." if element.isdigit() else element for element in elements]
-        assert len(name_search)==1
-        signal_value = [1 if len(re.compile(element).findall(name_search[0]))>0 else 0 for element in pattern_element]
-        if sum(signal_value)<=0:
-            return False
+        return group_parameters
+    @property
+    def emb_pattern(self):
+        if self.peft_type:
+            return [rf"\.embedding\."]
         else:
-            return True
+            return [rf"\.w[^ ]e\."]
+    @property
+    def seq_cls_head(self):
+        if self.peft_type:
+            return ["score"]
+        else:
+            return ["score"]
+    @property
+    def token_cls_head(self):
+        if self.peft_type:
+            return ["classifier"]
+        else:
+            return ["classifier"]
+    @property
+    def qa_cls_head(self):
+        if self.peft_type:
+            return ["qa_outputs"]
+        else:
+            return ["qa_outputs"]
+    @property
+    def causal_head(self):
+        if self.peft_type:
+            return [rf"\.ln_f\."]
+        else:
+            return [rf"\.ln_f\."]
+    @property
+    def others_pattern(self):
+        if self.peft_type:
+            return [rf'\.\d+\.']
+        else:
+            return [rf'\.\d+\.']
+            
+class GPTNeoXCallBack(HiFTCallBack):
+    def __init__(self,freeze_layers,strategy,taskType,peft_type=None):
+        super().__init__(freeze_layers,strategy,taskType,peft_type)
+        self.TaskTInterface = [TaskType.SEQ_CLS,TaskType.TOKEN_CLS,TaskType.QUESTION_ANS,TaskType.CAUSAL_LM]
+        self.check_task_type(taskType,"GPTNeoX",self.TaskTInterface)
+    def merge_param(self,group_parameters):
+        group_parameters = self.emb_pattern + [param for param in group_parameters if len(re.compile(self.emb_pattern[0]).findall(param))<=0]
+        
+        return group_parameters
+    @property
+    def emb_pattern(self):
+        if self.peft_type:
+            return [rf"\.embedding\."]
+        else:
+            return [rf"\.w[^ ]e\."]
+    @property
+    def seq_cls_head(self):
+        if self.peft_type:
+            return ["score"]
+        else:
+            return ["score"]
+    @property
+    def token_cls_head(self):
+        if self.peft_type:
+            return ["classifier"]
+        else:
+            return ["classifier"]
+    @property
+    def qa_cls_head(self):
+        if self.peft_type:
+            return ["qa_outputs"]
+        else:
+            return ["qa_outputs"]
+    @property
+    def causal_head(self):
+        if self.peft_type:
+            return [rf"\.ln_f\."]
+        else:
+            return [rf"\.ln_f\."]
+    @property
+    def others_pattern(self):
+        if self.peft_type:
+            return [rf'\.\d+\.']
+        else:
+            return [rf'\.\d+\.']
 
 class OPTCallBack(HiFTCallBack):
-    TaskTInterface = [TaskType.SEQ_CLS,TaskType.QUESTION_ANS,TaskType.CAUSAL_LM]
-    def __init__(self,freeze_layers,strategy,lora_tuning=False):
-        super().__init__(freeze_layers,strategy)
-        self.number_position = 5 if lora_tuning else 3
-    @classmethod
-    def SequenceClassificationSpecialLayer(cls):
-       special_layers = [r"w[^ ]e","score"]
-       return special_layers
-    @classmethod
-    def QuestionAnsweringSpecialLayer(cls):
-        special_layers = [r"w[^ ]e","qa_outputs"]
-        return special_layers
-    @classmethod
-    def CausalLMSpecialLayer(cls):
-        special_layers = [r"embed_[^ ]+","final_layer_norm"]
-        return special_layers
-    @classmethod
-    def GetSpecialLayer(cls,taskType):
-        logger.warning("For OPT the HiTaskType should be {}".format(" , ".join(cls.TaskTInterface)))
-        assert taskType in cls.TaskTInterface
-        if taskType == TaskType.CAUSAL_LM:
-            return cls.CausalLMSpecialLayer()
-        return super().GetSpecialLayer(taskType)
-    def pattern_name(self,special_layers):
-        patterns = [rf'\.\d+\.']
-        patterns.extend([rf'{layer}' for layer in special_layers])
-        pattern = '|'.join(patterns)
-        return pattern
-    def check_selection(self,elements,name_search):
-        pattern_element = ["\."+element+"\." if element.isdigit() else element for element in elements]
-        if len(name_search) >1:
-            name_search = name_search[:1]
-        assert len(name_search)==1
-        signal_value = [1 if len(re.compile(element).findall(name_search[0]))>0 else 0 for element in pattern_element]
-        if sum(signal_value)<=0:
-            return False
+    def __init__(self,freeze_layers,strategy,taskType,peft_type=None):
+        super().__init__(freeze_layers,strategy,taskType,peft_type)
+        self.TaskTInterface = [TaskType.SEQ_CLS,TaskType.QUESTION_ANS,TaskType.CAUSAL_LM]
+        self.check_task_type(taskType,"OPT",self.TaskTInterface)
+    
+    def merge_param(self,group_parameters):
+        group_parameters = self.emb_pattern + [param for param in group_parameters if len(re.compile(self.emb_pattern[0]).findall(param))<=0]
+        return group_parameters
+    @property
+    def emb_pattern(self):
+        if self.peft_type:
+            return [rf"\.embedding\."]
         else:
-            return True
+            return [rf"\.embed_[^ ]+\."]
+    @property
+    def seq_cls_head(self):
+        if self.peft_type:
+            return ["score"]
+        else:
+            return ["score"]
+    @property
+    def qa_cls_head(self):
+        if self.peft_type:
+            return ["qa_outputs"]
+        else:
+            return ["qa_outputs"]
+    @property
+    def causal_head(self):
+        if self.peft_type:
+            return ["final_layer_norm"]
+        else:
+            return ["final_layer_norm"]
+    @property
+    def others_pattern(self):
+        if self.peft_type:
+            return [rf'\.\d+\.']
+        else:
+            return [rf'\.\d+\.']
 
 class LLaMaFamilyCallBack(HiFTCallBack):
-    TaskTInterface = [TaskType.SEQ_CLS,TaskType.CAUSAL_LM]
-    def __init__(self,freeze_layers,strategy,lora_tuning=False):
-        super().__init__(freeze_layers,strategy)
-        self.number_position = 4 if lora_tuning else 2
-    @classmethod
-    def SequenceClassificationSpecialLayer(cls):
-       special_layers = ["embed_tokens","norm","score"]
-       return special_layers
-    @classmethod
-    def CausalLMSpecialLayer(cls):
-        special_layers = ["embed_tokens","norm","lm_head"]
-        return special_layers
-    @classmethod
-    def GetSpecialLayer(cls,taskType):
-        logger.warning("For LLaMaFamily the HiTaskType should be {}".format(" , ".join(cls.TaskTInterface)))
-        assert taskType in cls.TaskTInterface
-        if taskType == TaskType.CAUSAL_LM:
-            return cls.CausalLMSpecialLayer()
-        super().GetSpecialLayer(taskType)
-    def pattern_name(self,special_layers):
-        patterns = [rf'\.\d+\.']
-        patterns.extend([rf'{layer}' if "norm" not in layer else rf'\.\d+\.|\.{layer}\.' for layer in special_layers])
-        pattern = '|'.join(patterns)
-        return pattern
-    def check_selection(self,elements,name_search):
-        pattern_element = ["\."+element+"\." if element.isdigit() or "norm" in element else element for element in elements]
-        assert len(name_search)==1
-        signal_value = [1 if len(re.compile(element).findall(name_search[0]))>0 else 0 for element in pattern_element]
-        if sum(signal_value)<=0:
-            return False
+    def __init__(self,freeze_layers,strategy,taskType,peft_type=None):
+        super().__init__(freeze_layers,strategy,taskType,peft_type)
+        self.TaskTInterface = [TaskType.SEQ_CLS,TaskType.CAUSAL_LM]
+        self.check_task_type(taskType,"LLaMA",self.TaskTInterface)
+    @property
+    def emb_pattern(self):
+        if self.peft_type:
+            return [rf"\.embedding\."]
         else:
-            return True
-
+            return ["embed_tokens"]
+    @property
+    def seq_cls_head(self):
+        if self.peft_type:
+            return ["score"]
+        else:
+            return ["model.norm.weight","score"]
+    @property
+    def causal_head(self):
+        if self.peft_type:
+            return ["lm_head"]
+        else:
+            return ["model.norm.weight","lm_head"]
+    @property
+    def others_pattern(self):
+        if self.peft_type:
+            return [rf'\.\d+\.']
+        else:
+            return [rf'\.\d+\.']
 
 MODDELS_HiFT_PROCESS={
     "roberta":RobertaCallBack,

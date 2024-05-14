@@ -1,0 +1,26 @@
+  0%|          | 0/750 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "examples/vicuna_train.py", line 566, in <module>
+    train()
+  File "examples/vicuna_train.py", line 540, in train
+    trainer.train()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/transformers/trainer.py", line 1537, in train
+    return inner_training_loop(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/hift/trainer.py", line 1034, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/hift/trainer.py", line 723, in training_step
+    return super().training_step(model, inputs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/transformers/trainer.py", line 2744, in training_step
+    self.accelerator.backward(loss)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/accelerate/accelerator.py", line 1899, in backward
+    self.deepspeed_engine_wrapped.backward(loss, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/accelerate/utils/deepspeed.py", line 167, in backward
+    self.engine.backward(loss, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/deepspeed/utils/nvtx.py", line 15, in wrapped_fn
+    ret_val = func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/deepspeed/runtime/engine.py", line 1973, in backward
+    loss.backward(retain_graph=retain_graph)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/_tensor.py", line 492, in backward
+    torch.autograd.backward(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/torch/autograd/__init__.py", line 251, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.36 GiB. GPU 0 has a total capacty of 47.54 GiB of which 1.79 GiB is free. Including non-PyTorch memory, this process has 45.74 GiB memory in use. Of the allocated memory 44.50 GiB is allocated by PyTorch, and 779.41 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

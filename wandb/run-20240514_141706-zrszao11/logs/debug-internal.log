@@ -1,0 +1,538 @@
+2024-05-14 14:17:06,378 INFO    StreamThr :924834 [internal.py:wandb_internal():86] W&B internal server running at pid: 924834, started at: 2024-05-14 14:17:06.377134
+2024-05-14 14:17:06,380 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status
+2024-05-14 14:17:06,391 INFO    WriterThread:924834 [datastore.py:open_for_write():85] open: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/run-zrszao11.wandb
+2024-05-14 14:17:06,392 DEBUG   SenderThread:924834 [sender.py:send():382] send: header
+2024-05-14 14:17:06,392 DEBUG   SenderThread:924834 [sender.py:send():382] send: run
+2024-05-14 14:17:06,841 INFO    SenderThread:924834 [dir_watcher.py:__init__():211] watching files in: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files
+2024-05-14 14:17:06,841 INFO    SenderThread:924834 [sender.py:_start_run_threads():1136] run started: zrszao11 with start time 1715689026.37787
+2024-05-14 14:17:06,857 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: check_version
+2024-05-14 14:17:06,858 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: check_version
+2024-05-14 14:17:06,918 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: run_start
+2024-05-14 14:17:06,950 DEBUG   HandlerThread:924834 [system_info.py:__init__():32] System info init
+2024-05-14 14:17:06,950 DEBUG   HandlerThread:924834 [system_info.py:__init__():47] System info init done
+2024-05-14 14:17:06,950 INFO    HandlerThread:924834 [system_monitor.py:start():194] Starting system monitor
+2024-05-14 14:17:06,951 INFO    SystemMonitor:924834 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-14 14:17:06,952 INFO    HandlerThread:924834 [system_monitor.py:probe():214] Collecting system info
+2024-05-14 14:17:06,953 INFO    SystemMonitor:924834 [interfaces.py:start():190] Started cpu monitoring
+2024-05-14 14:17:06,954 INFO    SystemMonitor:924834 [interfaces.py:start():190] Started disk monitoring
+2024-05-14 14:17:06,955 INFO    SystemMonitor:924834 [interfaces.py:start():190] Started gpu monitoring
+2024-05-14 14:17:06,956 INFO    SystemMonitor:924834 [interfaces.py:start():190] Started memory monitoring
+2024-05-14 14:17:06,957 INFO    SystemMonitor:924834 [interfaces.py:start():190] Started network monitoring
+2024-05-14 14:17:07,020 DEBUG   HandlerThread:924834 [system_info.py:probe():196] Probing system
+2024-05-14 14:17:07,029 DEBUG   HandlerThread:924834 [gitlib.py:_init_repo():56] git repository is invalid
+2024-05-14 14:17:07,030 DEBUG   HandlerThread:924834 [system_info.py:probe():244] Probing system done
+2024-05-14 14:17:07,030 DEBUG   HandlerThread:924834 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-91-generic-x86_64-with-glibc2.10', 'python': '3.8.5', 'heartbeatAt': '2024-05-14T12:17:07.021031', 'startedAt': '2024-05-14T12:17:06.365798', 'docker': None, 'cuda': None, 'args': ('--model_type', 'llama', '--HiTaskType', 'CAUSAL_LM', '--optim', 'adamw_torch', '--deepspeed', 'dsconfig/zero0_config.json', '--model_name_or_path', '/mounts/work/lyk/hierFT/llama2-7b', '--dataset_dir', 'alpaca_data', '--validation_split_percentage', '0.01', '--per_device_train_batch_size', '8', '--per_device_eval_batch_size', '8', '--do_train', '--do_eval', '--seed', '12345', '--fp16', '--tf32', 'true', '--num_train_epochs', '1', '--lr_scheduler_type', 'cosine', '--learning_rate', '2e-5', '--warmup_ratio', '0.03', '--weight_decay', '0.0', '--logging_strategy', 'steps', '--logging_steps', '10', '--save_strategy', 'steps', '--save_total_limit', '3', '--evaluation_strategy', 'steps', '--eval_steps', '100', '--save_steps', '200', '--preprocessing_num_workers', '4', '--max_seq_length', '512', '--output_dir', 'outputs/instruct_tuning/model', '--overwrite_output_dir', '--logging_first_step', 'True', '--torch_dtype', 'float16', '--ddp_find_unused_parameters', 'False', '--load_best_model_at_end', '--hier_tuning', '--group_element', '1', '--optimizer_strategy', 'down2up'), 'state': 'running', 'program': 'examples/instruct_tuning.py', 'codePathLocal': 'examples/instruct_tuning.py', 'codePath': 'examples/instruct_tuning.py', 'host': 'rho1', 'username': 'yongkang', 'executable': '/mounts/work/lyk/anaconda3/envs/torch2/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 1942.186625, 'min': 1500.0, 'max': 3000.0}, 'cpu_freq_per_core': [{'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2200.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2166.322, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1561.066, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3648.081, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3724.28, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3724.277, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 1500.0, 'min': 1500.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1500.0, 'max': 3000.0}, {'current': 2697.214, 'min': 1500.0, 'max': 3000.0}], 'disk': {'/': {'total': 878.1072120666504, 'used': 583.3512840270996}}, 'gpu': 'NVIDIA RTX A6000', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}, {'name': 'NVIDIA RTX A6000', 'memory_total': 51527024640}], 'memory': {'total': 251.73123168945312}}
+2024-05-14 14:17:07,030 INFO    HandlerThread:924834 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-14 14:17:07,030 INFO    HandlerThread:924834 [system_monitor.py:probe():227] Publishing system info
+2024-05-14 14:17:07,030 DEBUG   HandlerThread:924834 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-05-14 14:17:07,031 DEBUG   HandlerThread:924834 [system_info.py:_save_pip():68] Saving pip packages done
+2024-05-14 14:17:07,032 DEBUG   HandlerThread:924834 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2024-05-14 14:17:07,844 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/conda-environment.yaml
+2024-05-14 14:17:07,844 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/requirements.txt
+2024-05-14 14:17:09,844 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/conda-environment.yaml
+2024-05-14 14:17:09,845 DEBUG   HandlerThread:924834 [system_info.py:_save_conda():87] Saving conda packages done
+2024-05-14 14:17:09,848 INFO    HandlerThread:924834 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-14 14:17:09,861 DEBUG   SenderThread:924834 [sender.py:send():382] send: files
+2024-05-14 14:17:09,861 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-metadata.json with policy now
+2024-05-14 14:17:09,870 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:17:09,870 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:17:09,873 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:17:10,049 DEBUG   SenderThread:924834 [sender.py:send():382] send: telemetry
+2024-05-14 14:17:10,050 DEBUG   SenderThread:924834 [sender.py:send():382] send: config
+2024-05-14 14:17:10,050 DEBUG   SenderThread:924834 [sender.py:send():382] send: metric
+2024-05-14 14:17:10,051 DEBUG   SenderThread:924834 [sender.py:send():382] send: telemetry
+2024-05-14 14:17:10,051 DEBUG   SenderThread:924834 [sender.py:send():382] send: metric
+2024-05-14 14:17:10,051 WARNING SenderThread:924834 [sender.py:send_metric():1343] Seen metric with glob (shouldn't happen)
+2024-05-14 14:17:10,051 DEBUG   SenderThread:924834 [sender.py:send():382] send: telemetry
+2024-05-14 14:17:10,294 ERROR   wandb-upload_0:924834 [internal_api.py:upload_file():2761] upload_file exception https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/zrszao11/wandb-metadata.json?Expires=1715775430&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UBlZsbJPZDUAuvXXiyZnCbkGUgXwpvzSHngGCXyI8Bk%2BVNAhriC3o%2B61RVn6HHwzjywTmJfpXEGMpOBhz%2BTsr%2B5u%2BlCigHO7uN1IA%2BbAtKh4q2TmJKOOoxo4DSMc6yRXYp8%2BLA8S%2BygFkLGgP4kx%2BWrfKKDpzb4j6HDQgYYuzz2MJhkb%2FZ9rLGkqgo4JXdQ1zufCeZgSyfByNIDNNHPlqwrd4q9FY%2BwFM5HJv0T5c9fBoBawZgRtg5pwbRl6tWb9cueVFdk5BUztMDZUqObZ8tOhTvAXqAlB2VIgNDBsKlMl0P%2Fb3GIJwv3DGv8RYXTrc2gWZ2HJsFPg2eItjXQh9w%3D%3D: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/zrszao11/wandb-metadata.json?Expires=1715775430&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UBlZsbJPZDUAuvXXiyZnCbkGUgXwpvzSHngGCXyI8Bk%2BVNAhriC3o%2B61RVn6HHwzjywTmJfpXEGMpOBhz%2BTsr%2B5u%2BlCigHO7uN1IA%2BbAtKh4q2TmJKOOoxo4DSMc6yRXYp8%2BLA8S%2BygFkLGgP4kx%2BWrfKKDpzb4j6HDQgYYuzz2MJhkb%2FZ9rLGkqgo4JXdQ1zufCeZgSyfByNIDNNHPlqwrd4q9FY%2BwFM5HJv0T5c9fBoBawZgRtg5pwbRl6tWb9cueVFdk5BUztMDZUqObZ8tOhTvAXqAlB2VIgNDBsKlMl0P%2Fb3GIJwv3DGv8RYXTrc2gWZ2HJsFPg2eItjXQh9w%3D%3D
+2024-05-14 14:17:10,294 ERROR   wandb-upload_0:924834 [internal_api.py:upload_file():2763] upload_file request headers: {'User-Agent': 'python-requests/2.31.0', 'Accept-Encoding': 'gzip, deflate, br', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '10136'}
+2024-05-14 14:17:10,294 ERROR   wandb-upload_0:924834 [internal_api.py:upload_file():2765] upload_file response body: b"<?xml version='1.0' encoding='UTF-8'?><Error><Code>AccessDenied</Code><Message>Access denied.</Message><Details>We're sorry, but this service is not available in your location</Details></Error>"
+2024-05-14 14:17:10,339 ERROR   wandb-upload_0:924834 [upload_job.py:push():134] Failed to upload file: /tmp/tmpncs4ct_qwandb/ljudua31-wandb-metadata.json
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/zrszao11/wandb-metadata.json?Expires=1715775430&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UBlZsbJPZDUAuvXXiyZnCbkGUgXwpvzSHngGCXyI8Bk%2BVNAhriC3o%2B61RVn6HHwzjywTmJfpXEGMpOBhz%2BTsr%2B5u%2BlCigHO7uN1IA%2BbAtKh4q2TmJKOOoxo4DSMc6yRXYp8%2BLA8S%2BygFkLGgP4kx%2BWrfKKDpzb4j6HDQgYYuzz2MJhkb%2FZ9rLGkqgo4JXdQ1zufCeZgSyfByNIDNNHPlqwrd4q9FY%2BwFM5HJv0T5c9fBoBawZgRtg5pwbRl6tWb9cueVFdk5BUztMDZUqObZ8tOhTvAXqAlB2VIgNDBsKlMl0P%2Fb3GIJwv3DGv8RYXTrc2gWZ2HJsFPg2eItjXQh9w%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-14 14:17:10,361 ERROR   Thread-11 :924834 [step_upload.py:_handle_event():200] Failed to upload file: /tmp/tmpncs4ct_qwandb/ljudua31-wandb-metadata.json
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 41, in wrapper
+    return func(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 212, in wrapped_fn
+    return retrier(*args, **kargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 131, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2787, in upload_file
+    wandb._sentry.reraise(e)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 154, in reraise
+    raise exc.with_traceback(sys.exc_info()[2])
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 2759, in upload_file
+    response.raise_for_status()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: https://storage.googleapis.com/wandb-production.appspot.com/neuzxm/huggingface/zrszao11/wandb-metadata.json?Expires=1715775430&GoogleAccessId=gorilla-files-url-signer-man%40wandb-production.iam.gserviceaccount.com&Signature=UBlZsbJPZDUAuvXXiyZnCbkGUgXwpvzSHngGCXyI8Bk%2BVNAhriC3o%2B61RVn6HHwzjywTmJfpXEGMpOBhz%2BTsr%2B5u%2BlCigHO7uN1IA%2BbAtKh4q2TmJKOOoxo4DSMc6yRXYp8%2BLA8S%2BygFkLGgP4kx%2BWrfKKDpzb4j6HDQgYYuzz2MJhkb%2FZ9rLGkqgo4JXdQ1zufCeZgSyfByNIDNNHPlqwrd4q9FY%2BwFM5HJv0T5c9fBoBawZgRtg5pwbRl6tWb9cueVFdk5BUztMDZUqObZ8tOhTvAXqAlB2VIgNDBsKlMl0P%2Fb3GIJwv3DGv8RYXTrc2gWZ2HJsFPg2eItjXQh9w%3D%3D
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 288, in run_and_notify
+    self._do_upload_sync(event)
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/step_upload.py", line 330, in _do_upload_sync
+    job.run()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 57, in run
+    self.push()
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/filesync/upload_job.py", line 125, in push
+    self._api.upload_file_retry(
+  File "/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/wandb/apis/normalize.py", line 51, in wrapper
+    raise CommError(message, error)
+wandb.errors.CommError: <Response [403]>
+2024-05-14 14:17:10,846 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:10,846 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-metadata.json
+2024-05-14 14:17:12,116 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:17:12,120 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:17:12,123 DEBUG   SenderThread:924834 [sender.py:send():382] send: metric
+2024-05-14 14:17:12,123 DEBUG   SenderThread:924834 [sender.py:send():382] send: metric
+2024-05-14 14:17:12,123 DEBUG   SenderThread:924834 [sender.py:send():382] send: metric
+2024-05-14 14:17:12,123 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:17:12,123 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:17:12,124 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:17:12,849 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:12,849 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_created():271] file/dir created: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:17:13,850 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:14,852 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:15,853 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:16,855 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:17,327 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:17:17,856 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:18,858 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:19,859 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:20,860 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:21,861 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:22,660 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:17:22,863 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:23,864 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:24,866 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:24,869 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:17:24,870 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:17:24,871 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:17:25,867 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:26,868 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:27,858 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:17:27,870 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:28,725 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:17:28,727 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:17:28,727 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:17:28,728 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:17:28,871 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:28,871 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:17:29,872 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:30,873 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:31,874 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:32,876 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:33,559 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:17:33,877 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:34,879 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:35,880 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:36,881 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:37,883 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:38,855 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:17:38,884 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:39,870 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:17:39,871 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:17:39,871 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:17:39,885 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/config.yaml
+2024-05-14 14:17:41,886 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:42,888 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:43,889 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:44,217 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:17:44,890 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:45,892 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:46,893 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:47,894 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:48,895 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:49,406 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:17:49,897 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:50,199 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:17:50,202 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:17:50,202 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:17:50,203 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:17:50,898 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:50,898 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:17:51,899 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:52,900 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:53,902 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:54,870 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:17:54,870 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:17:54,871 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:17:54,903 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:55,061 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:17:55,904 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:56,905 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:57,907 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:58,908 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:17:59,909 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:00,112 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:18:00,910 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:01,912 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:02,913 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:03,914 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:04,915 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:05,336 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:18:05,917 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:06,918 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:06,957 DEBUG   SystemMonitor:924834 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-14 14:18:06,961 DEBUG   SenderThread:924834 [sender.py:send():382] send: stats
+2024-05-14 14:18:08,167 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:09,070 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:18:09,073 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:18:09,074 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:18:09,075 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:18:09,168 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:18:09,870 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:18:09,871 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:18:09,885 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:18:10,169 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:10,399 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:18:12,172 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:14,174 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:15,430 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:18:16,177 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:18,179 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:20,181 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:20,669 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:18:22,183 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:24,185 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:25,100 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:18:25,101 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:18:25,103 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:18:26,085 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:18:26,188 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:28,191 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:28,621 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:18:28,623 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:18:28,624 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:18:28,625 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:18:29,191 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:18:30,193 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:31,115 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:18:32,195 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:36,183 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:18:36,199 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:36,962 DEBUG   SenderThread:924834 [sender.py:send():382] send: stats
+2024-05-14 14:18:38,202 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:40,101 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:18:40,102 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:18:40,103 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:18:40,204 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:42,175 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:18:42,206 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:44,208 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:46,210 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:47,436 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:18:48,212 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:49,214 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:50,215 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:51,216 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:52,217 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:53,390 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:18:54,220 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:55,100 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:18:55,101 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:18:55,101 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:18:56,281 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:56,283 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:18:56,285 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:18:56,286 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:18:56,287 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:18:57,282 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:18:58,283 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:18:58,659 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:19:00,285 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:02,286 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:04,006 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:19:06,289 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:06,965 DEBUG   SenderThread:924834 [sender.py:send():382] send: stats
+2024-05-14 14:19:08,291 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:09,592 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:19:10,100 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:19:10,101 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:19:10,102 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:19:10,293 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:12,295 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:14,298 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:14,780 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:19:16,301 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:18,303 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:20,055 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:19:20,305 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:21,176 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:19:21,177 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:19:21,178 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:19:21,179 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:19:21,305 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:19:22,307 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:24,309 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:25,100 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:19:25,102 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:19:25,102 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:19:25,102 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:19:26,311 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:28,313 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:30,315 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:30,962 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:19:32,316 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:34,318 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:36,320 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:36,868 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:19:36,965 DEBUG   SenderThread:924834 [sender.py:send():382] send: stats
+2024-05-14 14:19:38,322 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:40,100 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:19:40,101 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:19:40,102 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:19:40,323 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:42,325 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:42,633 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:19:43,904 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:19:43,905 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:19:43,906 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:19:43,907 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:19:44,327 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:44,327 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:19:46,329 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:47,922 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:19:48,331 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:50,333 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:52,334 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:53,000 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:19:54,337 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:55,101 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:19:55,101 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:19:55,102 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:19:56,339 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:58,342 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:19:58,377 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:20:00,343 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:02,345 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:03,874 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:20:04,348 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:06,350 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:06,967 DEBUG   SenderThread:924834 [sender.py:send():382] send: stats
+2024-05-14 14:20:07,547 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:20:07,548 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:20:07,548 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:20:07,549 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:20:08,353 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:08,353 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:20:09,868 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:20:10,101 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:20:10,102 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:20:10,103 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:20:10,355 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:12,357 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:14,359 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:14,962 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:20:16,361 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:18,363 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:20,365 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:20,838 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:20:22,368 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:24,370 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:25,101 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:20:25,102 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:20:25,102 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:20:25,851 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:20:26,371 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:28,374 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:30,375 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:30,883 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:20:32,378 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:34,380 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:35,083 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:20:35,085 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:20:35,086 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:20:35,087 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:20:35,381 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:20:36,088 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:20:36,382 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:36,970 DEBUG   SenderThread:924834 [sender.py:send():382] send: stats
+2024-05-14 14:20:38,384 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:40,101 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:20:40,102 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:20:40,103 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:20:40,386 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:41,317 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:20:44,391 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:46,392 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:47,309 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:20:48,394 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:50,396 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:52,524 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:20:54,399 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:55,101 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:20:55,102 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:20:55,103 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:20:56,401 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:20:57,610 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:20:58,403 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:00,084 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:21:00,085 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:21:00,086 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:21:00,087 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:21:00,406 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:00,406 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:21:02,408 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:02,775 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:21:04,409 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:06,411 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:06,972 DEBUG   SenderThread:924834 [sender.py:send():382] send: stats
+2024-05-14 14:21:07,780 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:21:08,413 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:10,102 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:21:10,103 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:21:10,104 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:21:10,415 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:12,417 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:12,535 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:21:12,553 DEBUG   SenderThread:924834 [sender.py:send():382] send: metric
+2024-05-14 14:21:12,554 DEBUG   SenderThread:924834 [sender.py:send():382] send: metric
+2024-05-14 14:21:12,554 DEBUG   SenderThread:924834 [sender.py:send():382] send: metric
+2024-05-14 14:21:12,554 DEBUG   SenderThread:924834 [sender.py:send():382] send: metric
+2024-05-14 14:21:12,554 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:21:12,554 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:21:12,555 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:21:13,418 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:21:13,556 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:21:14,419 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:16,422 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:18,424 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:18,695 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:21:20,426 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:24,430 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:24,683 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:21:25,101 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:21:25,103 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:21:25,103 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:21:25,431 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/config.yaml
+2024-05-14 14:21:26,431 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:28,434 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:29,900 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:21:30,435 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:32,438 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:34,915 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:21:35,280 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:21:35,282 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:21:35,282 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:21:35,283 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:21:35,440 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:21:36,441 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:36,974 DEBUG   SenderThread:924834 [sender.py:send():382] send: stats
+2024-05-14 14:21:38,444 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:40,101 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:21:40,102 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:21:40,103 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:21:40,103 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:21:42,448 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:44,451 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:45,639 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:21:46,455 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:48,458 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:50,460 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:50,950 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:21:52,462 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:54,464 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:21:55,101 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:21:55,102 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:21:55,103 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:21:56,515 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:21:58,468 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:00,469 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:02,291 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:22:02,749 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:22:02,750 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:22:02,751 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:22:02,752 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:22:03,472 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:22:04,474 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:06,477 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:06,976 DEBUG   SenderThread:924834 [sender.py:send():382] send: stats
+2024-05-14 14:22:08,022 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:22:08,479 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:10,102 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:22:10,104 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:22:10,104 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:22:12,484 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:13,728 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:22:14,486 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:16,489 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:18,878 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:22:20,493 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:22,495 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:24,499 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:24,830 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:22:25,131 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:22:25,131 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:22:25,134 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:22:26,501 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:28,503 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:28,516 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:22:28,517 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:22:28,517 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:22:28,519 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:22:29,504 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:22:29,840 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:22:30,505 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:32,508 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:34,510 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:35,634 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:22:36,512 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:36,978 DEBUG   SenderThread:924834 [sender.py:send():382] send: stats
+2024-05-14 14:22:38,515 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:40,130 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:22:40,131 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:22:40,131 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:22:40,920 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:22:42,519 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:44,521 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:46,523 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:46,694 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:22:48,526 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:50,528 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:52,466 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:22:52,530 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:54,045 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: partial_history
+2024-05-14 14:22:54,046 DEBUG   SenderThread:924834 [sender.py:send():382] send: history
+2024-05-14 14:22:54,046 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: summary_record
+2024-05-14 14:22:54,047 INFO    SenderThread:924834 [sender.py:_save_file():1392] saving file wandb-summary.json with policy end
+2024-05-14 14:22:54,532 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:54,533 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/wandb-summary.json
+2024-05-14 14:22:55,131 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: internal_messages
+2024-05-14 14:22:55,131 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: stop_status
+2024-05-14 14:22:55,132 DEBUG   SenderThread:924834 [sender.py:send_request():409] send_request: stop_status
+2024-05-14 14:22:56,535 INFO    Thread-12 :924834 [dir_watcher.py:_on_file_modified():288] file/dir modified: /nfs/datx/lyk/HiFT/wandb/run-20240514_141706-zrszao11/files/output.log
+2024-05-14 14:22:58,305 DEBUG   HandlerThread:924834 [handler.py:handle_request():146] handle_request: status_report
+2024-05-14 14:23:01,118 INFO    memory    :924834 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2024-05-14 14:23:01,118 DEBUG   SystemMonitor:924834 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-14 14:23:01,118 DEBUG   SystemMonitor:924834 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-14 14:23:01,121 DEBUG   SenderThread:924834 [sender.py:send():382] send: stats
+2024-05-14 14:23:03,225 INFO    MainThread:924834 [internal.py:handle_exit():76] Internal process exited

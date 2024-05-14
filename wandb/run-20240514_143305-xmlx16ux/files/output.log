@@ -1,0 +1,140 @@
+  0%|          | 0/3218 [00:00<?, ?it/s]/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/deepspeed/runtime/utils.py:274: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/conda/conda-bld/pytorch_1699449229234/work/torch/csrc/tensor/python_tensor.cpp:83.)
+  overflow_gpu = get_accelerator().ByteTensor([overflow])
+[2024-05-14 14:33:10,277] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 0
+[2024-05-14 14:33:10,278] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 65536.0 to 32768.0
+[2024-05-14 14:33:10,280] [INFO] [replace_operation.py:230:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 65536.0, reducing to 32768.0
+{'loss': 0.0, 'learning_rate': 0.0, 'epoch': 0.0}
+  0%|          | 2/3218 [00:03<1:39:58,  1.87s/it]
+[2024-05-14 14:33:11,989] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 1
+[2024-05-14 14:33:11,989] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 32768.0 to 16384.0
+
+  0%|          | 3/3218 [00:05<1:42:35,  1.91s/it]
+[2024-05-14 14:33:13,956] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 2
+[2024-05-14 14:33:13,957] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 16384.0 to 8192.0
+
+  0%|          | 4/3218 [00:07<1:41:50,  1.90s/it]
+[2024-05-14 14:33:15,839] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 3
+[2024-05-14 14:33:15,839] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 8192.0 to 4096.0
+
+  0%|          | 5/3218 [00:09<1:44:33,  1.95s/it]
+[2024-05-14 14:33:17,885] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 4
+[2024-05-14 14:33:17,885] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 4096.0 to 2048.0
+[2024-05-14 14:33:17,885] [INFO] [replace_operation.py:230:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 4096.0, reducing to 2048.0
+[2024-05-14 14:33:20,073] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 5
+[2024-05-14 14:33:20,073] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 2048.0 to 1024.0
+
+  0%|          | 7/3218 [00:13<1:43:44,  1.94s/it]
+[2024-05-14 14:33:21,814] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 6
+[2024-05-14 14:33:21,814] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 1024.0 to 512.0
+[2024-05-14 14:33:21,817] [INFO] [replace_operation.py:230:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 1024.0, reducing to 512.0
+[2024-05-14 14:33:24,188] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 7
+[2024-05-14 14:33:24,188] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 512.0 to 256.0
+[2024-05-14 14:33:24,190] [INFO] [replace_operation.py:230:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 512.0, reducing to 256.0
+[2024-05-14 14:33:25,790] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 8
+[2024-05-14 14:33:25,790] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 256.0 to 128.0
+
+  0%|          | 9/3218 [00:17<1:43:17,  1.93s/it]
+[2024-05-14 14:33:27,601] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 9
+[2024-05-14 14:33:27,601] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 128.0 to 64.0
+
+  0%|          | 10/3218 [00:19<1:41:08,  1.89s/it]
+{'loss': 0.0, 'learning_rate': 0.0, 'epoch': 0.0}
+[2024-05-14 14:33:29,707] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 10
+[2024-05-14 14:33:29,708] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 64.0 to 32.0
+
+  0%|          | 11/3218 [00:21<1:44:48,  1.96s/it]
+[2024-05-14 14:33:31,478] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 11
+[2024-05-14 14:33:31,478] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 32.0 to 16.0
+
+  0%|          | 12/3218 [00:23<1:41:25,  1.90s/it]
+[2024-05-14 14:33:33,599] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 12
+[2024-05-14 14:33:33,599] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 16.0 to 8.0
+
+  0%|          | 13/3218 [00:25<1:45:11,  1.97s/it]
+[2024-05-14 14:33:35,525] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 13
+[2024-05-14 14:33:35,525] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 8.0 to 4.0
+
+  0%|          | 14/3218 [00:27<1:44:10,  1.95s/it]
+[2024-05-14 14:33:37,455] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 14
+[2024-05-14 14:33:37,455] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 4.0 to 2.0
+
+  0%|          | 15/3218 [00:29<1:43:50,  1.95s/it]
+[2024-05-14 14:33:39,130] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 15
+[2024-05-14 14:33:39,130] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 2.0 to 1.0
+
+  0%|          | 16/3218 [00:30<1:39:42,  1.87s/it]
+[2024-05-14 14:33:40,742] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 16
+[2024-05-14 14:33:40,743] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 1.0 to 0.5
+
+  1%|          | 17/3218 [00:32<1:35:24,  1.79s/it]
+[2024-05-14 14:33:42,329] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 17
+[2024-05-14 14:33:42,329] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.5 to 0.25
+
+  1%|          | 18/3218 [00:34<1:32:13,  1.73s/it]
+[2024-05-14 14:33:44,020] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 18
+[2024-05-14 14:33:44,020] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+[2024-05-14 14:33:44,020] [INFO] [replace_operation.py:230:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 0.25, reducing to 0.25
+[2024-05-14 14:33:45,784] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 19
+[2024-05-14 14:33:45,784] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+
+  1%|          | 20/3218 [00:37<1:35:54,  1.80s/it]
+{'loss': 0.0, 'learning_rate': 0.0, 'epoch': 0.01}
+[2024-05-14 14:33:48,145] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 20
+[2024-05-14 14:33:48,145] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+
+  1%|          | 21/3218 [00:40<1:44:20,  1.96s/it]
+[2024-05-14 14:33:50,380] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 21
+[2024-05-14 14:33:50,381] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+
+  1%|          | 22/3218 [00:42<1:49:27,  2.05s/it]
+[2024-05-14 14:33:52,472] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 22
+[2024-05-14 14:33:52,472] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+
+  1%|          | 23/3218 [00:44<1:49:16,  2.05s/it]
+[2024-05-14 14:33:54,803] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 23
+[2024-05-14 14:33:54,803] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+
+  1%|          | 24/3218 [00:46<1:53:58,  2.14s/it]
+[2024-05-14 14:33:57,211] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 24
+[2024-05-14 14:33:57,211] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+
+  1%|          | 25/3218 [00:49<1:57:51,  2.21s/it]
+[2024-05-14 14:33:59,250] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 25
+[2024-05-14 14:33:59,250] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+
+  1%|          | 26/3218 [00:51<1:55:02,  2.16s/it]
+[2024-05-14 14:34:01,326] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 26
+[2024-05-14 14:34:01,326] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+
+  1%|          | 27/3218 [00:53<1:53:51,  2.14s/it]
+[2024-05-14 14:34:03,279] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 27
+[2024-05-14 14:34:03,279] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+
+  1%|          | 28/3218 [00:55<1:50:17,  2.07s/it]
+[2024-05-14 14:34:05,150] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 28
+[2024-05-14 14:34:05,150] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+
+  1%|          | 29/3218 [00:57<1:47:23,  2.02s/it]
+[2024-05-14 14:34:07,084] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 29
+[2024-05-14 14:34:07,084] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+
+  1%|          | 30/3218 [00:59<1:52:23,  2.12s/it]
+{'loss': 0.0, 'learning_rate': 0.0, 'epoch': 0.01}
+[2024-05-14 14:34:09,361] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 30
+[2024-05-14 14:34:09,362] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+
+  1%|          | 31/3218 [01:01<1:48:25,  2.04s/it]
+[2024-05-14 14:34:11,085] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 31
+[2024-05-14 14:34:11,085] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+
+  1%|          | 32/3218 [01:03<1:42:59,  1.94s/it]
+[2024-05-14 14:34:12,906] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 32
+[2024-05-14 14:34:12,906] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+
+  1%|          | 34/3218 [01:05<1:23:58,  1.58s/it]
+[2024-05-14 14:34:14,518] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 33
+[2024-05-14 14:34:14,518] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+[2024-05-14 14:34:14,518] [INFO] [replace_operation.py:230:step] [deepspeed] fp16 dynamic loss scale overflow! Skipping step. Attempted loss scale: 0.25, reducing to 0.25
+[2024-05-14 14:34:15,013] [INFO] [unfused_optimizer.py:281:_update_scale] Grad overflow on iteration: 34
+[2024-05-14 14:34:15,013] [INFO] [unfused_optimizer.py:282:_update_scale] Reducing dynamic loss scale from 0.25 to 0.25
+

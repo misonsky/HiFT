@@ -13,6 +13,8 @@
     },
     "gradient_accumulation_steps": "auto",
     "steps_per_print": "auto",
+    "gradient_clipping":"auto",
     "train_micro_batch_size_per_gpu": "auto",
-    "wall_clock_breakdown": false
+    "wall_clock_breakdown": false,
+    "zero_force_ds_cpu_optimizer": false
 }

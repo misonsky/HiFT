@@ -1,0 +1,176 @@
+
+  0%|          | 0/750 [00:00<?, ?it/s]/mounts/work/lyk/anaconda3/envs/torch2/lib/python3.8/site-packages/deepspeed/runtime/utils.py:387: UserWarning: The torch.cuda.*DtypeTensor constructors are no longer recommended. It's best to use methods such as torch.tensor(data, dtype=*, device='cuda') to create tensors. (Triggered internally at /opt/conda/conda-bld/pytorch_1699449229234/work/torch/csrc/tensor/python_tensor.cpp:83.)
+  total_norm_cuda = get_accelerator().FloatTensor([float(total_norm)])
+
+
+
+
+
+
+
+
+  1%|▏         | 10/750 [00:25<31:07,  2.52s/it]
+
+
+
+
+
+
+
+
+
+  3%|▎         | 19/750 [00:44<24:43,  2.03s/it]
+
+
+
+
+
+
+
+
+  4%|▍         | 30/750 [01:01<16:23,  1.37s/it]
+
+
+
+
+
+
+
+  5%|▌         | 40/750 [01:20<29:22,  2.48s/it]
+
+
+
+
+
+
+
+
+
+  7%|▋         | 49/750 [01:46<31:35,  2.70s/it]
+
+
+
+
+
+
+
+
+
+
+
+  8%|▊         | 60/750 [02:09<23:05,  2.01s/it]
+
+
+
+
+
+
+
+  9%|▉         | 69/750 [02:23<16:01,  1.41s/it]
+
+
+
+
+
+
+
+
+
+
+ 11%|█         | 80/750 [02:53<32:07,  2.88s/it]
+
+
+
+
+
+
+
+
+
+
+ 12%|█▏        | 90/750 [03:18<25:45,  2.34s/it]
+
+
+
+
+
+
+
+
+
+ 13%|█▎        | 100/750 [03:36<18:06,  1.67s/it]
+
+
+
+
+
+
+
+
+ 15%|█▍        | 110/750 [03:56<27:10,  2.55s/it]
+
+
+
+
+
+
+
+
+
+ 16%|█▌        | 119/750 [04:22<28:33,  2.72s/it]
+
+
+
+
+
+
+
+
+
+
+
+ 17%|█▋        | 130/750 [04:46<20:51,  2.02s/it]
+
+
+
+
+
+
+
+ 19%|█▊        | 139/750 [05:00<14:27,  1.42s/it]
+
+
+
+
+
+
+
+
+
+
+ 20%|██        | 150/750 [05:29<28:59,  2.90s/it]
+
+
+
+
+
+
+
+
+
+ 21%|██        | 159/750 [05:52<23:24,  2.38s/it]
+
+
+
+
+
+
+
+
+
+
+ 23%|██▎       | 170/750 [06:13<17:40,  1.83s/it]
+
+
+
+

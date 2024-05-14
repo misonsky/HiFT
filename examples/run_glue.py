@@ -46,15 +46,9 @@ from transformers.trainer_utils import get_last_checkpoint
 from transformers.utils import check_min_version, send_example_telemetry
 from transformers.utils.versions import require_version
 
-from peft import (
-    PeftType,
-    LoraConfig,
-    TaskType,
-    get_peft_model
-)
+from hift import HiFTrainer,GetCallBack,PEFTrainer,peft_function
+from peft import PeftModel
 
-# sys.path.append(os.path.abspath('.'))
-from hift import HiFTrainer,GetCallBack
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
 check_min_version("4.36.0")
 
@@ -73,6 +67,16 @@ task_to_keys = {
 }
 
 logger = logging.getLogger(__name__)
+
+
+
+@dataclass
+class MyTrainingArguments(TrainingArguments):
+    optim: str = field(
+        default="adamw_torch",
+        metadata={"help": "The optimizer to use."},
+    )
+
 
 @dataclass
 class DataTrainingArguments:
@@ -231,6 +235,27 @@ class HiFTArguments(ModelArguments):
         default="SEQ_CLS",
         metadata={"help": ("HiTaskType should be consistent with PEFT TaskType" )},
     )
+    peft_type: str = field(
+        default=None,
+        metadata={"help": ("peft_type should be in [lora,adalora,ia3,p_tuning,prefix_tuning,prompt_tuning]" )},
+    )
+    init_text:str = field(
+        default="Predict if sentiment of this review is positive, negative or neutral",
+        metadata={
+            "help": (
+                "the init prompt text for prompt tuning"
+            )
+        },
+    )
+    lora_rank: int = field(
+        default=8,
+        metadata={"help": ("rank for lora or adalora" )},
+    )
+    peft_path : Optional[str] = field(default=None)
+    virtual_tokens:int = field(
+        default=20,
+        metadata={"help": ("the number of virtual tokens for p_tuning, prefix_tuning and prefix_tuning" )},
+    )
     group_element: int = field(
         default=1,
         metadata={"help": ("number element for each group parameters" )},
@@ -247,14 +272,6 @@ class HiFTArguments(ModelArguments):
             )
         },
     )
-    lora_tuning:bool = field(
-        default=False,
-        metadata={
-            "help": (
-                "whether using lora tuning"
-            )
-        },
-    )
     freeze_layers: List[str] = field(
         default_factory=list,
         metadata={
@@ -263,16 +280,33 @@ class HiFTArguments(ModelArguments):
             )
         },
     )
-def AutoModelClassification(model_name_path):
-    
-    return (AutoModelForSequenceClassification,AutoTokenizer,AutoConfig)
+
+class SavePeftModelCallback(transformers.TrainerCallback):
+    def save_model(self, args, state, kwargs):
+        if state.best_model_checkpoint is not None:
+            checkpoint_folder = os.path.join(state.best_model_checkpoint, "peft_model")
+        else:
+            checkpoint_folder = os.path.join(args.output_dir, f"{PREFIX_CHECKPOINT_DIR}-{state.global_step}")
+
+        peft_model_path = os.path.join(checkpoint_folder, "peft_model")
+        kwargs["model"].save_pretrained(peft_model_path)
+        kwargs["tokenizer"].save_pretrained(peft_model_path)
+
+    def on_save(self, args, state, control, **kwargs):
+        self.save_model(args, state, kwargs)
+        return control
+
+    def on_train_end(self, args, state, control, **kwargs):
+        peft_model_path = os.path.join(args.output_dir, "peft_model")
+        kwargs["model"].save_pretrained(peft_model_path)
+        kwargs["tokenizer"].save_pretrained(peft_model_path)
 
 def main():
     # See all possible arguments in src/transformers/training_args.py
     # or by passing the --help flag to this script.
     # We now keep distinct sets of args, for a cleaner separation of concerns.
 
-    parser = HfArgumentParser((HiFTArguments, DataTrainingArguments, TrainingArguments))
+    parser = HfArgumentParser((HiFTArguments, DataTrainingArguments, MyTrainingArguments))
     if len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
         # If we pass only one argument to the script and it's the path to a json file,
         # let's parse it to get our arguments.
@@ -468,15 +502,20 @@ def main():
         trust_remote_code=model_args.trust_remote_code,
         ignore_mismatched_sizes=model_args.ignore_mismatched_sizes,
     )
-    if model_args.lora_tuning:
-        peft_config = LoraConfig(
-            peft_type = PeftType.LORA,
-            lora_alpha=16,
-            lora_dropout=0.1,
-            r=8,
-            bias="none",
-            task_type=TaskType.SEQ_CLS)
-        model = get_peft_model(model, peft_config)
+    if model_args.peft_type:
+        if model_args.peft_path is not None:
+            logger.info("Peft from pre-trained model")
+            model = PeftModel.from_pretrained(model, model_args.peft_path)
+        else:
+            model = peft_function(model,
+                    config = config,
+                    peft_type = model_args.peft_type,
+                    task_type = model_args.HiTaskType,
+                    rank=model_args.lora_rank,
+                    virtual_tokens=model_args.virtual_tokens,
+                    tokenizer_name_or_path=model_args.tokenizer_name if model_args.tokenizer_name else model_args.model_name_or_path,
+                    init_text=model_args.init_text if model_args.peft_type=="prompt_tuning" else None,
+                    peft_config=None)
     # Preprocessing the raw_datasets
     if data_args.task_name is not None:
         sentence1_key, sentence2_key = task_to_keys[data_args.task_name]
@@ -614,26 +653,29 @@ def main():
             group_element = model_args.group_element,
             strategy = model_args.optimizer_strategy,
             hier_tuning= model_args.hier_tuning,
-            lora_tuning = model_args.lora_tuning,
+            peft_type = model_args.peft_type,
             freeze_layers = model_args.freeze_layers,
-            train_dataset=train_dataset if training_args.do_train else None,
-            eval_dataset=eval_dataset if training_args.do_eval else None,
-            model=model,
-            tokenizer=tokenizer,
-            compute_metrics=compute_metrics,
-            data_collator=data_collator,
-            args=training_args
-        )
-    else:
-        trainer = Trainer(
-            model=model,
             args=training_args,
             train_dataset=train_dataset if training_args.do_train else None,
             eval_dataset=eval_dataset if training_args.do_eval else None,
+            model=model,
+            tokenizer=tokenizer,
+            compute_metrics=compute_metrics,
+            data_collator=data_collator
+        )
+    else:
+        trainer = PEFTrainer(
+            peft_type = model_args.peft_type,
+            args=training_args,
+            model=model,
+            train_dataset=train_dataset if training_args.do_train else None,
+            eval_dataset=eval_dataset if training_args.do_eval else None,
             compute_metrics=compute_metrics,
             tokenizer=tokenizer,
             data_collator=data_collator,
         )
+    if model_args.peft_type:
+        trainer.add_callback(SavePeftModelCallback)
     # Training
     if training_args.do_train:
         checkpoint = None
