@@ -33,7 +33,7 @@ Instruction fine-tuning 7B model on A6000 (48G), and the experimental results sh
 | llama2-7b(Alpaca) | 512            | 8              |
 | llama2-7b(Vicuna) | 2800           | 1              |
 
-Instruction fine-tuning 7B model on A6000 (24G)  .  If you use multiple GPUs for distributed training on `RTX 3090/4000`, add the following commands before running: `export NCCL_IB_DISABLE=1`; `export NCCL_P2P_DISABLE=1`   
+Instruction fine-tuning 7B model on RTX3090 (24G)  .  If you use multiple GPUs for distributed training on `RTX 3090/4000`, add the following commands before running: `export NCCL_IB_DISABLE=1`; `export NCCL_P2P_DISABLE=1`   
 
 | Model             | Max Seq Length | Max Batch Size |
 | ----------------- | -------------- | -------------- |
