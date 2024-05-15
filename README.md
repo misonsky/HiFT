@@ -38,7 +38,7 @@ Instruction fine-tuning 7B model on A6000 (48G), and the experimental results sh
 `pytorch` >= 2.1.1; `transformers`==4.36.2
 
 ```
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 
 
