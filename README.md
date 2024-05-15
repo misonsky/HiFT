@@ -38,6 +38,7 @@ Instruction fine-tuning 7B model on A6000 (48G), and the experimental results sh
 1. `pytorch` >= 2.1.1; `transformers`==4.36.2
 2. `pip install -r requirements.txt`
 3. `conda install mpi4py==3.1.4`
+3. `pip install flash-attn==2.5.8`
 
 
 
