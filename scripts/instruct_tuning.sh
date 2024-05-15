@@ -16,7 +16,6 @@ CUDA_VISIBLE_DEVICES="0,2" torchrun --master_port "$port" --nproc_per_node=$num_
     --do_eval \
     --seed 12345 \
     --fp16 \
-    --tf32 true \
     --num_train_epochs 1 \
     --lr_scheduler_type "cosine" \
     --learning_rate 1e-5 \
