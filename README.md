@@ -33,6 +33,14 @@ Instruction fine-tuning 7B model on A6000 (48G), and the experimental results sh
 | Alpaca | 512        | 8              |
 | Vicuna | 2800       | 1              |
 
+### Requirements
+
+`pytorch` >= 2.1.1; `transformers`==4.36.2
+
+```
+pip install -r requirement.txt
+```
+
 
 
 ## Quickstart  
