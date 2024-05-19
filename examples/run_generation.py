@@ -19,6 +19,7 @@
 import logging
 import os
 import sys
+import math
 import warnings
 from copy import deepcopy
 from dataclasses import dataclass, field
@@ -34,6 +35,7 @@ import fnmatch
 import torch
 import deepspeed
 import transformers
+from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR
 from transformers import (
     AutoConfig,
     GPT2Config,
