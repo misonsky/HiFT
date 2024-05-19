@@ -31,7 +31,7 @@ from transformers.trainer_pt_utils import LabelSmoother
 
 from fastchat.conversation import SeparatorStyle
 from fastchat.model.model_adapter import get_conversation_template
-
+from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR
 IGNORE_TOKEN_ID = LabelSmoother.ignore_index
 
 from llama2_flash_attn_monkey_patch import replace_llama_attn_with_flash_attn
