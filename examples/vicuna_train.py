@@ -362,7 +362,7 @@ class SupervisedDataset(Dataset):
     def __init__(self, raw_data, tokenizer: transformers.PreTrainedTokenizer):
         super(SupervisedDataset, self).__init__()
         key_name = "conversations"
-        if "items" in raw_data[i]:
+        if "items" in raw_data[0]:
             key_name = "items"
         rank0_print("Formatting inputs...")
         sources = [example[key_name] for example in raw_data]
@@ -518,7 +518,7 @@ def train():
             model=model,
             train_dataset=data_module['train_dataset'] if training_args.do_train else None,
             eval_dataset=data_module['eval_dataset'] if training_args.do_eval else None,
-            compute_metrics=compute_metrics if training_args.predict_with_generate else None,
+            compute_metrics=None,
             tokenizer=tokenizer,#data_collator=data_collator   
         )
     else:
@@ -530,7 +530,7 @@ def train():
             eval_dataset=data_module['eval_dataset'] if training_args.do_eval else None,
             tokenizer=tokenizer,
             data_collator=data_collator,
-            compute_metrics=compute_metrics if training_args.predict_with_generate else None,
+            compute_metrics=None,
         )
     
     if model_args.peft_type:
@@ -554,7 +554,7 @@ def train():
         logger.info("*** Evaluate ***")
 
         metrics = trainer.evaluate()
-        metrics["eval_samples"] =len(eval_dataset)
+        metrics["eval_samples"] =len(data_module['eval_dataset'])
         try:
             perplexity = math.exp(metrics["eval_loss"])
         except OverflowError:
