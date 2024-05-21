@@ -94,7 +94,7 @@ class HiFTCallBack(object):
         if len(self.freeze_layers)>0:
             for index in self.freeze_layers:
                 group_parameters[int(index)]=-1
-                group_parameters = [element for element in group_parameters if element != -1]
+        group_parameters = [element for element in group_parameters if element != -1]
         if self.strategy=="up2down":
            group_parameters.reverse()
         elif self.strategy == "random":
