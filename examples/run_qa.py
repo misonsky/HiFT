@@ -46,7 +46,7 @@ from transformers import (
 from transformers.trainer_utils import get_last_checkpoint
 from transformers.utils import check_min_version, send_example_telemetry
 from transformers.utils.versions import require_version
-
+from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR
 from hift import HiFTQuestionAnsweringTrainer,GetCallBack,QuestionAnsweringTrainer,peft_function
 from peft import PeftModel
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.

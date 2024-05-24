@@ -1,8 +1,9 @@
 export num_gpus=1
 export output_dir="outputs/conll2003"
 port=$(shuf -i25000-30000 -n1)
+# CUDA_VISIBLE_DEVICES=3 python run_glue.py \
 CUDA_VISIBLE_DEVICES="7" torchrun --master_port "$port" --nproc_per_node=$num_gpus examples/run_ner.py \
---model_name_or_path roberta-base \
+--model_name_or_path /mounts/work/lyk/hierFT/roberta-base \
 --dataset_name conll2003 \
 --do_train \
 --do_eval \

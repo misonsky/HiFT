@@ -1,15 +1,14 @@
 export num_gpus=1
-export output_dir="outputs/cola"
+export output_dir="outputs/squad_ft"
 port=$(shuf -i25000-30000 -n1)
 # CUDA_VISIBLE_DEVICES=3 python run_glue.py \
-CUDA_VISIBLE_DEVICES="7" torchrun --master_port "$port" --nproc_per_node=$num_gpus examples/run_glue.py \
---model_name_or_path /mounts/work/lyk/hierFT/roberta-large \
---task_name cola \
+CUDA_VISIBLE_DEVICES="7" torchrun --master_port "$port" --nproc_per_node=$num_gpus examples/run_qa.py \
+--model_name_or_path /mounts/work/lyk/hierFT/roberta-base \
+--dataset_name squad \
 --do_train \
 --do_eval \
---do_predict \
 --optim "adamw_hf" \
---peft_type "adalora" \
+--deepspeed "dsconfig/zero0_config.json" \
 --max_seq_length 512 \
 --per_device_train_batch_size 8 \
 --learning_rate 3e-5 \
@@ -17,6 +16,7 @@ CUDA_VISIBLE_DEVICES="7" torchrun --master_port "$port" --nproc_per_node=$num_gp
 --output_dir $output_dir/model \
 --overwrite_output_dir \
 --logging_steps 10 \
+--fp16 \
 --logging_dir $output_dir/log \
 --evaluation_strategy epoch \
 --save_strategy epoch \

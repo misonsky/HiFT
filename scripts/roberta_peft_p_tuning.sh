@@ -1,8 +1,9 @@
 export num_gpus=1
 export output_dir="outputs/cola"
 port=$(shuf -i25000-30000 -n1)
+# CUDA_VISIBLE_DEVICES=3 python run_glue.py \
 CUDA_VISIBLE_DEVICES="5" torchrun --master_port "$port" --nproc_per_node=$num_gpus examples/run_glue.py \
---model_name_or_path roberta-large \
+--model_name_or_path /mounts/work/lyk/hierFT/roberta-large \
 --task_name cola \
 --do_train \
 --do_eval \

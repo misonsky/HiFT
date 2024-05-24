@@ -49,7 +49,7 @@ from transformers.utils.versions import require_version
 
 from hift import HiFTrainer,GetCallBack,PEFTrainer,peft_function
 from peft import PeftModel
-
+from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR
 # Will error if the minimal version of Transformers is not installed. Remove at your own risks.
 check_min_version("4.36.0")
 

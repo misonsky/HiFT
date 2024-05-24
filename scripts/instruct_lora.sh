@@ -2,11 +2,11 @@ export num_gpus=8
 export output_dir="outputs/instruct_tuning"
 port=$(shuf -i25000-30000 -n1)
 
-CUDA_VISIBLE_DEVICES="0,1" torchrun --master_port "$port" --nproc_per_node=$num_gpus examples/instruct_tuning.py \
+CUDA_VISIBLE_DEVICES=1 torchrun --master_port "$port" examples/instruct_tuning.py \
     --model_type llama \
     --HiTaskType "CAUSAL_LM" \
     --peft_type "lora" \
-    --model_name_or_path opt-7b  \
+    --model_name_or_path /mounts/work/lyk/hierFT/llama2-7b  \
     --dataset_dir data/alpaca_data \
     --validation_split_percentage 0.001 \
     --per_device_train_batch_size 4 \

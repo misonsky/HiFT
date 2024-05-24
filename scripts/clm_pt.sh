@@ -6,7 +6,7 @@ CUDA_VISIBLE_DEVICES=0 torchrun --master_port "$port" examples/pretrain_tuning.p
     --model_type llama \
     --HiTaskType "CAUSAL_LM" \
     --deepspeed "dsconfig/zero0_config.json" \
-    --model_name_or_path llama2-7b \
+    --model_name_or_path /mounts/work/lyk/hierFT/llama2-7b \
     --dataset_dir "data" \
     --data_cache_dir "data_cache_dir" \
     --validation_split_percentage 0.001 \
