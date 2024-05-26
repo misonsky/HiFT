@@ -56,6 +56,7 @@ require_version("datasets>=1.8.0", "To fix: pip install -r examples/pytorch/ques
 
 logger = logging.getLogger(__name__)
 
+from transformers.pytorch_utils import ALL_LAYERNORM_LAYERS, is_torch_greater_or_equal_than_1_10, is_torch_less_than_1_11
 
 @dataclass
 class MyTrainingArguments(TrainingArguments):
@@ -526,7 +527,10 @@ def main():
         for i, offsets in enumerate(offset_mapping):
             # We will label impossible answers with the index of the CLS token.
             input_ids = tokenized_examples["input_ids"][i]
-            cls_index = input_ids.index(tokenizer.cls_token_id)
+            if tokenizer.cls_token_id is not None:
+                cls_index = input_ids.index(tokenizer.cls_token_id)
+            else:
+                cls_index = input_ids.index(tokenizer.bos_token_id)
 
             # Grab the sequence corresponding to that example (to know what is the context and what is the question).
             sequence_ids = tokenized_examples.sequence_ids(i)
